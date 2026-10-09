@@ -1,6 +1,6 @@
 # Bayu Febriansyah · Engineering portfolio
 
-A static portfolio built around engineering decisions, personal contributions, and evidence. Nine project stories cover composites, deployable structures, impact simulation, robotics, software, and systems architecture.
+A static portfolio built around engineering decisions, personal contributions, and evidence. Seven technical projects and one Illinois MakerLab case study cover composites, deployable structures, impact simulation, robotics, fabrication, and systems architecture.
 
 The site is plain HTML and CSS with a small progressive-enhancement script. A dependency-free Node build produces the pages from editable JSON. There is no database, subscription, external font request, or client-side framework.
 
@@ -23,13 +23,13 @@ Open the URL printed by the server. It includes the repository subpath. After ed
 | `scripts/build.mjs` | Home page and case-study templates |
 | `public/assets/styles.css` | Responsive visual design |
 | `public/assets/site.js` | Project filtering and keyboard-accessible image enlargement |
-| `public/assets/projects/` | Optimized images extracted from the supplied reports, plus one labeled workflow illustration |
+| `public/assets/projects/` | Optimized report figures and selected MakerLab project photographs and CAD views |
 | `public/assets/video/so101-demo.mp4` | Compressed, silent, browser-compatible copy of the supplied SO-101 demonstration |
 | `public/reports/` | Seven original technical PDFs, unchanged |
 | `public/resume/` | Supplied resume PDF |
 | `content/report-manifest.json` | SHA-256 hashes and original report filenames |
 
-Keep opening overviews under 160 words. Match claims to the supplied evidence, credit collaborators, and distinguish simulation, physical testing, and proposed systems. Add new MakerLab examples within its existing case study. Unfinished Gexcon work stays outside the public build. The Aering report and client data are excluded; its diagram is an illustration.
+Keep opening overviews under 160 words. Match claims to the supplied evidence, credit collaborators, and distinguish simulation, physical testing, proposed systems, and production estimates. Add new MakerLab examples within the `examples` array in its existing case study. Employment examples outside MakerLab are omitted. Customer documents, invoices, shipping details, original third-party CAD libraries, and the watch-cleaner manual stay outside the public assets.
 
 ## Publish with GitHub Pages
 
