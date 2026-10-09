@@ -1,0 +1,593 @@
+[
+  {
+    "slug": "carbon-epoxy-i-beam",
+    "title": "Carbon-Epoxy I-Beam",
+    "category": "Composite manufacturing",
+    "year": "2026",
+    "setting": "UIUC · AE 526",
+    "filters": [
+      "build",
+      "testing"
+    ],
+    "tools": "Composite layup, tooling, curing, load testing",
+    "evidence": "Manufactured beam · Team load test",
+    "image": "composite-beam-tooling.webp",
+    "imageAlt": "Composite beam bagged and restrained in fabrication tooling",
+    "takeaway": "A tested beam—and a clearer understanding of what manufacturing changes about an ideal design.",
+    "overviewHeading": "Turning a prediction into a physical structure.",
+    "details": [
+      {
+        "heading": "Design for the available process",
+        "body": "The team’s numerical design was the starting point. I led fabrication around available prepreg, honeycomb, steel-channel tooling, and cure equipment. Manufacturing choices became part of the engineering problem."
+      },
+      {
+        "heading": "Change what the first build reveals",
+        "body": "Foam-filled Nomex proved impractical. We used unfilled Nomex with adhesive film, then revised orientation and restraint after the initial cure allowed flange warping."
+      },
+      {
+        "heading": "Let the test expose the gap",
+        "body": "The team measured 2,376 lbf against a 7,200 lbf target: roughly one-third of the required load. The tested Nomex build anchors this case; the result points to a substantial manufacturing and modeling gap."
+      }
+    ],
+    "attribution": "Team project. I led fabrication; numerical design and aggregate test results are credited to the team.",
+    "report": {
+      "file": "carbon-epoxy-i-beam.pdf",
+      "title": "Manufacturing and Testing a Carbon Fiber Reinforced Epoxy I Beam",
+      "pages": 47,
+      "size": "0.7 MB"
+    },
+    "figures": [
+      {
+        "file": "composite-beam-tooling.webp",
+        "title": "Tooling that responds to the build",
+        "caption": "The bagged assembly uses orientation and restraint to address flange warping seen in the first cure arrangement.",
+        "alt": "Composite beam in a restrained tooling and vacuum-bag assembly",
+        "width": 799,
+        "height": 599,
+        "source": "Project report, PDF page 35.",
+        "wide": false
+      },
+      {
+        "file": "composite-beam-test.webp",
+        "title": "Put the manufactured beam to the test",
+        "caption": "The team’s load test measured the behavior of the physical Nomex-core beam, rather than the ideal numerical structure.",
+        "alt": "Composite I-beam mounted in the load-test frame",
+        "width": 910,
+        "height": 497,
+        "source": "Project report, PDF page 37.",
+        "wide": false
+      }
+    ],
+    "role": "Fabrication lead",
+    "description": "Turned a team beam design into a tested composite structure, revising core preparation and tooling when manufacturing exposed problems.",
+    "overview": [
+      "I led fabrication of a carbon-fiber beam from our team’s numerical design, adapting the build around available materials and tooling. The challenge was to turn the predicted performance into a structure we could manufacture and test.",
+      "Foam filling proved impractical, so we moved to unfilled Nomex honeycomb bonded with adhesive film. After an initial cure allowed the flanges to warp, we revised the beam’s orientation and added restraint during curing. These changes addressed problems the ideal design alone did not reveal.",
+      "The team measured a peak load of 2,376 lbf, below the 7,200 lbf target. The outcome was a tested beam and a documented manufacturing sequence, with a clear gap between predicted and measured performance to investigate further."
+    ],
+    "imageWidth": 799,
+    "imageHeight": 599
+  },
+  {
+    "slug": "bistable-composite-boom",
+    "title": "Bistable Composite Boom",
+    "category": "Deployable structures",
+    "year": "2026",
+    "setting": "UIUC · AE 498",
+    "filters": [
+      "build",
+      "analysis",
+      "testing"
+    ],
+    "tools": "MATLAB, laminate modeling, composite fabrication, camera-based shape measurement",
+    "evidence": "Fabricated specimen · Measured geometry · Design screen",
+    "image": "bistable-boom-deployed.webp",
+    "imageAlt": "Deployed carbon-fiber boom on a work surface",
+    "takeaway": "One structure, two stable shapes—and a design tradeoff between transition energy and stored geometry.",
+    "overviewHeading": "Compact storage needs more than a low-energy transition.",
+    "details": [
+      {
+        "heading": "Connect the model to a real specimen",
+        "body": "I modeled a three-layer laminate, fabricated it on the available mold, and measured both stable shapes with stereo cameras. This connected the analytical design with the geometry of the manufactured part."
+      },
+      {
+        "heading": "Check both stable shapes",
+        "body": "Measured curvatures were within about 5% of the predicted values for this specimen. I explored the mismatch using bounded parameter adjustments; fitting the same measurements was calibration, not a separate validation."
+      },
+      {
+        "heading": "Screen for the right objective",
+        "body": "I compared 5,476 modeled layer arrangements. Lower estimated transition energy also changed the coiled shape. The screen showed why energy and usable geometry need to be considered together; its candidates were not built."
+      }
+    ],
+    "report": {
+      "file": "bistable-composite-boom.pdf",
+      "title": "Ultrathin Bistable Composite Short Boom",
+      "pages": 49,
+      "size": "1.2 MB"
+    },
+    "figures": [
+      {
+        "file": "bistable-boom-deployed.webp",
+        "title": "Extended, without being held",
+        "caption": "The fabricated carbon-fiber baseline holds its extended configuration.",
+        "alt": "Fabricated carbon-fiber boom in its extended stable shape",
+        "width": 694,
+        "height": 520,
+        "source": "Project report, PDF page 8.",
+        "wide": false
+      },
+      {
+        "file": "bistable-boom-coiled.webp",
+        "title": "The same specimen, stored",
+        "caption": "The boom also holds a coiled configuration. Both photographs show the tested baseline, not a screened alternative.",
+        "alt": "Same carbon-fiber boom in a compact coiled shape",
+        "width": 525,
+        "height": 520,
+        "source": "Project report, PDF page 8.",
+        "wide": false
+      },
+      {
+        "file": "bistable-boom-measurement.webp",
+        "title": "Measure what was actually made",
+        "caption": "Stereo camera measurements provided the surface geometry used to compare the specimen with the model.",
+        "alt": "Stereo-camera shape measurement setup for the composite boom",
+        "width": 662,
+        "height": 780,
+        "source": "Project report, PDF page 9.",
+        "wide": false
+      }
+    ],
+    "role": "Modeling, fabrication, testing",
+    "description": "Built a carbon-fiber boom with two stable shapes, then compared 5,476 modeled designs and uncovered a tradeoff between transition energy and stored shape.",
+    "overview": [
+      "I built and tested a thin carbon-fiber boom that held two shapes: extended and coiled. I also compared 5,476 modeled layer arrangements and found a tradeoff: reducing the estimated energy needed to switch shapes changed the coiled shape itself.",
+      "The challenge was to connect compact storage with useful deployed geometry. Using the available materials and mold, I combined MATLAB modeling, fabrication, and camera-based shape measurements to compare the design with a real specimen.",
+      "The model captured both stable shapes, although the measured geometry differed. I explored those differences before screening alternative designs. The result was a tested baseline and a clearer design requirement: evaluate the transition energy and the resulting shapes together. The alternative designs remained simulations."
+    ],
+    "imageWidth": 694,
+    "imageHeight": 520
+  },
+  {
+    "slug": "graded-crash-boxes",
+    "title": "Functionally Graded Crash Boxes",
+    "category": "Impact simulation",
+    "year": "2023",
+    "setting": "ITB · Undergraduate thesis",
+    "filters": [
+      "analysis"
+    ],
+    "tools": "LS-DYNA, nonlinear impact modeling, comparative design analysis",
+    "evidence": "Numerical study · Published-test benchmark",
+    "image": "crash-box-collapse.webp",
+    "imageAlt": "Four simulated crash-box shapes during progressive collapse",
+    "imageFit": "contain",
+    "takeaway": "Redistributing wall thickness changed how a crash box folded—and the balance between energy absorption and crushing force.",
+    "overviewHeading": "Use the material where it changes the collapse.",
+    "details": [
+      {
+        "heading": "Make the comparison meaningful",
+        "body": "I compared wall layouts and thickness distributions under the same simulated impact conditions. A published physical impact test served as a benchmark for the modeling approach; I did not perform that experiment."
+      },
+      {
+        "heading": "Read more than one performance measure",
+        "body": "The highlighted graded design absorbed 124% more energy per crushed mass than a plain tube and 11.8% more than a conventional multicell tube. This normalization uses the material crushed, not total component mass."
+      },
+      {
+        "heading": "Recognize the tradeoff",
+        "body": "Mean crushing force was 15.8% lower than in the multicell comparison. The highlighted design was not a universal optimum: different thickness choices changed several performance measures, and physical testing remains a next step."
+      }
+    ],
+    "report": {
+      "file": "graded-crash-boxes.pdf",
+      "title": "Impact Analysis of Multi-Cell Crash Box Structures with Transverse Functionally Graded Thickness",
+      "pages": 103,
+      "size": "4.4 MB"
+    },
+    "figures": [
+      {
+        "file": "crash-box-collapse.webp",
+        "title": "Follow the fold, not only the final number",
+        "caption": "The simulated sequence shows progressive collapse during impact. Wall layout and thickness affect the way the structure folds.",
+        "alt": "Four LS-DYNA simulation states showing a red crash box progressively crushing",
+        "width": 1215,
+        "height": 757,
+        "source": "Project report, PDF page 81.",
+        "wide": false
+      }
+    ],
+    "role": "Undergraduate thesis researcher",
+    "description": "Simulated crash-box designs with graded wall thickness, finding higher energy absorption per crushed mass while revealing tradeoffs in crushing force.",
+    "overview": [
+      "My thesis examined how a crash box’s internal walls and thickness distribution affect the way it absorbs an impact. One simulated design absorbed 124% more energy per unit of crushed material than a plain tube and 11.8% more than a conventional multicell tube.",
+      "I developed LS-DYNA models, checked the modeling approach against a published impact test, and compared designs under the same simulated impact conditions. Varying the thickness distribution let me study how the walls folded during crushing and how that changed performance.",
+      "Energy absorption and crushing force traded off: the highlighted design also had a lower mean crushing force than the multicell comparison. The useful finding was a design tradeoff supported by simulation. The proposed crash boxes were not physically tested in this project."
+    ],
+    "imageWidth": 1215,
+    "imageHeight": 757
+  },
+  {
+    "slug": "aering-flight-data",
+    "title": "Flight-Data Visualization",
+    "category": "Engineering software",
+    "year": "2022",
+    "setting": "PT Aering · Internship",
+    "filters": [
+      "systems",
+      "analysis"
+    ],
+    "tools": "Python, flight-record processing, map and parameter plots, X-Plane",
+    "evidence": "Visualization workflow · Simulator comparison",
+    "image": "aering-workflow.svg",
+    "imageAlt": "Illustrated workflow from flight records to geometry corrections to X-Plane playback",
+    "imageFit": "contain",
+    "takeaway": "A Python workflow made takeoff and landing playback easier to interpret in X-Plane.",
+    "overviewHeading": "Make the visualization reflect its context.",
+    "details": [
+      {
+        "heading": "Start with the source of the mismatch",
+        "body": "Recorded coordinates and altitude references could put the displayed aircraft away from runway geometry. I used airport context and flight phase to guide corrections for visualization."
+      },
+      {
+        "heading": "Connect processing to the final output",
+        "body": "I processed parameters, applied corrections, and prepared simulator input files. The workflow tied Python processing to map views, parameter plots, and the playback a reviewer would see."
+      },
+      {
+        "heading": "Keep the conclusion within the evidence",
+        "body": "The comparisons supported more coherent visual reconstruction. They did not establish recovered flight-state accuracy or validate corrected data for operational flight analysis."
+      }
+    ],
+    "scopeNote": "This public summary describes my approach at a high level. The internship report and underlying flight records are not published here.",
+    "figures": [
+      {
+        "file": "aering-workflow.svg",
+        "title": "From recorded parameters to interpretable playback",
+        "caption": "An illustration of the workflow, rather than client data or a measured flight path. Corrections were developed for visualization.",
+        "alt": "Diagram: flight records, geometry and reference corrections, X-Plane playback",
+        "width": 1200,
+        "height": 720,
+        "source": "Workflow illustration; no client data.",
+        "wide": false
+      }
+    ],
+    "role": "Flight Data Engineering Intern",
+    "description": "Built a Python workflow to correct runway alignment and altitude references, making takeoff and landing playback in X-Plane more coherent.",
+    "overview": [
+      "I developed a Python workflow to improve takeoff and landing visualization in X-Plane. Flight-record coordinates and altitude references could place the aircraft away from the runway or at an implausible height, making the playback difficult to interpret.",
+      "I processed the recorded parameters, applied corrections using airport geometry and flight phase, and prepared simulator input files. This connected the correction logic with the output needed for playback.",
+      "I compared the results using map views, parameter plots, and X-Plane playback. The outcome was a documented workflow and corrected visualizations. Its scope was visual reconstruction: the corrections were not established as recovered flight-state ground truth or validated inputs for operational flight-data analysis."
+    ],
+    "imageWidth": 1200,
+    "imageHeight": 720
+  },
+  {
+    "slug": "illinois-makerlab",
+    "title": "Illinois MakerLab",
+    "category": "Robotics & fabrication",
+    "year": "2026",
+    "setting": "UIUC · MakerLab",
+    "filters": [
+      "build",
+      "systems",
+      "testing"
+    ],
+    "tools": "3D printing, LeRobot SO-101, assembly, calibration, teleoperation, training",
+    "evidence": "Assembled system · Trained-task video",
+    "image": "so101-robot.webp",
+    "imageAlt": "Two red SO-101 robot arms on the MakerLab worktable",
+    "imagePosition": "center 72%",
+    "takeaway": "Taking an SO-101 robot arm from printed parts to a trained-task demonstration.",
+    "overviewHeading": "Bring the physical build and software together.",
+    "video": true,
+    "makerlab": true,
+    "details": [
+      {
+        "heading": "Build the complete system",
+        "body": "I printed parts and handled assembly and wiring. The work extended beyond making components: the assembled hardware needed to connect with calibration and control."
+      },
+      {
+        "heading": "Use a platform to focus the engineering",
+        "body": "LeRobot supplied the original robot platform. I handled software setup, calibration, teleoperation, and training, focusing on integration rather than claiming the platform design as my own."
+      },
+      {
+        "heading": "Demonstrate the integrated result",
+        "body": "The video shows the trained arm performing tasks. It provides qualitative evidence of task execution; dataset size, repeatability, and success rate have not been documented in this case."
+      }
+    ],
+    "scopeNote": "The SO-101 video is the current project evidence. This MakerLab case study is structured to grow as more examples and documentation are added.",
+    "figures": [],
+    "role": "Build, software, training",
+    "description": "Took a LeRobot SO-101 arm from printed parts through assembly, calibration, software setup, and training to a task demonstration.",
+    "overview": [
+      "At Illinois MakerLab, I built and configured a LeRobot SO-101 arm for a trained-task demonstration. I handled part printing, assembly, wiring, calibration, teleoperation, software setup, and training.",
+      "The challenge was to make the physical build and software work together. Using an existing robot platform focused the work on fabrication and integration; calibration, control, and training connected the assembled arm to task execution.",
+      "The supplied video demonstrates the trained arm performing tasks. This example shows my contribution across the build and software workflow, with the platform’s original design credited to LeRobot. It is the first example in a broader MakerLab case study that will expand as more work is added."
+    ],
+    "imageWidth": 1000,
+    "imageHeight": 1774
+  },
+  {
+    "slug": "tape-spring-hinge",
+    "title": "Tape Spring Hinge",
+    "category": "Flexible mechanisms",
+    "year": "2026",
+    "setting": "UIUC · AE 498",
+    "filters": [
+      "build",
+      "analysis",
+      "testing"
+    ],
+    "tools": "Abaqus, MATLAB, camera measurements, vibration and bending tests",
+    "evidence": "Physical tests · Simulation comparisons",
+    "image": "tape-spring-fixture.webp",
+    "imageAlt": "Thin steel tape spring bent in a measurement fixture",
+    "takeaway": "Testing several behaviors showed where an ideal hinge model was useful—and where it needed closer scrutiny.",
+    "overviewHeading": "One close match is only part of the picture.",
+    "details": [
+      {
+        "heading": "Evaluate several kinds of behavior",
+        "body": "I prepared the steel specimen and combined shape measurements, vibration analysis, and bending tests with Abaqus simulations. Separate measurements addressed separate aspects of the hinge’s behavior."
+      },
+      {
+        "heading": "Look at the size of each mismatch",
+        "body": "The second vibration mode was measured at 111.70 Hz and predicted at 117.20 Hz, about a 5% difference. Other modes differed more. A close match in one mode did not validate the complete model."
+      },
+      {
+        "heading": "Report the unfinished response",
+        "body": "The nonlinear bending simulation stopped before completing the full test response. That limit helps identify where assumptions and numerical settings need attention; no completed refinement is claimed here."
+      }
+    ],
+    "report": {
+      "file": "tape-spring-hinge.pdf",
+      "title": "Tape Spring Hinge",
+      "pages": 53,
+      "size": "1.6 MB"
+    },
+    "figures": [
+      {
+        "file": "tape-spring-fixture.webp",
+        "title": "A simple specimen, several behaviors",
+        "caption": "The physical tape spring and fixture connect the ideal geometry to a measurable folding response.",
+        "alt": "Steel tape spring bent between fixtures beside a ruler",
+        "width": 514,
+        "height": 355,
+        "source": "Project report, PDF page 15.",
+        "wide": false
+      },
+      {
+        "file": "tape-spring-deployment.webp",
+        "title": "Observe the motion",
+        "caption": "The image sequence records the specimen changing shape. These frames are distinct from the vibration-test dataset.",
+        "alt": "Sequential photographs of the tape spring changing shape",
+        "width": 1379,
+        "height": 678,
+        "source": "Project report, PDF page 35.",
+        "wide": false
+      },
+      {
+        "file": "tape-spring-bending.webp",
+        "title": "See where the model stops",
+        "caption": "The measured bending response extends beyond the portion completed by the nonlinear simulation.",
+        "alt": "Plot comparing measured tape-spring bending response with the partial simulated response",
+        "width": 1247,
+        "height": 821,
+        "source": "Project report, PDF page 37.",
+        "wide": false
+      }
+    ],
+    "role": "Modeling, fabrication, testing",
+    "description": "Compared a flexible steel hinge’s shape, vibration, and bending response with simulations, identifying where the ideal model matched the specimen and where it fell short.",
+    "overview": [
+      "I modeled, prepared, and tested a thin steel tape spring to investigate how it changed shape, vibrated, and resisted bending. The challenge was to understand which parts of its behavior an ideal model could predict reliably.",
+      "I combined Abaqus simulations with camera-based measurements, MATLAB data analysis, and a bending test. Checking several behaviors gave a broader comparison than matching a single shape or test result.",
+      "Agreement depended on the behavior being examined. The second predicted vibration frequency was closest to the measurement; other modes differed more, and the nonlinear bending simulation did not complete the full response. The outcome was a measured basis for judging the model’s limits and identifying which assumptions and test conditions needed closer attention."
+    ],
+    "imageWidth": 514,
+    "imageHeight": 355
+  },
+  {
+    "slug": "medical-uav-systems",
+    "title": "Medical UAV Command & Control",
+    "category": "Systems architecture",
+    "year": "2025",
+    "setting": "Systems engineering study",
+    "filters": [
+      "systems"
+    ],
+    "tools": "Concept of operations, requirements structure, functional breakdown, interface matrix",
+    "evidence": "Proposed architecture · Interface documentation",
+    "image": "medical-uav-context.webp",
+    "imageAlt": "System context diagram connecting a medical UAV control center to users and services",
+    "imageFit": "contain",
+    "takeaway": "An architecture that connects a medical delivery request to mission planning, aircraft monitoring, and external coordination.",
+    "overviewHeading": "Make responsibilities and interfaces visible.",
+    "details": [
+      {
+        "heading": "Set a useful system boundary",
+        "body": "I focused on the command-and-control center while identifying what it would need from aircraft, ground stations, customers, and external services. That boundary made the scope manageable."
+      },
+      {
+        "heading": "Connect functions with information",
+        "body": "I developed the operating concept, functional breakdown, requirements structure, and interface matrix. Together, they show who does what and which information must cross subsystem boundaries."
+      },
+      {
+        "heading": "Create a basis for further development",
+        "body": "The output is a proposed architecture for review and requirements development. Numerical requirements still needed refinement; a working delivery network and flight-test performance were not demonstrated."
+      }
+    ],
+    "report": {
+      "file": "medical-uav-command-control.pdf",
+      "title": "Medical Unmanned Aerial Vehicle System: Command and Control Center",
+      "pages": 22,
+      "size": "1.6 MB"
+    },
+    "figures": [
+      {
+        "file": "medical-uav-context.webp",
+        "title": "The control center in context",
+        "caption": "The proposed control center connects delivery requests with aircraft, ground services, and external coordination.",
+        "alt": "Context diagram for the medical UAV command-and-control center",
+        "width": 965,
+        "height": 608,
+        "source": "Project report, PDF page 9.",
+        "wide": false
+      },
+      {
+        "file": "medical-uav-operation.webp",
+        "title": "Connect the steps of a mission",
+        "caption": "The functional flow gives the proposed operation a sequence of responsibilities and information exchanges.",
+        "alt": "Functional flow diagram for proposed medical drone operations",
+        "width": 1280,
+        "height": 720,
+        "source": "Project report, PDF page 10.",
+        "wide": false
+      }
+    ],
+    "role": "Systems architecture",
+    "description": "Defined how a medical-drone control center would plan missions, coordinate airspace, monitor aircraft, and manage interfaces across the proposed delivery system.",
+    "overview": [
+      "I developed a proposed command-and-control architecture for medical-drone deliveries. The challenge was to connect a transport request with mission planning, airspace coordination, aircraft monitoring, and safety intervention across several organizations and subsystems.",
+      "I created the operating concept, requirements structure, functional breakdown, and interface matrix. Focusing on the control center gave the architecture a clear boundary while showing what it needed from aircraft, ground stations, customers, and external services.",
+      "I mapped responsibilities and information exchanges to make the proposed operation easier to examine. The result was an architecture and a structured basis for further requirements development. It was a systems-design study; a working delivery network and flight-test performance were not demonstrated."
+    ],
+    "imageWidth": 965,
+    "imageHeight": 608
+  },
+  {
+    "slug": "thick-origami",
+    "title": "Thick Origami Mechanisms",
+    "category": "Mechanism design",
+    "year": "2026",
+    "setting": "UIUC · AE 498",
+    "filters": [
+      "build"
+    ],
+    "tools": "NX CAD, rigid-panel geometry, 3D-printed panels, tape-hinge assembly",
+    "evidence": "CAD geometry · Manual motion demonstration",
+    "image": "thick-origami-prototype.webp",
+    "imageAlt": "Purple 3D-printed rigid-panel folding mechanism with tape hinges",
+    "takeaway": "Panel thickness and clearance turned ideal folding geometry into a moving physical mechanism.",
+    "overviewHeading": "Make room for the thickness of real parts.",
+    "details": [
+      {
+        "heading": "Translate geometry into solid parts",
+        "body": "Paper models treat folds as thin lines. In NX, I adjusted panel thicknesses and cutouts so rigid parts could move without colliding."
+      },
+      {
+        "heading": "Assemble and examine the motion",
+        "body": "I prepared the design and assembled printed panels with tape hinges, then manually evaluated coordinated folding in the Bennett-linkage prototype. A related Miura-Ori assembly extended the exploration."
+      },
+      {
+        "heading": "Separate motion from structural performance",
+        "body": "Manual folding demonstrated that the geometry could move. It did not establish load capacity or repeated-use durability. The result is a physical kinematics demonstration."
+      }
+    ],
+    "attribution": "I performed design, preparation, assembly, and evaluation. Nikhil submitted the print job on the Space Structures Lab-managed printer.",
+    "report": {
+      "file": "thick-origami.pdf",
+      "title": "Thick Origami",
+      "pages": 13,
+      "size": "0.6 MB"
+    },
+    "figures": [
+      {
+        "file": "thick-origami-cad.webp",
+        "title": "Clearance is part of the mechanism",
+        "caption": "Changes in panel thickness and cutouts provide space for rigid panels to fold.",
+        "alt": "Colored NX CAD model of the rigid-panel mechanism",
+        "width": 898,
+        "height": 478,
+        "source": "Project report, PDF page 7.",
+        "wide": false
+      },
+      {
+        "file": "thick-origami-motion.webp",
+        "title": "From the CAD model to coordinated motion",
+        "caption": "Manual folding demonstrates the assembled mechanism’s motion. Nikhil’s contribution was submitting the lab print job.",
+        "alt": "Sequence of purple printed panels folding through several configurations",
+        "width": 1378,
+        "height": 259,
+        "source": "Project report, PDF page 9.",
+        "wide": true
+      }
+    ],
+    "role": "CAD, assembly, evaluation",
+    "description": "Adapted paper-folding geometry into rigid-panel mechanisms, using panel thickness changes and clearances to let physical parts fold without colliding.",
+    "overview": [
+      "I turned ideal folding geometry into a moving rigid-panel prototype. The challenge was that real panels have thickness: a mechanism that folds on paper can collide when built from solid parts.",
+      "I developed the geometry in NX, adjusted panel thicknesses and cutouts for clearance, and assembled the printed panels with tape hinges. I performed the design, preparation, assembly, and evaluation; Nikhil submitted the print job on the lab-managed printer.",
+      "Manual folding demonstrated coordinated motion in the Bennett-linkage prototype. A related Miura-Ori assembly extended the exploration. The outcome was a physical demonstration of how geometric allowances make thick-panel folding practical. Strength and repeated-use durability were not established by these motion demonstrations."
+    ],
+    "imageWidth": 480,
+    "imageHeight": 410
+  },
+  {
+    "slug": "thin-origami-bellows",
+    "title": "Thin Origami Bellows",
+    "category": "Experimental mechanics",
+    "year": "2026",
+    "setting": "UIUC · AE 498",
+    "filters": [
+      "build",
+      "testing"
+    ],
+    "tools": "NX crease-pattern design, paper fabrication, tensile testing, data analysis",
+    "evidence": "One specimen · One tensile test",
+    "image": "thin-origami-test.webp",
+    "imageAlt": "Paper bellows specimen and printed fixtures mounted in a tensile testing frame",
+    "imagePosition": "center 46%",
+    "takeaway": "A paper bellows test made the attachment region part of the engineering finding.",
+    "overviewHeading": "Understand the setup as well as the specimen.",
+    "details": [
+      {
+        "heading": "Create the geometry and the specimen",
+        "body": "I designed the crease pattern in NX, scored and folded the paper, and mounted the bellows using printed fixtures. The attachments transferred load into the folded structure."
+      },
+      {
+        "heading": "Read the force alongside the damage",
+        "body": "The single trial recorded a peak of 48.1 N and tearing near an attachment. The measurement describes the combined specimen and setup, rather than a repeatable material-strength rating."
+      },
+      {
+        "heading": "Turn a limit into the next question",
+        "body": "The record began with preload and covered limited movement. Better attachment design and repeat tests became priorities for future work; those improvements were not completed in this project."
+      }
+    ],
+    "attribution": "I performed CAD, fabrication, testing, and analysis. The report acknowledges fixture guidance from the Space Structures Lab.",
+    "report": {
+      "file": "thin-origami-bellows.pdf",
+      "title": "Thin Origami Bellows",
+      "pages": 12,
+      "size": "0.7 MB"
+    },
+    "figures": [
+      {
+        "file": "thin-origami-pattern.webp",
+        "title": "Design the path of the folds",
+        "caption": "The NX crease pattern defines the bellows geometry before scoring and folding the paper.",
+        "alt": "NX drawing showing the thin-origami bellows crease pattern",
+        "width": 1346,
+        "height": 820,
+        "source": "Project report, PDF page 5.",
+        "wide": false
+      },
+      {
+        "file": "thin-origami-test.webp",
+        "title": "The attachment matters",
+        "caption": "The tensile frame pulls the bellows through printed fixtures. Tearing near an attachment makes the load transfer part of the interpretation.",
+        "alt": "Paper bellows and printed fixtures in an Instron tensile frame",
+        "width": 1125,
+        "height": 1500,
+        "source": "Project report, PDF page 7.",
+        "wide": false
+      }
+    ],
+    "role": "CAD, fabrication, testing",
+    "description": "Designed and folded a paper bellows, then used a tensile test to examine its opening response and tearing near an attachment.",
+    "overview": [
+      "I designed, fabricated, and tested a paper bellows to study how its folds opened under tension. The challenge was to connect the folding geometry with a measured response while accounting for the attachments used to pull the specimen.",
+      "I created the crease pattern in NX, scored and folded the paper, and tested it with printed fixtures. I analyzed the recorded force and movement alongside observations of the specimen.",
+      "A single test recorded a peak force of 48.1 N and tearing near an attachment. That result describes this specimen and setup, rather than a repeatable strength rating. The useful finding was that the attachment region deserved closer attention. Better fixtures and repeat tests became priorities for future work, rather than improvements already completed."
+    ],
+    "imageWidth": 1125,
+    "imageHeight": 1500
+  }
+]

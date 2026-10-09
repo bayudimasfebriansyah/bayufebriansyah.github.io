@@ -1,0 +1,44 @@
+[
+  {
+    "file": "carbon-epoxy-i-beam.pdf",
+    "original": "Carbon Fiber I Beam.pdf",
+    "sha256": "cb2d8616e3cb9b84473c8872959d12348535bf299114fcd5964f90272010bac4",
+    "bytes": 740092
+  },
+  {
+    "file": "bistable-composite-boom.pdf",
+    "original": "Bistable Boom.pdf",
+    "sha256": "eee432616fb4e07623f7e8b232469ffddeb1f2733b48b2b555dc23de5d93b719",
+    "bytes": 1156425
+  },
+  {
+    "file": "graded-crash-boxes.pdf",
+    "original": "Impact Analysis of Crash Box.pdf",
+    "sha256": "8c2e5dcb5c0417ea9e6ec34c280bf800af8449306a86518f5d64d2a3970071e1",
+    "bytes": 4366454
+  },
+  {
+    "file": "tape-spring-hinge.pdf",
+    "original": "Tape Spring.pdf",
+    "sha256": "ab9961f5e3bd8ab859e93ce47fc98c492cbce9070c8c1c7bf970e9fad508be93",
+    "bytes": 1605113
+  },
+  {
+    "file": "medical-uav-command-control.pdf",
+    "original": "Medical UAV.pdf",
+    "sha256": "f4fbbbcdf0a30519f9db1a11d01947d32a848e6a3888b40b528266ddc1ced534",
+    "bytes": 1574448
+  },
+  {
+    "file": "thick-origami.pdf",
+    "original": "Thick Origami.pdf",
+    "sha256": "435bc345f39f9084ac30329421599e893a551f59477eb0e94d416880bffc1d74",
+    "bytes": 581018
+  },
+  {
+    "file": "thin-origami-bellows.pdf",
+    "original": "Thin Origami.pdf",
+    "sha256": "86b8e5aafacc30964eaf0584a73cfd3919f27a249717fbb9becc62effde7e62b",
+    "bytes": 714835
+  }
+]
