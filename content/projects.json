@@ -206,63 +206,9 @@
     "imageHeight": 757
   },
   {
-    "slug": "aering-flight-data",
-    "title": "Flight-Data Visualization",
-    "category": "Engineering software",
-    "year": "2022",
-    "setting": "PT Aering · Internship",
-    "filters": [
-      "systems",
-      "analysis"
-    ],
-    "tools": "Python, flight-record processing, map and parameter plots, X-Plane",
-    "evidence": "Visualization workflow · Simulator comparison",
-    "image": "aering-workflow.svg",
-    "imageAlt": "Illustrated workflow from flight records to geometry corrections to X-Plane playback",
-    "imageFit": "contain",
-    "takeaway": "A Python workflow made takeoff and landing playback easier to interpret in X-Plane.",
-    "overviewHeading": "Make the visualization reflect its context.",
-    "details": [
-      {
-        "heading": "Start with the source of the mismatch",
-        "body": "Recorded coordinates and altitude references could put the displayed aircraft away from runway geometry. I used airport context and flight phase to guide corrections for visualization."
-      },
-      {
-        "heading": "Connect processing to the final output",
-        "body": "I processed parameters, applied corrections, and prepared simulator input files. The workflow tied Python processing to map views, parameter plots, and the playback a reviewer would see."
-      },
-      {
-        "heading": "Keep the conclusion within the evidence",
-        "body": "The comparisons supported more coherent visual reconstruction. They did not establish recovered flight-state accuracy or validate corrected data for operational flight analysis."
-      }
-    ],
-    "scopeNote": "This public summary describes my approach at a high level. The internship report and underlying flight records are not published here.",
-    "figures": [
-      {
-        "file": "aering-workflow.svg",
-        "title": "From recorded parameters to interpretable playback",
-        "caption": "An illustration of the workflow, rather than client data or a measured flight path. Corrections were developed for visualization.",
-        "alt": "Diagram: flight records, geometry and reference corrections, X-Plane playback",
-        "width": 1200,
-        "height": 720,
-        "source": "Workflow illustration; no client data.",
-        "wide": false
-      }
-    ],
-    "role": "Flight Data Engineering Intern",
-    "description": "Built a Python workflow to correct runway alignment and altitude references, making takeoff and landing playback in X-Plane more coherent.",
-    "overview": [
-      "I developed a Python workflow to improve takeoff and landing visualization in X-Plane. Flight-record coordinates and altitude references could place the aircraft away from the runway or at an implausible height, making the playback difficult to interpret.",
-      "I processed the recorded parameters, applied corrections using airport geometry and flight phase, and prepared simulator input files. This connected the correction logic with the output needed for playback.",
-      "I compared the results using map views, parameter plots, and X-Plane playback. The outcome was a documented workflow and corrected visualizations. Its scope was visual reconstruction: the corrections were not established as recovered flight-state ground truth or validated inputs for operational flight-data analysis."
-    ],
-    "imageWidth": 1200,
-    "imageHeight": 720
-  },
-  {
     "slug": "illinois-makerlab",
     "title": "Illinois MakerLab",
-    "category": "Robotics & fabrication",
+    "category": "Fabrication & robotics",
     "year": "2026",
     "setting": "UIUC · MakerLab",
     "filters": [
@@ -270,40 +216,175 @@
       "systems",
       "testing"
     ],
-    "tools": "3D printing, LeRobot SO-101, assembly, calibration, teleoperation, training",
-    "evidence": "Assembled system · Trained-task video",
+    "tools": "CAD revisions, print preparation, prototype assembly, production planning, LeRobot SO-101",
+    "evidence": "Physical prints · CAD revisions · Production plans · Trained-task video",
     "image": "so101-robot.webp",
     "imageAlt": "Two red SO-101 robot arms on the MakerLab worktable",
     "imagePosition": "center 72%",
-    "takeaway": "Taking an SO-101 robot arm from printed parts to a trained-task demonstration.",
-    "overviewHeading": "Bring the physical build and software together.",
+    "takeaway": "From a trained robot arm to practical print trials, CAD revisions, and production planning.",
+    "overviewHeading": "Make the design work beyond the screen.",
     "video": true,
     "makerlab": true,
     "details": [
       {
-        "heading": "Build the complete system",
-        "body": "I printed parts and handled assembly and wiring. The work extended beyond making components: the assembled hardware needed to connect with calibration and control."
+        "heading": "Connect the complete system",
+        "body": "For the SO-101, I carried the work from printed parts through mechanical and electrical assembly to calibration, control, and training. The task demonstration brings those stages together."
       },
       {
-        "heading": "Use a platform to focus the engineering",
-        "body": "LeRobot supplied the original robot platform. I handled software setup, calibration, teleoperation, and training, focusing on integration rather than claiming the platform design as my own."
+        "heading": "Design around how a part will be used",
+        "body": "For the PCB kits, repeated removal for debugging shaped the mounting design. I added pockets for square nuts to the supplied CAD, giving the client a reusable fastening approach to evaluate in a print sample."
       },
       {
-        "heading": "Demonstrate the integrated result",
-        "body": "The video shows the trained arm performing tasks. It provides qualitative evidence of task execution; dataset size, repeatability, and success rate have not been documented in this case."
+        "heading": "Plan the job before production",
+        "body": "The watch-cleaner plan separates jobs by color, material, infill, and support requirements. Slicer records document estimated material use and machine time; they are planning estimates rather than measured production results."
       }
     ],
-    "scopeNote": "The SO-101 video is the current project evidence. This MakerLab case study is structured to grow as more examples and documentation are added.",
+    "scopeNote": "Selected photographs, CAD views, and production records document the prototypes and planning shown here. The SO-101 video demonstrates the integrated robot performing tasks; it is a qualitative demonstration rather than a measured task-success study.",
     "figures": [],
-    "role": "Build, software, training",
-    "description": "Took a LeRobot SO-101 arm from printed parts through assembly, calibration, software setup, and training to a task demonstration.",
+    "role": "Fabrication, CAD iteration, robot integration",
+    "description": "Built and trained an SO-101 robot arm, alongside MakerLab work spanning print trials, CAD revisions, prototype assembly, and production planning.",
     "overview": [
-      "At Illinois MakerLab, I built and configured a LeRobot SO-101 arm for a trained-task demonstration. I handled part printing, assembly, wiring, calibration, teleoperation, software setup, and training.",
-      "The challenge was to make the physical build and software work together. Using an existing robot platform focused the work on fabrication and integration; calibration, control, and training connected the assembled arm to task execution.",
-      "The supplied video demonstrates the trained arm performing tasks. This example shows my contribution across the build and software workflow, with the platform’s original design credited to LeRobot. It is the first example in a broader MakerLab case study that will expand as more work is added."
+      "At Illinois MakerLab, my work connects digital designs with the practical demands of fabrication and assembly. The challenge changes from project to project: making a robot respond, examining a failed print, adjusting a physical interface, or organizing a production job.",
+      "For the LeRobot SO-101, I handled printing, assembly, wiring, calibration, software setup, teleoperation, and training. The video shows the trained arm performing tasks.",
+      "The examples below also cover Functional Hand print trials and assembled grips, tissue-clamp prototypes, reusable PCB mounts, and watch-cleaner production planning. Each shows how I connect a practical requirement with a build decision and a documented outcome."
     ],
     "imageWidth": 1000,
-    "imageHeight": 1774
+    "imageHeight": 1774,
+    "examples": [
+      {
+        "id": "functional-hand",
+        "title": "Functional Hand",
+        "category": "Print trials & assembly",
+        "summary": "From failed prints to assembled grips.",
+        "paragraphs": [
+          "I printed and assembled grips from the existing Functional Hand design. The work progressed through unsuccessful builds and test pieces to assembled grips and a batch of parts.",
+          "The challenge extended beyond printing the shells: the grips also needed to come together with their flexible loops. The photographs show both stages, from a failed build on the print bed to the assembled result."
+        ],
+        "credit": "Device design: Functional Hand. The work shown here concerns printing and assembly.",
+        "figures": [
+          {
+            "file": "functional-hand-failed-print.webp",
+            "title": "A print trial that did not finish cleanly",
+            "caption": "Loose filament around the parts records an unsuccessful build in the print-trial sequence.",
+            "alt": "Failed blue Functional Hand print with loose filament on the build plate",
+            "width": 1200,
+            "height": 1600,
+            "bytes": 506060
+          },
+          {
+            "file": "functional-hand-assembled.webp",
+            "title": "Check the assembled result",
+            "caption": "Printed grips assembled with flexible loops show the complete assembly beyond the printed shell.",
+            "alt": "Five assembled blue and turquoise Functional Hand grips with flexible loops",
+            "width": 768,
+            "height": 1024,
+            "bytes": 55158
+          },
+          {
+            "file": "functional-hand-batch.webp",
+            "title": "Carry the work into a batch",
+            "caption": "Completed grips gathered on the MakerLab worktable show the move from individual trials to a batch of parts.",
+            "alt": "Batch of completed blue Functional Hand grips on a worktable",
+            "width": 1600,
+            "height": 1200,
+            "bytes": 228076
+          }
+        ]
+      },
+      {
+        "id": "tissue-clamp",
+        "title": "Tissue-clamp prototyping",
+        "category": "CAD revisions & physical prototypes",
+        "summary": "Work through the fit of several moving parts.",
+        "paragraphs": [
+          "I worked through CAD revisions and printed prototypes of a tissue clamp, bringing its frame, rods, sliding pieces, and fasteners into one small assembly. The challenge was to make several moving interfaces fit and remain practical to assemble.",
+          "The physical prototype made those interfaces tangible. Revision notes called for thicker slides, larger screws, stronger connections, and fewer bottom fasteners. The result shown is a printed prototype and a defined direction for further changes; its clamping performance remains unmeasured."
+        ],
+        "figures": [
+          {
+            "file": "tissue-clamp-cad.webp",
+            "title": "Make the interfaces visible",
+            "caption": "The CAD assembly shows how the frame, rods, sliders, and screws fit together.",
+            "alt": "CAD view of a circular tissue-clamp assembly with four rods and sliding clamps",
+            "width": 1600,
+            "height": 1200,
+            "bytes": 13846
+          },
+          {
+            "file": "tissue-clamp-prototype.webp",
+            "title": "Compare the model with a physical assembly",
+            "caption": "The printed prototype places the small interfaces in a real assembly. The ruler gives a sense of scale.",
+            "alt": "Black printed tissue-clamp prototype beside a ruler",
+            "width": 1024,
+            "height": 768,
+            "bytes": 42026
+          }
+        ]
+      },
+      {
+        "id": "kit-cad-revisions",
+        "title": "Reusable PCB mounts",
+        "category": "Client requirements & CAD adaptation",
+        "summary": "Design for the next time the board comes off.",
+        "paragraphs": [
+          "The client needed to remove circuit boards for debugging and reinstall them. I modified the supplied kit CAD to accommodate square nuts held in pockets, matching the existing 4-40 hardware and supporting repeated disassembly.",
+          "I shared the revised geometry and a CAD assembly with the nut in place. The client approved the direction. The next step was a printed sample to check fit, tolerances, and support needs around the overhang before committing to production."
+        ],
+        "credit": "Base kit designs supplied by the client. My contribution was the mounting adaptation, print preparation, and coordination of the proposed changes.",
+        "figures": [
+          {
+            "file": "kit-insert-before.webp",
+            "title": "Show the hardware in place",
+            "caption": "The revised CAD assembly includes a 4-40 square nut, showing how the supplied hardware sits in the new pocket.",
+            "alt": "Revised CAD mounting feature with a square nut assembled in its pocket",
+            "width": 508,
+            "height": 422,
+            "bytes": 4340
+          },
+          {
+            "file": "kit-insert-after.webp",
+            "title": "Inspect the pocket before printing",
+            "caption": "The same revised feature without the nut. A print sample was planned to check the pocket fit and overhang.",
+            "alt": "Revised CAD mounting feature showing the empty square-nut pocket",
+            "width": 348,
+            "height": 350,
+            "bytes": 3826
+          }
+        ]
+      },
+      {
+        "id": "production-planning",
+        "title": "Watch-cleaner production planning",
+        "category": "Print preparation & job planning",
+        "summary": "Turn a parts list into jobs a printer can run.",
+        "paragraphs": [
+          "I translated the supplied UberKiwi watch-cleaner part library into 13 print configurations. Grouping parts by color, PLA or PETG, infill, and support requirements turned a long parts list into defined jobs.",
+          "Different parts called for different print settings, so a single setup would not suit the whole machine. The plan and slicer estimates provided a basis for material and machine-time planning before production; the figures shown are estimates."
+        ],
+        "credit": "UberKiwi machine design and manual: Frank Simons. The contribution shown here is print preparation and production planning.",
+        "facts": [
+          {
+            "value": "13",
+            "label": "Print configurations in the watch-cleaner plan"
+          },
+          {
+            "value": "PLA + PETG",
+            "label": "Materials separated into appropriate jobs"
+          }
+        ],
+        "figures": [
+          {
+            "file": "watch-cleaner-slicing.webp",
+            "title": "Plan material and machine time",
+            "caption": "A watch-cleaner slicing record estimates material use and print duration before the job runs.",
+            "alt": "Watch-cleaner slicing result showing estimated filament use and print duration",
+            "width": 597,
+            "height": 471,
+            "bytes": 15878
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "tape-spring-hinge",
