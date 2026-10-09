@@ -12,7 +12,7 @@ let count = 0;
 for (const f of pages) {
   const html = await readFile(f,'utf8');
   if ((html.match(/<h1(?:\s|>)/g)||[]).length !== 1) errors.push(`${f}: expected one h1`);
-  if (/C:[\\/]|Editorial source and integration|Gexcon|hello@bayufebriansyah/.test(html)) errors.push(`${f}: private or unfinished content leaked`);
+  if (/C:[\\/]|Editorial source and integration|Gexcon|Aering|aering-flight-data|hello@bayufebriansyah/.test(html)) errors.push(`${f}: private or excluded content leaked`);
   for (const match of html.matchAll(/(?:href|src|poster)="([^"]+)"/g)) {
     let value = match[1].replace(/&amp;/g,'&');
     if (/^(mailto:|https?:|data:)/.test(value)) continue;
