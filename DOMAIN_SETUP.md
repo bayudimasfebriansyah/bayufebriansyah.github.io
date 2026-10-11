@@ -1,5 +1,7 @@
 # Connect bayufebriansyah.com
 
+For Cloudflare-specific setup, including the existing GitHub host and optional Cloudflare Pages hosting, use [CLOUDFLARE_SETUP.md](CLOUDFLARE_SETUP.md).
+
 The site can run on its free GitHub Pages address before a domain is purchased. Registration and ownership must be confirmed before changing the Pages custom-domain field or publishing DNS records.
 
 ## Register and protect the domain

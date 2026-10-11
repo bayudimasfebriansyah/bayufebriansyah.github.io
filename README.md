@@ -47,6 +47,8 @@ The default address for this repository is:
 
 The workflow reads the site's origin and base path from GitHub Pages, so internal links also work when a verified custom domain is added. A custom domain requires a new deployment after the Pages setting changes. See [DOMAIN_SETUP.md](DOMAIN_SETUP.md).
 
+For Cloudflare Pages, run `node build-cloudflare.mjs` to build and check the site at the root of `https://bayufebriansyah.com`. Publish `dist/`. [CLOUDFLARE_SETUP.md](CLOUDFLARE_SETUP.md) contains the Git integration settings and the alternative DNS setup for retaining GitHub hosting.
+
 For a manual root-domain build, set `BASE_PATH` to an empty string and `SITE_ORIGIN` to the domain before running the build. To preview that build, stop the current preview server and restart it. The server reads the base path when starting.
 
 ## Accessibility and performance
