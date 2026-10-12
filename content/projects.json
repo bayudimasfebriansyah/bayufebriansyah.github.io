@@ -68,10 +68,10 @@
       {
         "id": "tissue-clamp",
         "title": "Tissue-clamp prototyping",
-        "category": "CAD revisions & physical prototypes",
+        "category": "CAD design & physical prototypes",
         "summary": "Revising a small assembly with several moving interfaces.",
         "paragraphs": [
-          "I worked on CAD revisions and printed prototypes of a tissue clamp. Its frame, rods, sliders, and screws had to fit together in a compact assembly, so the connections mattered as much as the overall shape.",
+          "I designed a tissue clamp in CAD and printed prototypes. Its frame, rods, sliders, and screws had to fit together in a compact assembly, so the connections mattered as much as the overall shape.",
           "The prototype and revision notes helped define the next changes: thicker slides, larger screws, thicker connections, and fewer fasteners underneath. The photos show the CAD and a physical prototype. Clamping performance has not yet been measured."
         ],
         "figures": [
