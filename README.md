@@ -18,11 +18,11 @@ Open the URL printed by the server. It includes the repository subpath. After ed
 
 | File | Purpose |
 | --- | --- |
-| `content/projects.json` | Card descriptions, project overviews, roles, methods, evidence, captions, report metadata |
+| `content/projects.json` | Card descriptions, project overviews, narrative sections and their image references, roles, captions, report metadata |
 | `site.config.json` | Contact links and the default local build URL |
 | `scripts/build.mjs` | Home page and case-study templates |
 | `public/assets/styles.css` | Responsive visual design |
-| `public/assets/site.js` | Project filtering and keyboard-accessible image enlargement |
+| `public/assets/site.js` | Keyboard-accessible image enlargement |
 | `public/assets/projects/` | Optimized report figures and selected MakerLab project photographs and CAD views |
 | `public/assets/video/so101-demo.mp4` | Compressed, silent, browser-compatible copy of the supplied SO-101 demonstration |
 | `public/reports/` | Seven original technical PDFs, unchanged |
@@ -53,6 +53,6 @@ For a manual root-domain build, set `BASE_PATH` to an empty string and `SITE_ORI
 
 ## Accessibility and performance
 
-All project content and report links are available without JavaScript. Filters only appear when their script runs. Image links open the original image without JavaScript and use a modal dialog when supported, with Escape dismissal and focus restoration. Images have alternative text, the layout supports narrow screens, focus indicators are visible, and motion respects the reduced-motion preference. Video uses a poster and native controls with no autoplay or initial video download.
+All project content and report links are available without JavaScript. All eight entries appear in a single All Works collection, with Illinois MakerLab first. Image links open the original image without JavaScript and use a modal dialog when supported, with Escape dismissal and focus restoration. Images have alternative text, the layout supports narrow screens, focus indicators are visible, and motion respects the reduced-motion preference. Video uses a poster and native controls with no autoplay or initial video download.
 
 Public project images are optimized WebP files. The 21-second demonstration is approximately 2 MB. Reports download only when requested; their original bytes are preserved. Source PDFs and their figures retain their authors' attribution. No blanket open-source license is applied to third-party report content.

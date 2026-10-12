@@ -1,23 +1,3 @@
-const filterBar = document.querySelector('[data-filters]');
-if (filterBar) {
-  const cards = [...document.querySelectorAll('.project-card')];
-  const buttons = [...filterBar.querySelectorAll('[data-filter]')];
-  const count = filterBar.querySelector('[role="status"]');
-  filterBar.hidden = false;
-  filterBar.addEventListener('click',event => {
-    const button = event.target.closest('[data-filter]');
-    if (!button) return;
-    const selected = button.dataset.filter;
-    buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-    let visible = 0;
-    cards.forEach(card=> {
-      card.hidden = selected !== 'all' && !card.dataset.category.split(' ').includes(selected);
-      if (!card.hidden) visible++;
-    });
-    count.textContent = `${visible} ${visible===1?'project':'projects'}`;
-  });
-}
-
 const dialog = document.querySelector('.image-dialog');
 if (dialog && typeof dialog.showModal === 'function') {
   let opener;

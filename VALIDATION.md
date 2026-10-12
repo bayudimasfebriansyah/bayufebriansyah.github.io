@@ -1,5 +1,18 @@
 # Validation record
 
+## Editorial revision — October 12, 2026 (local draft)
+
+- Rewrote all eight card descriptions (16–21 words) and opening overviews (87–103 words), using specific contributions, choices, and results.
+- Featured Illinois MakerLab in the existing home-page hero and placed it first in one All Works collection. Removed category-filter controls and their JavaScript.
+- Replaced the numbered approach cards with descriptive narrative sections. Removed figure counters and MakerLab section numbers; retained card index badges as part of the existing visual design.
+- Placed photographs, CAD, and results alongside the corresponding narrative. Added eight figures extracted from the supplied reports and used the existing thick-origami prototype image in its story.
+- Preserved original reports and the robot video. Seven report SHA-256 hashes and all 225 local references pass.
+- Checked the home page and technical stories at desktop size, and the home, tape-spring, and MakerLab pages at 390-pixel phone width. No horizontal overflow; all five MakerLab anchors remain visible. Verified image enlargement, Escape dismissal, and focus restoration.
+- MakerLab management examples are limited to supported requirements, client communication and approval, CAD changes, and material/machine-time planning. Additional deadline, material-purchasing, and delivery claims await the user's clarification; Gmail is disconnected.
+- The ordering uses the report months for now. Relative completion order within the April origami pair and March I-beam/boom pair awaits the user's confirmation. This draft has not replaced the live website.
+
+## Previous published version
+
 Checked October 9, 2026 against the supplied reports, resume, project-role clarifications, video, and MakerLab project folder.
 
 - Built seven technical case studies, the MakerLab page, the home page, and a 404 page with Node.js 24.
