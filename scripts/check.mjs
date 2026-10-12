@@ -15,7 +15,7 @@ for (const f of pages) {
   if (/C:[\\/]|Editorial source and integration|Gexcon|Aering|aering-flight-data|hello@bayufebriansyah/.test(html)) errors.push(`${f}: private or excluded content leaked`);
   for (const match of html.matchAll(/(?:href|src|poster)="([^"]+)"/g)) {
     let value = match[1].replace(/&amp;/g,'&');
-    if (/^(mailto:|https?:|data:)/.test(value)) continue;
+    if (/^(mailto:|tel:|https?:|data:)/.test(value)) continue;
     let u = new URL(value,origin+basePath+'/'+path.relative(root,f).replaceAll('\\','/'));
     if (basePath && !u.pathname.startsWith(basePath+'/')) {errors.push(`${f}: link escapes site base: ${value}`);continue;}
     let target = path.join(root,decodeURIComponent(u.pathname.slice(basePath.length)));
