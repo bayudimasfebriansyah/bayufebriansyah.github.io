@@ -21,6 +21,8 @@ Open the URL printed by the server. The default build uses the root path, matchi
 | `content/projects.json` | Card descriptions, project overviews, narrative sections and their image references, roles, captions, report metadata |
 | `site.config.json` | Contact links and the default local build URL |
 | `scripts/build.mjs` | Home page and case-study templates |
+| `scripts/portfolio-preview.svg` | Editable source for the BF logo sharing card |
+| `public/assets/portfolio-preview.png` | 1200 × 627 logo card used by every page for Open Graph and Twitter/X previews |
 | `public/assets/styles.css` | Responsive visual design |
 | `public/assets/site.js` | Keyboard-accessible image enlargement |
 | `public/assets/projects/` | Optimized report figures and selected MakerLab project photographs and CAD views |

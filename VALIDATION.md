@@ -1,5 +1,12 @@
 # Validation record
 
+## Logo sharing preview — October 12, 2026
+
+- Created a 1200 × 627 PNG sharing card from the existing BF monogram, with the portfolio name and domain. Visually checked the rendered card; file size is 42,531 bytes.
+- Set a single absolute logo-image URL in the shared page template, including Open Graph image type, dimensions and alternative text, plus Twitter/X image metadata. All 10 generated HTML pages use the card.
+- Compared every generated page body with the published site; visible content is identical. All 225 local references and seven original report hashes pass.
+- Social platforms may cache earlier previews. LinkedIn Post Inspector can refresh metadata for new shares; existing posts may retain their original preview.
+
 ## Custom-domain launch — October 12, 2026
 
 - Confirmed the purchased domain in Cloudflare Registrar and verified ownership in the GitHub account's Pages settings using its issued TXT record. Retained that record.
