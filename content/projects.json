@@ -47,13 +47,12 @@
             "bytes": 506060
           },
           {
-            "file": "functional-hand-assembled.webp",
+            "file": "functional-hand-assembled-ccw.svg",
             "title": "Assembled grips",
             "caption": "Printed bodies fitted with flexible loops.",
             "alt": "Five assembled blue and turquoise Functional Hand grips with flexible loops",
-            "width": 768,
-            "height": 1024,
-            "bytes": 55158
+            "width": 1024,
+            "height": 768
           },
           {
             "file": "functional-hand-batch.webp",
@@ -609,12 +608,12 @@
         "wide": false
       },
       {
-        "file": "bistable-boom-fabrication.webp",
+        "file": "bistable-boom-fabrication-ccw.svg",
         "title": "Fabrication on the mold",
         "caption": "The composite layup vacuum-bagged on its fabrication mold.",
         "alt": "Vacuum-bagged composite layup on the boom fabrication mold.",
-        "width": 1200,
-        "height": 1600,
+        "width": 1600,
+        "height": 1200,
         "source": "Project report, PDF page 8.",
         "wide": false
       }
@@ -635,7 +634,7 @@
           "I used MATLAB to model a three-layer composite, then fabricated it on the available mold. Layer arrangement matters because it determines the shapes the thin structure can hold. Building a baseline gave me a real part to compare with the prediction."
         ],
         "figures": [
-          "bistable-boom-fabrication.webp"
+          "bistable-boom-fabrication-ccw.svg"
         ]
       },
       {
