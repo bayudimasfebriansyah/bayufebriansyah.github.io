@@ -2,11 +2,11 @@
 
 For Cloudflare-specific setup, including the existing GitHub host and optional Cloudflare Pages hosting, use [CLOUDFLARE_SETUP.md](CLOUDFLARE_SETUP.md).
 
-The site can run on its free GitHub Pages address before a domain is purchased. Registration and ownership must be confirmed before changing the Pages custom-domain field or publishing DNS records.
+The domain was purchased through Cloudflare and verified in GitHub on October 12, 2026. The repository's custom domain is `bayufebriansyah.com`, with **Enforce HTTPS** enabled. Cloudflare DNS holds the four GitHub Pages A records, the `www` CNAME, and the GitHub ownership-verification TXT record. Keep that TXT record in place. HTTPS and the path-preserving `www` redirect have been verified publicly.
 
-## Register and protect the domain
+## Maintain the domain
 
-Search for `bayufebriansyah.com` at your preferred registrar, such as [Cloudflare Registrar](https://domains.cloudflare.com/). A registry lookup on October 9, 2026 returned no registration, but checkout is the authoritative availability and price check. Review the first-year and renewal cost before paying. Enable WHOIS privacy/redaction where available and auto-renew, and confirm the registrant email.
+Manage renewal and registration details in Cloudflare Registrar. The setup below documents the existing GitHub Pages configuration so it can be maintained later.
 
 ## Verify ownership in GitHub
 

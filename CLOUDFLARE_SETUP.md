@@ -1,6 +1,6 @@
 # Launch bayufebriansyah.com with Cloudflare
 
-The portfolio is prepared for `https://bayufebriansyah.com`. Buy the domain and complete Cloudflare's registration and email-verification steps before connecting it. The current GitHub Pages site can continue serving while the domain is prepared.
+Cloudflare manages the purchased `bayufebriansyah.com` domain and its DNS. GitHub Pages hosts the portfolio, with automatic deployment from `main`. Option A below documents the configuration selected on October 12, 2026; Option B is an alternative for a future hosting migration.
 
 ## Option A: Cloudflare domain with the existing GitHub hosting
 

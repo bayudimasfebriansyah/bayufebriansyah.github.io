@@ -1,6 +1,14 @@
 # Validation record
 
-## Editorial revision — October 12, 2026 (local draft)
+## Custom-domain launch — October 12, 2026
+
+- Confirmed the purchased domain in Cloudflare Registrar and verified ownership in the GitHub account's Pages settings using its issued TXT record. Retained that record.
+- Set the repository custom domain to `bayufebriansyah.com`, then added the four GitHub Pages A records and the `www` CNAME in Cloudflare, all DNS only. Both Cloudflare and Google public DNS resolve the records correctly.
+- Deployment `38299874187` succeeded for commit `fb2480e`. Before HTTPS was ready, checked 53 live pages and files on the new domain, including all eight projects, original report hashes, resume, video, and project images. The three excluded resources returned 404.
+- GitHub issued a usable certificate. Enabled **Enforce HTTPS** and verified a valid HTTPS 200 response at the root domain, HTTP-to-HTTPS redirection, and HTTPS `www` redirection preserving a project path and query string.
+- A final deployment after enabling HTTPS updates the generated canonical, sitemap, and social-sharing URLs from HTTP to HTTPS. The site retains an empty base path for the custom domain.
+
+## Editorial revision — October 12, 2026
 
 - Rewrote all eight card descriptions (16–21 words) and opening overviews (87–103 words), using specific contributions, choices, and results.
 - Featured Illinois MakerLab in the existing home-page hero and placed it first in one All Works collection. Removed category-filter controls and their JavaScript.
@@ -9,7 +17,8 @@
 - Preserved original reports and the robot video. Seven report SHA-256 hashes and all 225 local references pass.
 - Checked the home page and technical stories at desktop size, and the home, tape-spring, and MakerLab pages at 390-pixel phone width. No horizontal overflow; all five MakerLab anchors remain visible. Verified image enlargement, Escape dismissal, and focus restoration.
 - MakerLab management examples are limited to supported requirements, client communication and approval, CAD changes, and material/machine-time planning. Additional deadline, material-purchasing, and delivery claims await the user's clarification; Gmail is disconnected.
-- The ordering uses the report months for now. Relative completion order within the April origami pair and March I-beam/boom pair awaits the user's confirmation. This draft has not replaced the live website.
+- The ordering uses the report months for now. Relative completion order within the April origami pair and March I-beam/boom pair awaits the user's confirmation. The user authorized publication with the current content.
+- Published the revised source in commit `9bbb4f3`, then changed the default origin to `https://bayufebriansyah.com` with an empty base path in commit `fb2480e`. The domain-root build passes all 225 local references and the seven original report hashes.
 
 ## Previous published version
 

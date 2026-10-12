@@ -12,7 +12,7 @@ Install Node.js 22 or newer, then run:
 npm run dev
 ```
 
-Open the URL printed by the server. It includes the repository subpath. After editing source, rebuild with `npm run build` and refresh the browser. `npm run check` verifies local links, fragments, content boundaries, and original report hashes.
+Open the URL printed by the server. The default build uses the root path, matching the custom domain. After editing source, rebuild with `npm run build` and refresh the browser. `npm run check` verifies local links, fragments, content boundaries, and original report hashes.
 
 ## Edit the portfolio
 
@@ -35,15 +35,25 @@ Keep opening overviews under 160 words. Match claims to the supplied evidence, c
 
 Repository: [bayudimasfebriansyah/bayufebriansyah.github.io](https://github.com/bayudimasfebriansyah/bayufebriansyah.github.io).
 
-On Windows, after the source is committed locally, run `powershell -ExecutionPolicy Bypass -File .\Publish-Portfolio.ps1`. This applies the policy only to that process. Git Credential Manager opens the normal GitHub sign-in if needed; complete it on GitHub. The script pushes `main`, configures Pages for Actions, and starts a deployment. It never asks you to paste a token into source code. If your account prevents automatic Pages setup, use the manual steps below.
+The repository already uses GitHub Actions to publish the portfolio. Cloudflare manages the domain and DNS; GitHub Pages hosts the website.
 
 1. In repository **Settings → Pages**, choose **GitHub Actions** as the source.
 2. Push changes to `main`. The deployment workflow builds, checks, and publishes `dist/`.
 3. Review the workflow under **Actions** and open the deployment URL when it succeeds.
 
-The default address for this repository is:
+The custom address is:
 
-[bayudimasfebriansyah.github.io/bayufebriansyah.github.io/](https://bayudimasfebriansyah.github.io/bayufebriansyah.github.io/)
+[bayufebriansyah.com](https://bayufebriansyah.com/)
+
+To update the project text, edit `content/projects.json`, run `npm run build` and `npm run check`, then commit and push to `main`:
+
+```sh
+git add content/projects.json
+git commit -m "Update portfolio content"
+git push origin main
+```
+
+Stage any other source files you changed too. Each push starts a new deployment. You can also edit a text file directly on GitHub and commit it to `main`. Check the Actions run before sharing a change. Do not edit `dist/`; the workflow regenerates it from the source.
 
 The workflow reads the site's origin and base path from GitHub Pages, so internal links also work when a verified custom domain is added. A custom domain requires a new deployment after the Pages setting changes. See [DOMAIN_SETUP.md](DOMAIN_SETUP.md).
 
