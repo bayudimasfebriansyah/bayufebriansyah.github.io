@@ -93,7 +93,7 @@ const out = path.join(root, 'dist');
 await rm(out, {recursive:true, force:true});
 await mkdir(out, {recursive:true});
 await cp(path.join(root, 'public'), out, {recursive:true});
-await writeFile(path.join(out, 'index.html'), page({title:'Bayu Febriansyah — Engineering Portfolio',description:'Bayu Febriansyah’s aerospace engineering portfolio: Illinois MakerLab, composite structures, folding mechanisms, robotics, testing, and systems design.',pathname:'/',body:homeBody,home:true}));
+await writeFile(path.join(out, 'index.html'), page({title:'Bayu Febriansyah Engineering Portfolio',description:'Bayu Febriansyah’s aerospace engineering portfolio: Illinois MakerLab, composite structures, folding mechanisms, robotics, testing, and systems design.',pathname:'/',body:homeBody,home:true}));
 for (const [i,p] of projects.entries()) {
   const dest = path.join(out, 'projects', p.slug);
   await mkdir(dest, {recursive:true});
