@@ -17,7 +17,7 @@
     "scopeNote": "The photographs, CAD views, print records, and robot video show the work described above. Print times and material quantities shown in slicer records are estimates. The robot video is a task demonstration; task success was not measured across repeated trials.",
     "figures": [],
     "role": "3D Printing Engineer",
-    "description": "Build and train robot arms, revise client CAD, and plan print jobs—from clarifying requirements to preparing parts for assembly.",
+    "description": "Build and train robot arms, revise client CAD, and plan print jobs, from clarifying requirements to preparing parts for assembly.",
     "overview": [
       "At Illinois MakerLab, I work on both the parts and the planning behind them. I clarify what clients need, communicate proposed changes, and prepare designs and print jobs around the materials, hardware, and assembly involved.",
       "For a reusable circuit-board mount, that meant revising supplied CAD and getting the client’s approval before a planned sample print. For a watch cleaner, I organized the part library into 13 print configurations with material and machine-time estimates.",
