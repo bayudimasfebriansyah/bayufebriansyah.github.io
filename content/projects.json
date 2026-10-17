@@ -47,22 +47,12 @@
             "height": 768
           },
           {
-            "file": "kit-insert-before.webp",
-            "title": "The nut in place",
-            "caption": "The CAD assembly shows how the square nut sits in its fitted pocket.",
-            "alt": "Revised CAD mounting feature with a square nut assembled in its pocket",
-            "width": 508,
-            "height": 422,
-            "bytes": 4340
-          },
-          {
-            "file": "kit-insert-after.webp",
-            "title": "The revised pocket",
-            "caption": "The mounting pocket without the nut, showing the geometry used for the screw-fastened connection.",
-            "alt": "Revised CAD mounting feature showing the empty square-nut pocket",
-            "width": 348,
-            "height": 350,
-            "bytes": 3826
+            "file": "ieee-pels-printed-base-side.webp",
+            "title": "Side slots in the mounting posts",
+            "caption": "A side view of the printed base shows the square nuts seated in the mounting posts.",
+            "alt": "Side view of the white printed IEEE PELS lab-kit base with square nuts seated in the mounting posts",
+            "width": 1024,
+            "height": 768
           }
         ],
         "link": {
