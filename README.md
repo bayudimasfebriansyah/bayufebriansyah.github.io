@@ -1,6 +1,6 @@
 # Bayu Febriansyah · Engineering portfolio
 
-A static portfolio built around engineering decisions, personal contributions, and evidence. Seven technical projects and one Illinois MakerLab case study cover composites, deployable structures, impact simulation, robotics, fabrication, and systems architecture.
+A static portfolio built around engineering decisions, personal contributions, and evidence. Nine standalone projects cover structures, materials, manufacturing, mechanical design, and systems architecture. The IEEE PELS University Lab Kit and Tissue Clamp Assembly lead the collection, followed by seven technical projects.
 
 The site is plain HTML and CSS with a small progressive-enhancement script. A dependency-free Node build produces the pages from editable JSON. There is no database, subscription, external font request, or client-side framework.
 
@@ -26,12 +26,11 @@ Open the URL printed by the server. The default build uses the root path, matchi
 | `public/assets/styles.css` | Responsive visual design |
 | `public/assets/site.js` | Keyboard-accessible image enlargement |
 | `public/assets/projects/` | Optimized report figures and selected MakerLab project photographs and CAD views |
-| `public/assets/video/so101-demo.mp4` | Compressed, silent, browser-compatible copy of the supplied SO-101 demonstration |
 | `public/reports/` | Seven original technical PDFs, unchanged |
 | `public/resume/` | Supplied resume PDF |
 | `content/report-manifest.json` | SHA-256 hashes and original report filenames |
 
-Keep opening overviews under 160 words. Match claims to the supplied evidence, credit collaborators, and distinguish simulation, physical testing, proposed systems, and production estimates. Add new MakerLab examples within the `examples` array in its existing case study. Employment examples outside MakerLab are omitted. Customer documents, invoices, shipping details, original third-party CAD libraries, and the watch-cleaner manual stay outside the public assets.
+Keep opening overviews under 160 words. Match claims to the supplied evidence, credit collaborators, and distinguish simulation, physical testing, proposed systems, and production estimates. Add new projects as standalone entries in `content/projects.json`, with narrative sections and supporting figures. The `featured` flag selects the home-page image and story link. Employment examples outside MakerLab are omitted. Customer documents, invoices, shipping details, original third-party CAD libraries, and the watch-cleaner manual stay outside the public assets.
 
 ## Publish with GitHub Pages
 
@@ -65,6 +64,6 @@ For a manual root-domain build, set `BASE_PATH` to an empty string and `SITE_ORI
 
 ## Accessibility and performance
 
-All project content and report links are available without JavaScript. All eight entries appear in a single Selected Works collection, with Illinois MakerLab first. Image links open the original image without JavaScript and use a modal dialog when supported, with Escape dismissal and focus restoration. Images have alternative text, the layout supports narrow screens, focus indicators are visible, and motion respects the reduced-motion preference. Video uses a poster and native controls with no autoplay or initial video download.
+All project content and report links are available without JavaScript. All nine entries appear in a single Selected Works collection, with IEEE PELS first and the tissue-clamp assembly second. Image links open the original image without JavaScript and use a modal dialog when supported, with Escape dismissal and focus restoration. Images have alternative text, the layout supports narrow screens, focus indicators are visible, and motion respects the reduced-motion preference.
 
-Public project images are optimized WebP files. The 21-second demonstration is approximately 2 MB. Reports download only when requested; their original bytes are preserved. Source PDFs and their figures retain their authors' attribution. No blanket open-source license is applied to third-party report content.
+Public project images are optimized WebP files. Reports download only when requested; their original bytes are preserved. Source PDFs and their figures retain their authors' attribution. No blanket open-source license is applied to third-party report content.

@@ -1,5 +1,12 @@
 # Validation record
 
+## Standalone MakerLab projects — 16 October 2026
+
+- Replaced the Illinois MakerLab umbrella entry with two standalone cases: IEEE PELS University Lab Kit and Tissue Clamp Assembly. These lead Selected Works, followed by the seven existing technical projects. The umbrella page is no longer generated.
+- Retained the current IEEE PELS photographs and the tissue-clamp CAD and prototype images. Preserved the supplied-kit attribution, the distinction between printed-part sets and complete electronics kits, and the tissue clamp's unmeasured clamping performance.
+- Updated the home introduction to structures, materials, and manufacturing. The featured tissue-clamp CAD image now links directly to its standalone case. MakerLab employment context remains in About.
+- Built 11 pages, checked all 200 local references, and verified the seven original report hashes. Reviewed both new pages and the project grid at desktop width; checked all three at a 390-pixel viewport with no horizontal overflow. Verified image enlargement, Escape dismissal, and focus restoration.
+
 ## Logo sharing preview — October 12, 2026
 
 - Created a 1200 × 627 PNG sharing card from the existing BF monogram, with the portfolio name and domain. Visually checked the rendered card; file size is 42,531 bytes.

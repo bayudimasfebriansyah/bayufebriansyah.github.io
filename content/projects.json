@@ -1,178 +1,147 @@
 [
   {
-    "slug": "illinois-makerlab",
-    "title": "Illinois MakerLab",
-    "category": "Fabrication & robotics",
-    "year": "May 2026–present",
-    "setting": "UIUC · MakerLab",
-    "tools": "CAD, 3D printing, client coordination, production planning, LeRobot SO-101",
-    "evidence": "Assembled parts · CAD designs · Printed-part production · Robot demonstration",
-    "image": "so101-robot.webp",
-    "imageAlt": "Two red SO-101 robot arms on the MakerLab worktable",
-    "imagePosition": "center 72%",
-    "takeaway": "I build robot systems and help clients take mechanical designs from CAD through printing, production, and delivery.",
-    "overviewHeading": "Client projects and hands-on engineering.",
-    "video": true,
-    "makerlab": true,
-    "scopeNote": "The photographs, CAD views, print records, and robot video show the work described above. Print times and material quantities shown in slicer records are estimates. The robot video is a task demonstration; task success was not measured across repeated trials.",
-    "figures": [],
-    "role": "3D Printing Engineer",
-    "description": "Build and train robot arms, adapt client CAD, and manage printed-part production, from clarifying requirements through manufacturing and shipping.",
+    "slug": "ieee-pels-university-lab-kit",
+    "title": "IEEE PELS University Lab Kit",
+    "category": "Mechanical design & manufacturing",
+    "year": "2026",
+    "setting": "Illinois MakerLab",
+    "tools": "CAD, 3D printing, client coordination, manufacturing and shipping",
+    "evidence": "Printed bases · 200+ printed-part sets manufactured and shipped",
+    "image": "ieee-pels-printed-base.webp",
+    "imageAlt": "White printed IEEE PELS lab-kit base with square nuts installed in slots in the mounting posts",
+    "imageWidth": 1024,
+    "imageHeight": 768,
+    "role": "Mechanical adaptations, production & delivery",
+    "description": "Adapted lab-kit bases for printing without supports and managed manufacturing and shipping of more than 200 complete printed-part sets.",
+    "takeaway": "I adapted the lab kit’s printed bases and managed manufacturing and shipping of more than 200 complete printed-part sets.",
+    "overviewHeading": "From a mounting detail to a production run.",
     "overview": [
-      "At Illinois MakerLab, I work on both the parts and the planning behind them. I clarify what clients need, communicate proposed changes, and prepare designs and print jobs around the materials, hardware, and assembly involved.",
-      "For the IEEE PELS University Lab Kit, I adapted printed bases and managed manufacturing and shipping of more than 200 complete printed-part sets. For a watch cleaner, I organized the part library into 13 print configurations with material and machine-time estimates.",
-      "Alongside these projects, I built and trained LeRobot SO-101 arms. The examples below show my work in CAD, printing, assembly, software, and client coordination."
+      "The IEEE Power Electronics Society’s University Lab Kit gives students a platform for hands-on power-electronics experiments. At Illinois MakerLab, I adapted the supplied base designs for 3D printing and worked with the client on the mounting arrangement.",
+      "I designed fitted slots for square nuts so circuit boards could be screwed in, removed for debugging, and reinstalled without heat-set inserts or adhesive. I also adapted the bases to print without supports.",
+      "I then scaled production through MakerLab and managed manufacturing and shipping of more than 200 complete sets of printed parts. The electronics and other kit components were handled separately."
     ],
-    "imageWidth": 1000,
-    "imageHeight": 1774,
-    "examples": [
+    "facts": [
       {
-        "id": "kit-cad-revisions",
-        "title": "IEEE PELS University Lab Kit",
-        "category": "Mechanical design, production & delivery",
-        "summary": "Adapted the printed bases and managed manufacturing and shipping of 200+ printed-part sets.",
+        "value": "200+",
+        "label": "Complete printed-part sets manufactured and shipped"
+      },
+      {
+        "value": "Square-nut slots",
+        "label": "Screw-fastened PCB mounting without heat-set inserts or adhesive"
+      }
+    ],
+    "figures": [
+      {
+        "file": "ieee-pels-printed-base.webp",
+        "title": "The printed base with nuts installed",
+        "caption": "Square nuts sit in fitted slots in the printed mounting posts, ready for screw-fastened circuit boards.",
+        "alt": "White printed IEEE PELS lab-kit base with square nuts installed in slots in the mounting posts",
+        "width": 1024,
+        "height": 768
+      },
+      {
+        "file": "ieee-pels-printed-base-side.webp",
+        "title": "Side slots in the mounting posts",
+        "caption": "A side view of the printed base shows the square nuts seated in the mounting posts.",
+        "alt": "Side view of the white printed IEEE PELS lab-kit base with square nuts seated in the mounting posts",
+        "width": 1024,
+        "height": 768
+      }
+    ],
+    "story": [
+      {
+        "heading": "A removable mount with fewer assembly steps",
         "paragraphs": [
-          "The IEEE Power Electronics Society’s University Lab Kit gives students a platform for hands-on power-electronics experiments. At Illinois MakerLab, I adapted the supplied base designs for 3D printing and worked with the client on the mounting arrangement.",
-          "I designed fitted slots for square nuts so circuit boards could be secured with screws, removed for debugging, and reinstalled without heat-set inserts or adhesive. I also adapted the design for printing without supports, avoiding a support-removal step during production.",
-          "I then scaled production through MakerLab and organized and managed manufacturing and shipping of more than 200 complete sets of printed parts. My scope covered the mechanical adaptations and printed components; the electronics and other kit components were handled separately."
+          "The boards needed a screw-fastened mounting arrangement. I used fitted square-nut slots in the printed posts so the connection could be taken apart and reassembled, without installing heat-set inserts or using adhesive.",
+          "Printing without supports also removed a support-cleanup step from the production workflow. The photographs show the current printed base with square nuts seated in its mounting posts."
         ],
-        "credit": "Original kit design: IEEE PELS University Lab Kit team. The project website acknowledges my contribution and Illinois MakerLab’s support.",
         "figures": [
-          {
-            "file": "ieee-pels-printed-base.webp",
-            "title": "The printed base with nuts installed",
-            "caption": "Square nuts sit in fitted slots in the printed mounting posts, ready for screw-fastened circuit boards.",
-            "alt": "White printed IEEE PELS lab-kit base with square nuts installed in slots in the mounting posts",
-            "width": 1024,
-            "height": 768
-          },
-          {
-            "file": "ieee-pels-printed-base-side.webp",
-            "title": "Side slots in the mounting posts",
-            "caption": "A side view of the printed base shows the square nuts seated in the mounting posts.",
-            "alt": "Side view of the white printed IEEE PELS lab-kit base with square nuts seated in the mounting posts",
-            "width": 1024,
-            "height": 768
-          }
-        ],
-        "link": {
-          "url": "https://pwreleclabkit.web.illinois.edu/",
-          "label": "View the IEEE PELS project"
-        },
-        "facts": [
-          {
-            "value": "200+",
-            "label": "Complete printed-part sets manufactured and shipped"
-          },
-          {
-            "value": "Square-nut slots",
-            "label": "Screw-fastened PCB mounting without heat-set inserts or adhesive"
-          }
+          "ieee-pels-printed-base.webp"
         ]
       },
       {
-        "id": "functional-hand",
-        "title": "Functional Hand",
-        "category": "Print trials & assembly",
-        "summary": "Printing and assembling an existing assistive grip design.",
+        "heading": "Following the parts through to delivery",
         "paragraphs": [
-          "I printed and assembled grips from the Functional Hand design, which uses a printed body and flexible loops to hold objects. My work covered the physical parts and assembly; the device design belongs to Functional Hand.",
-          "The work included failed prints and test pieces as well as assembled grips. The photos show that progression and the batch of completed assemblies."
-        ],
-        "credit": "Device design: Functional Hand. The work shown here concerns printing and assembly.",
-        "figures": [
-          {
-            "file": "functional-hand-failed-print.webp",
-            "title": "An unsuccessful print",
-            "caption": "Loose filament and incomplete parts on the build plate during the print trials.",
-            "alt": "Failed blue Functional Hand print with loose filament on the build plate",
-            "width": 1200,
-            "height": 1600,
-            "bytes": 506060
-          },
-          {
-            "file": "functional-hand-assembled-ccw.svg",
-            "title": "Assembled grips",
-            "caption": "Printed bodies fitted with flexible loops.",
-            "alt": "Five assembled blue and turquoise Functional Hand grips with flexible loops",
-            "width": 1024,
-            "height": 768
-          },
-          {
-            "file": "functional-hand-batch.webp",
-            "title": "The completed assemblies",
-            "caption": "A batch of assembled Functional Hand grips on the MakerLab worktable.",
-            "alt": "Batch of completed blue Functional Hand grips on a worktable",
-            "width": 1600,
-            "height": 1200,
-            "bytes": 228076
-          }
-        ]
-      },
-      {
-        "id": "tissue-clamp",
-        "title": "Tissue-clamp prototyping",
-        "category": "CAD design & physical prototypes",
-        "summary": "Revising a small assembly with several moving interfaces.",
-        "paragraphs": [
-          "I designed a tissue clamp in CAD and printed prototypes. Its frame, rods, sliders, and screws had to fit together in a compact assembly, so the connections mattered as much as the overall shape.",
-          "The prototype and revision notes helped define the next changes: thicker slides, larger screws, thicker connections, and fewer fasteners underneath. The photos show the CAD and a physical prototype. Clamping performance has not yet been measured."
+          "My work extended beyond the CAD changes. I coordinated with the client on the mounting arrangement, scaled printing through MakerLab, and organized and managed manufacturing and shipping of the printed-part sets.",
+          "The outcome was more than 200 complete sets of printed components manufactured and shipped. This quantity refers to the printed parts; it does not include production of the electronics or the complete laboratory kit."
         ],
         "figures": [
-          {
-            "file": "tissue-clamp-cad.webp",
-            "title": "The clamp assembly in CAD",
-            "caption": "The frame, rods, sliding clamps, and screws shown together before printing.",
-            "alt": "CAD view of a circular tissue-clamp assembly with four rods and sliding clamps",
-            "width": 1600,
-            "height": 1200,
-            "bytes": 13846
-          },
-          {
-            "file": "tissue-clamp-prototype.webp",
-            "title": "A physical prototype",
-            "caption": "The printed assembly beside a ruler. Revision notes address the slides, fasteners, and connections.",
-            "alt": "Black printed tissue-clamp prototype beside a ruler",
-            "width": 1024,
-            "height": 768,
-            "bytes": 42026
-          }
-        ]
-      },
-      {
-        "id": "production-planning",
-        "title": "Watch-cleaner production planning",
-        "category": "Print preparation & job planning",
-        "summary": "Organizing a part library into a practical print plan.",
-        "paragraphs": [
-          "I prepared the supplied UberKiwi watch-cleaner parts as 13 print configurations. I grouped them by color, PLA or PETG, infill, and support requirements because different parts needed different print settings.",
-          "The slicer estimates gave the job a material and machine-time plan before printing. This example shows my production preparation; the estimated times do not represent measured turnaround or completed delivery."
-        ],
-        "credit": "UberKiwi machine design and manual: Frank Simons. The contribution shown here is print preparation and production planning.",
-        "facts": [
-          {
-            "value": "13",
-            "label": "Print configurations in the watch-cleaner plan"
-          },
-          {
-            "value": "PLA + PETG",
-            "label": "Materials separated into appropriate jobs"
-          }
-        ],
-        "figures": [
-          {
-            "file": "watch-cleaner-slicing.webp",
-            "title": "Planning a print job",
-            "caption": "The slicer estimates filament use and print duration for one watch-cleaner configuration.",
-            "alt": "Watch-cleaner slicing result showing estimated filament use and print duration",
-            "width": 597,
-            "height": 471,
-            "bytes": 15878
-          }
+          "ieee-pels-printed-base-side.webp"
         ]
       }
     ],
-    "story": []
+    "attribution": "Original kit design: IEEE PELS University Lab Kit team. The project website acknowledges my contribution and Illinois MakerLab’s support.",
+    "reference": {
+      "url": "https://pwreleclabkit.web.illinois.edu/",
+      "label": "View the IEEE PELS project"
+    },
+    "scopeNote": "Visit the official project website for the wider kit, its educational use, and the project’s acknowledgments."
+  },
+  {
+    "slug": "tissue-clamp-assembly",
+    "title": "Tissue Clamp Assembly",
+    "category": "Mechanical design & prototyping",
+    "year": "2026",
+    "setting": "Illinois MakerLab",
+    "tools": "CAD, 3D printing, assembly review",
+    "evidence": "CAD assembly · Physical prototype · Revision notes",
+    "image": "tissue-clamp-cad.webp",
+    "imageAlt": "CAD view of a circular tissue-clamp assembly with four rods and sliding clamps",
+    "imageWidth": 1600,
+    "imageHeight": 1200,
+    "featured": true,
+    "role": "CAD design & prototyping",
+    "description": "Designed a compact tissue-clamp assembly in CAD, printed prototypes, and identified changes to its sliders, fasteners, and connections.",
+    "takeaway": "I designed and printed a tissue-clamp assembly, then identified changes to its sliding parts, connections, and fasteners.",
+    "overviewHeading": "Making the connections work together.",
+    "overview": [
+      "The tissue clamp brings a frame, rods, sliders, and screws together in a compact assembly. I designed it in CAD and printed prototypes, with attention to how the parts connected and moved together.",
+      "The prototype and revision notes identified the next changes: thicker slides and connections, larger screws, and fewer fasteners underneath. These findings gave the next design revision a concrete starting point.",
+      "The work shown here is design and prototyping. Clamping performance has not yet been measured."
+    ],
+    "figures": [
+      {
+        "file": "tissue-clamp-cad.webp",
+        "title": "The clamp assembly in CAD",
+        "caption": "The frame, rods, sliding clamps, and screws shown together before printing.",
+        "alt": "CAD view of a circular tissue-clamp assembly with four rods and sliding clamps",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 13846
+      },
+      {
+        "file": "tissue-clamp-prototype.webp",
+        "title": "A physical prototype",
+        "caption": "The printed assembly beside a ruler. Revision notes address the slides, fasteners, and connections.",
+        "alt": "Black printed tissue-clamp prototype beside a ruler",
+        "width": 1024,
+        "height": 768,
+        "bytes": 42026
+      }
+    ],
+    "story": [
+      {
+        "heading": "Designing the assembly in CAD",
+        "paragraphs": [
+          "I designed the frame, rods, sliding clamps, and screw connections as one assembly. The interfaces mattered as much as the overall shape: each part had to fit into the compact layout while allowing the sliding parts to move.",
+          "The CAD view shows those parts together before printing, making the connections and fastener arrangement visible."
+        ],
+        "figures": [
+          "tissue-clamp-cad.webp"
+        ]
+      },
+      {
+        "heading": "Using the prototype to plan the next revision",
+        "paragraphs": [
+          "I printed prototypes to bring the CAD design into a physical assembly. The prototype and revision notes helped identify changes to the slides, screws, connections, and fasteners underneath.",
+          "Thicker slides and connections, larger screws, and fewer underside fasteners were planned for the next revision. The prototype gave me specific changes to work on before evaluating clamping performance."
+        ],
+        "figures": [
+          "tissue-clamp-prototype.webp"
+        ]
+      }
+    ],
+    "scopeNote": "The CAD view, prototype photograph, and revision notes document the design and prototyping work described above."
   },
   {
     "slug": "tape-spring-hinge",
