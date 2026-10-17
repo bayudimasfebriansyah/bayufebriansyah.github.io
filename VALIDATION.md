@@ -48,3 +48,10 @@ Checked October 9, 2026 against the supplied reports, resume, project-role clari
 - Kept invoices, shipping information, customer documents, original third-party CAD libraries, and the watch-cleaner manual outside the public assets. Slicer figures are labeled as estimates and platform designs are credited separately.
 
 The expanded MakerLab content was deployed successfully to GitHub Pages. Verified 28 live pages and files over HTTPS, including all eight project pages, eight new MakerLab images, seven original report hashes, the resume, the robot clip, and the CSS/JavaScript assets. Confirmed that the retired Aering page and illustration, and the excluded trophy image, return 404. Custom-domain DNS and redirects remain pending domain ownership and setup.
+
+## IEEE PELS MakerLab update — 16 October 2026
+
+- Expanded the existing PCB-mount example into the IEEE PELS University Lab Kit story and preserved its `kit-cad-revisions` anchor. Added it to the MakerLab overview and navigation.
+- Used Bayu's confirmed contribution for the square-nut mounting design, printing without supports, and management of manufacturing and shipping of more than 200 complete printed-part sets. Kept electronics and other kit components outside his scope.
+- Added one optimized photograph of the printed base alongside the existing CAD views. Linked the public project website, which acknowledges Bayu and Illinois MakerLab.
+- Built 10 pages, checked 207 local references, and verified all seven original report hashes. Reviewed the complete section at desktop width, confirmed the new image opens in the enlargement dialog and closes with Escape, and checked that the page has no horizontal overflow at 390 pixels.

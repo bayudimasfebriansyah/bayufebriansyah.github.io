@@ -5,27 +5,81 @@
     "category": "Fabrication & robotics",
     "year": "May 2026–present",
     "setting": "UIUC · MakerLab",
-    "tools": "CAD, 3D printing, client coordination, print planning, LeRobot SO-101",
-    "evidence": "Assembled parts · CAD revisions · Print plans · Robot demonstration",
+    "tools": "CAD, 3D printing, client coordination, production planning, LeRobot SO-101",
+    "evidence": "Assembled parts · CAD designs · Printed-part production · Robot demonstration",
     "image": "so101-robot.webp",
     "imageAlt": "Two red SO-101 robot arms on the MakerLab worktable",
     "imagePosition": "center 72%",
-    "takeaway": "I build robot systems and work with clients to turn their requirements into CAD revisions, prototypes, and print plans.",
+    "takeaway": "I build robot systems and help clients take mechanical designs from CAD through printing, production, and delivery.",
     "overviewHeading": "Client projects and hands-on engineering.",
     "video": true,
     "makerlab": true,
     "scopeNote": "The photographs, CAD views, print records, and robot video show the work described above. Print times and material quantities shown in slicer records are estimates. The robot video is a task demonstration; task success was not measured across repeated trials.",
     "figures": [],
     "role": "3D Printing Engineer",
-    "description": "Build and train robot arms, revise client CAD, and plan print jobs, from clarifying requirements to preparing parts for assembly.",
+    "description": "Build and train robot arms, adapt client CAD, and manage printed-part production, from clarifying requirements through manufacturing and shipping.",
     "overview": [
       "At Illinois MakerLab, I work on both the parts and the planning behind them. I clarify what clients need, communicate proposed changes, and prepare designs and print jobs around the materials, hardware, and assembly involved.",
-      "For a reusable circuit-board mount, that meant revising supplied CAD and getting the client’s approval before a planned sample print. For a watch cleaner, I organized the part library into 13 print configurations with material and machine-time estimates.",
+      "For the IEEE PELS University Lab Kit, I adapted printed bases and managed manufacturing and shipping of more than 200 complete printed-part sets. For a watch cleaner, I organized the part library into 13 print configurations with material and machine-time estimates.",
       "Alongside these projects, I built and trained LeRobot SO-101 arms. The examples below show my work in CAD, printing, assembly, software, and client coordination."
     ],
     "imageWidth": 1000,
     "imageHeight": 1774,
     "examples": [
+      {
+        "id": "kit-cad-revisions",
+        "title": "IEEE PELS University Lab Kit",
+        "category": "Mechanical design, production & delivery",
+        "summary": "Adapted the printed bases and managed manufacturing and shipping of 200+ printed-part sets.",
+        "paragraphs": [
+          "The IEEE Power Electronics Society’s University Lab Kit gives students a platform for hands-on power-electronics experiments. At Illinois MakerLab, I adapted the supplied base designs for 3D printing and worked with the client on the mounting arrangement.",
+          "I designed fitted slots for square nuts so circuit boards could be secured with screws, removed for debugging, and reinstalled without heat-set inserts or adhesive. I also adapted the design for printing without supports, avoiding a support-removal step during production.",
+          "I then scaled production through MakerLab and organized and managed manufacturing and shipping of more than 200 complete sets of printed parts. My scope covered the mechanical adaptations and printed components; the electronics and other kit components were handled separately."
+        ],
+        "credit": "Original kit design: IEEE PELS University Lab Kit team. The project website acknowledges my contribution and Illinois MakerLab’s support.",
+        "figures": [
+          {
+            "file": "ieee-pels-printed-base.webp",
+            "title": "The printed base with nuts installed",
+            "caption": "Square nuts sit in fitted slots in the printed mounting posts, ready for screw-fastened circuit boards.",
+            "alt": "White printed IEEE PELS lab-kit base with square nuts installed in slots in the mounting posts",
+            "width": 1024,
+            "height": 768
+          },
+          {
+            "file": "kit-insert-before.webp",
+            "title": "The nut in place",
+            "caption": "The CAD assembly shows how the square nut sits in its fitted pocket.",
+            "alt": "Revised CAD mounting feature with a square nut assembled in its pocket",
+            "width": 508,
+            "height": 422,
+            "bytes": 4340
+          },
+          {
+            "file": "kit-insert-after.webp",
+            "title": "The revised pocket",
+            "caption": "The mounting pocket without the nut, showing the geometry used for the screw-fastened connection.",
+            "alt": "Revised CAD mounting feature showing the empty square-nut pocket",
+            "width": 348,
+            "height": 350,
+            "bytes": 3826
+          }
+        ],
+        "link": {
+          "url": "https://pwreleclabkit.web.illinois.edu/",
+          "label": "View the IEEE PELS project"
+        },
+        "facts": [
+          {
+            "value": "200+",
+            "label": "Complete printed-part sets manufactured and shipped"
+          },
+          {
+            "value": "Square-nut slots",
+            "label": "Screw-fastened PCB mounting without heat-set inserts or adhesive"
+          }
+        ]
+      },
       {
         "id": "functional-hand",
         "title": "Functional Hand",
@@ -92,37 +146,6 @@
             "width": 1024,
             "height": 768,
             "bytes": 42026
-          }
-        ]
-      },
-      {
-        "id": "kit-cad-revisions",
-        "title": "Reusable PCB mounts",
-        "category": "Client requirements & CAD adaptation",
-        "summary": "A mounting change driven by how the client uses the board.",
-        "paragraphs": [
-          "The client needed to remove circuit boards for debugging and reinstall them. I adapted the supplied kit CAD with pockets that hold square nuts, matching the existing 4-40 hardware so the board could use a reusable fastening arrangement.",
-          "I sent the revised geometry and an assembly view with the nut in place to explain the change. The client approved the direction. I then planned a sample print to check nut fit, tolerances, and support around the overhang before production."
-        ],
-        "credit": "Base kit designs supplied by the client. My contribution was the mounting adaptation, print preparation, and coordination of the proposed changes.",
-        "figures": [
-          {
-            "file": "kit-insert-before.webp",
-            "title": "The nut in place",
-            "caption": "The revised CAD assembly shows how the existing 4-40 square nut sits in its pocket.",
-            "alt": "Revised CAD mounting feature with a square nut assembled in its pocket",
-            "width": 508,
-            "height": 422,
-            "bytes": 4340
-          },
-          {
-            "file": "kit-insert-after.webp",
-            "title": "The revised pocket",
-            "caption": "The same feature without the nut. A sample print was planned to check fit and the overhang.",
-            "alt": "Revised CAD mounting feature showing the empty square-nut pocket",
-            "width": 348,
-            "height": 350,
-            "bytes": 3826
           }
         ]
       },
