@@ -75,9 +75,7 @@
       "url": "https://pwreleclabkit.web.illinois.edu/",
       "label": "View the IEEE PELS project"
     },
-    "scopeNote": "Visit the official project website for the wider kit, its educational use, and the project’s acknowledgments.",
-    "featured": true,
-    "featuredCaption": "Printed bases for the IEEE PELS University Lab Kit at Illinois MakerLab."
+    "scopeNote": "Visit the official project website for the wider kit, its educational use, and the project’s acknowledgments."
   },
   {
     "slug": "tape-spring-hinge",
@@ -474,7 +472,9 @@
           "composite-beam-test.webp"
         ]
       }
-    ]
+    ],
+    "featured": true,
+    "featuredCaption": "Led fabrication of a carbon-fiber I-beam, revising the core preparation and cure setup before the team’s load test."
   },
   {
     "slug": "bistable-composite-boom",
