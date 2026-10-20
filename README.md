@@ -12,7 +12,7 @@ Install Node.js 22 or newer, then run:
 npm run dev
 ```
 
-Open the URL printed by the server. The default build uses the root path, matching the custom domain. After editing source, rebuild with `npm run build` and refresh the browser. `npm run check` verifies local links, fragments, content boundaries, and original report hashes.
+Open the URL printed by the server. The default build uses the root path, matching the custom domain. After editing source, rebuild with `npm run build` and refresh the browser. `npm run check` verifies local links, responsive image sources, fragments, image dimensions, unique IDs, content boundaries, and original report hashes. `npm test` covers missing media, stale previews, and shared action links. Both checks run in the deployment workflow.
 
 ## Edit the portfolio
 
@@ -21,10 +21,12 @@ Open the URL printed by the server. The default build uses the root path, matchi
 | `content/projects.json` | Card descriptions, project overviews, narrative sections and their image references, roles, captions, report metadata |
 | `site.config.json` | Contact links and the default local build URL |
 | `scripts/build.mjs` | Home page and case-study templates |
+| `scripts/components.mjs` | Shared image and action-link rendering, safe fallbacks, responsive media |
+| `content/image-variants.json` | Original image hashes and optional responsive previews |
 | `scripts/portfolio-preview.svg` | Editable source for the BF logo sharing card |
 | `public/assets/portfolio-preview.png` | 1200 × 627 logo card used by every page for Open Graph and Twitter/X previews |
 | `public/assets/styles.css` | Responsive visual design |
-| `public/assets/site.js` | Keyboard-accessible image enlargement |
+| `public/assets/site.js` | Section navigation feedback, image failure handling, native image dialog |
 | `public/assets/projects/` | Optimized report figures and selected MakerLab project photographs and CAD views |
 | `public/reports/` | Seven original technical PDFs, unchanged |
 | `public/resume/` | Supplied resume PDF |
@@ -66,4 +68,16 @@ For a manual root-domain build, set `BASE_PATH` to an empty string and `SITE_ORI
 
 All project content and report links are available without JavaScript. All eight entries appear in a single Selected Works list, with IEEE PELS first. Each compact desktop row pairs a consistent image with its title, summary, and story/report links. On small screens the image stacks above the text. Rows are generated from the project data and flow automatically as entries change. Image links open the original image without JavaScript and use a modal dialog when supported, with Escape dismissal and focus restoration. Images have alternative text, the layout supports narrow screens, focus indicators are visible, and motion respects the reduced-motion preference.
 
-Public project images are optimized WebP files. Reports download only when requested; their original bytes are preserved. Source PDFs and their figures retain their authors' attribution. No blanket open-source license is applied to third-party report content.
+Public project images are optimized WebP files. Browsers choose among optional 480- and 768-pixel previews and the original using `srcset` and `sizes`. Originals retain their bytes; project images are lazy-loaded except for the featured image. Reports download only when requested; their original bytes are preserved. Source PDFs and their figures retain their authors' attribution. No blanket open-source license is applied to third-party report content.
+
+## Frontend maintenance
+
+The stylesheet is organized by live components and uses shared palette, typography, spacing, and transition tokens. The original paper, navy, orange, and muted green palette is retained. The header remains available while scrolling, with section feedback on the home page and Work selected on project pages. All navigation destinations remain visible on mobile.
+
+Every action has a visible keyboard focus state. Repeated story and report links include project names for assistive technology. Image enlargement uses the native dialog, preserves modified-click behavior, closes with Escape, and returns focus without moving the page. The skip link targets a focusable main landmark. Reduced-motion preferences disable smooth scrolling, transitions, and entrance motion.
+
+Keep `imageWidth`, `imageHeight`, and descriptive alternative text with every new project image. Missing imagery uses the neutral fallback; a failed enlarged image does not leave a broken zoom action. Optional reports, project references, and scope notes render only when supplied. The next-project component is omitted when only one project remains.
+
+Responsive previews are optional: a new original works immediately without them, and an original with a changed hash automatically bypasses stale previews. To regenerate previews, use `node scripts/prepare-images.mjs` with Sharp available in your local Node environment, or set `PORTFOLIO_SHARP_MODULE` to its module directory. This optional authoring tool is separate from the dependency-free build and does not run during deployment. It preserves the originals.
+
+Browser verification uses Chromium-based desktop, tablet, and phone viewports. The build checks and small regression suite complement manual keyboard, focus, contrast, and download checks; they do not constitute a full screen-reader or cross-browser audit.

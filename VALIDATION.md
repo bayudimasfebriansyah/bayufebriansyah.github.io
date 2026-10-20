@@ -1,5 +1,17 @@
 # Validation record
 
+## Frontend refinement — 20 October 2026
+
+- Consolidated accumulated style overrides into readable component styles and shared palette, spacing, type, and motion tokens. Retained the existing paper, navy, orange, and muted green identity, eight compact project rows, project facts, original reports, resume, and BF sharing image.
+- Added sticky section navigation with current-section feedback, all destinations available on phones, 44-pixel controls, contextual screen-reader labels, a working keyboard skip link, and visible focus states. Improved hover/active states without hiding content behind JavaScript.
+- Added optional responsive WebP previews. The small preview set totals 163,552 bytes versus 491,122 bytes for the original project images. Browser selection uses `srcset`/`sizes`; full-size originals and their bytes are preserved. CSS and JavaScript are approximately 5.3 KB and 1.6 KB gzipped, respectively; no build or frontend dependencies were added.
+- Verified a broken-image fixture in the browser: the fallback loaded within reserved dimensions and the unusable zoom action was removed. Checked stale/missing preview behavior and contextual links in three regression tests. Shared components handle optional media and documentation; one-project collections omit the next-project action.
+- Reviewed Chromium-based previews at 1366 × 900, 768 × 1024, 390 × 844, and 320 × 740. No horizontal overflow. Desktop rows measured 186–190 pixels high; phone images stack above the text. Checked active About/Work navigation and heading clearance below the sticky header.
+- Verified skip-link focus, visible keyboard focus, image-dialog focus return, Escape dismissal, scroll unlocking, and an actual report download. The downloaded PDF matches its original SHA-256. Browser console inspection found no errors on the inspected page.
+- Calculated text contrast ratios of 13.24:1 for body text, 6.33:1 for muted text, 4.74:1 for orange links, and 8.94:1 for contact text; the contact focus color is 8.31:1 against navy. Reviewed the reduced-motion rule disabling smooth scrolling, transitions, and entrance motion; the system preference was not emulated in the browser.
+- Built 10 pages, checked 239 local references including responsive sources, image dimensions, unique IDs, and new-tab link safety, and verified all seven report hashes. All three regression tests pass and run in CI. A byte comparison confirms project content is unchanged.
+- Remaining verification limits: no Safari/Firefox, real-device, or native screen-reader audit. The optional preview-generation helper needs Sharp locally; normal builds and deployments do not.
+
 ## Compact project list — 20 October 2026
 
 - Removed the Tissue Clamp Assembly entry, its generated page, and its two public images. IEEE PELS now supplies the featured image and story link; the feature falls back to the first project if no entry is marked featured.

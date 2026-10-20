@@ -1,0 +1,101 @@
+{
+  "ieee-pels-printed-base.webp": {
+    "sha256": "0b1903e1d7255d1309bdc50e29b74506c87b5b5abd6fbcb926732af0d7a5b5ba",
+    "variants": [
+      {
+        "file": "previews/ieee-pels-printed-base-480.webp",
+        "width": 480,
+        "height": 360
+      },
+      {
+        "file": "previews/ieee-pels-printed-base-768.webp",
+        "width": 768,
+        "height": 576
+      }
+    ]
+  },
+  "tape-spring-fixture.webp": {
+    "sha256": "0be2bc978d39417ccd9a53ffe12d2cc9d87bff23925377b8aefcc1a5dd4ed6b6",
+    "variants": [
+      {
+        "file": "previews/tape-spring-fixture-480.webp",
+        "width": 480,
+        "height": 332
+      }
+    ]
+  },
+  "thick-origami-prototype.webp": {
+    "sha256": "6201cfb28ff34c15f7badd7d5a7d8bd5cf20fb072b2271e91e27210152f2c31f",
+    "variants": []
+  },
+  "thin-origami-test.webp": {
+    "sha256": "3bf31e3e902b6c2841f3730deb0d6aa9638452f56b5320bc735fc78155bc49e2",
+    "variants": [
+      {
+        "file": "previews/thin-origami-test-480.webp",
+        "width": 480,
+        "height": 640
+      },
+      {
+        "file": "previews/thin-origami-test-768.webp",
+        "width": 768,
+        "height": 1024
+      }
+    ]
+  },
+  "composite-beam-tooling.webp": {
+    "sha256": "c178b73a9109c590d6fb1932a7c8fc1c2f4daa3bcc051b772a1c46036820252c",
+    "variants": [
+      {
+        "file": "previews/composite-beam-tooling-480.webp",
+        "width": 480,
+        "height": 360
+      },
+      {
+        "file": "previews/composite-beam-tooling-768.webp",
+        "width": 768,
+        "height": 576
+      }
+    ]
+  },
+  "bistable-boom-deployed.webp": {
+    "sha256": "db5a5324cc6660d6b89bde2a8c01de1346b0359fddb74673ff44a19947c3674d",
+    "variants": [
+      {
+        "file": "previews/bistable-boom-deployed-480.webp",
+        "width": 480,
+        "height": 360
+      }
+    ]
+  },
+  "medical-uav-context.webp": {
+    "sha256": "e720141b3e6471f03a24b952c9ceebe47798e3ca7fd1f1fa676adbefbdfcd34b",
+    "variants": [
+      {
+        "file": "previews/medical-uav-context-480.webp",
+        "width": 480,
+        "height": 302
+      },
+      {
+        "file": "previews/medical-uav-context-768.webp",
+        "width": 768,
+        "height": 484
+      }
+    ]
+  },
+  "crash-box-collapse.webp": {
+    "sha256": "d717be257be290f45bcc896f97f99c1c402d7771a36e69d369933bb4696642be",
+    "variants": [
+      {
+        "file": "previews/crash-box-collapse-480.webp",
+        "width": 480,
+        "height": 299
+      },
+      {
+        "file": "previews/crash-box-collapse-768.webp",
+        "width": 768,
+        "height": 478
+      }
+    ]
+  }
+}
