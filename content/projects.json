@@ -75,73 +75,9 @@
       "url": "https://pwreleclabkit.web.illinois.edu/",
       "label": "View the IEEE PELS project"
     },
-    "scopeNote": "Visit the official project website for the wider kit, its educational use, and the project’s acknowledgments."
-  },
-  {
-    "slug": "tissue-clamp-assembly",
-    "title": "Tissue Clamp Assembly",
-    "category": "Mechanical design & prototyping",
-    "year": "2026",
-    "setting": "Illinois MakerLab",
-    "tools": "CAD, 3D printing, assembly review",
-    "evidence": "CAD assembly · Physical prototype · Revision notes",
-    "image": "tissue-clamp-cad.webp",
-    "imageAlt": "CAD view of a circular tissue-clamp assembly with four rods and sliding clamps",
-    "imageWidth": 1600,
-    "imageHeight": 1200,
+    "scopeNote": "Visit the official project website for the wider kit, its educational use, and the project’s acknowledgments.",
     "featured": true,
-    "role": "CAD design & prototyping",
-    "description": "Designed a compact tissue-clamp assembly in CAD, printed prototypes, and identified changes to its sliders, fasteners, and connections.",
-    "takeaway": "I designed and printed a tissue-clamp assembly, then identified changes to its sliding parts, connections, and fasteners.",
-    "overviewHeading": "Making the connections work together.",
-    "overview": [
-      "The tissue clamp brings a frame, rods, sliders, and screws together in a compact assembly. I designed it in CAD and printed prototypes, with attention to how the parts connected and moved together.",
-      "The prototype and revision notes identified the next changes: thicker slides and connections, larger screws, and fewer fasteners underneath. These findings gave the next design revision a concrete starting point.",
-      "The work shown here is design and prototyping. Clamping performance has not yet been measured."
-    ],
-    "figures": [
-      {
-        "file": "tissue-clamp-cad.webp",
-        "title": "The clamp assembly in CAD",
-        "caption": "The frame, rods, sliding clamps, and screws shown together before printing.",
-        "alt": "CAD view of a circular tissue-clamp assembly with four rods and sliding clamps",
-        "width": 1600,
-        "height": 1200,
-        "bytes": 13846
-      },
-      {
-        "file": "tissue-clamp-prototype.webp",
-        "title": "A physical prototype",
-        "caption": "The printed assembly beside a ruler. Revision notes address the slides, fasteners, and connections.",
-        "alt": "Black printed tissue-clamp prototype beside a ruler",
-        "width": 1024,
-        "height": 768,
-        "bytes": 42026
-      }
-    ],
-    "story": [
-      {
-        "heading": "Designing the assembly in CAD",
-        "paragraphs": [
-          "I designed the frame, rods, sliding clamps, and screw connections as one assembly. The interfaces mattered as much as the overall shape: each part had to fit into the compact layout while allowing the sliding parts to move.",
-          "The CAD view shows those parts together before printing, making the connections and fastener arrangement visible."
-        ],
-        "figures": [
-          "tissue-clamp-cad.webp"
-        ]
-      },
-      {
-        "heading": "Using the prototype to plan the next revision",
-        "paragraphs": [
-          "I printed prototypes to bring the CAD design into a physical assembly. The prototype and revision notes helped identify changes to the slides, screws, connections, and fasteners underneath.",
-          "Thicker slides and connections, larger screws, and fewer underside fasteners were planned for the next revision. The prototype gave me specific changes to work on before evaluating clamping performance."
-        ],
-        "figures": [
-          "tissue-clamp-prototype.webp"
-        ]
-      }
-    ],
-    "scopeNote": "The CAD view, prototype photograph, and revision notes document the design and prototyping work described above."
+    "featuredCaption": "Printed bases for the IEEE PELS University Lab Kit at Illinois MakerLab."
   },
   {
     "slug": "tape-spring-hinge",

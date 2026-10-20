@@ -1,5 +1,13 @@
 # Validation record
 
+## Compact project list — 20 October 2026
+
+- Removed the Tissue Clamp Assembly entry, its generated page, and its two public images. IEEE PELS now supplies the featured image and story link; the feature falls back to the first project if no entry is marked featured.
+- Changed the homepage heading to “I’m Bayu, an engineer.” Retained the education details and other project descriptions.
+- Replaced the card grid with eight data-driven rows. Each desktop row has a 224 × 150 image, a title, a short description, and separate story/report or project-website links. Rows use natural document flow and resize to their content.
+- Reviewed a 1366 × 900 desktop viewport: all eight rows measured about 187 pixels high, with matching thumbnails and no horizontal overflow. At 390 × 844, images stack above the text, with consistent 175.5-pixel heights and no overflow. Also reviewed the intermediate-width row layout and followed a project link through to its case study.
+- Built 10 pages, checked all 207 local references, and verified all seven original report SHA-256 hashes.
+
 ## Standalone MakerLab projects — 16 October 2026
 
 - Replaced the Illinois MakerLab umbrella entry with two standalone cases: IEEE PELS University Lab Kit and Tissue Clamp Assembly. These lead Selected Works, followed by the seven existing technical projects. The umbrella page is no longer generated.
