@@ -43,7 +43,7 @@ function page({title, description, pathname, body, home = false, noindex = false
 function projectRow(p) {
   const titleId = 'project-' + p.slug;
   const image = media.image({file:p.image, alt:p.imageAlt, width:p.imageWidth, height:p.imageHeight,
-    sizes:'(max-width:650px) calc(100vw - 40px), (max-width:800px) 228px, (max-width:1050px) 280px, 340px', position:p.imagePosition});
+    sizes:'(max-width:720px) calc(100vw - 40px), (max-width:1050px) 40vw, (min-width:1366px) 507px, 40vw', position:p.imagePosition});
   const links = [actionLink({href:projectUrl(p), label:'Explore the project', context:p.title})];
   if (p.report) links.push(actionLink({href:reportUrl(p), label:'Full report', context:p.title, newTab:true}));
   if (p.reference) links.push(actionLink({href:p.reference.url, label:'Project website', context:p.title}));

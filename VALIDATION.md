@@ -1,5 +1,13 @@
 # Validation record
 
+## Alignment and visual balance — 20 October 2026
+
+- Replaced the narrow fixed project-image column with proportional image/text tracks. The Work section heading uses the same grid, aligning its introduction with the project summaries. Removed the summary width cap that left unused space at the right of the rows.
+- Reserved equal scrollbar gutters to keep the page visually centered. At 1366 pixels, the Work container has equal 63.33-pixel outer margins. Project images are approximately 507 × 280 pixels and rows approximately 333 pixels high, retaining roughly two visible projects.
+- Moved project stacking to 720 pixels so smaller browser panes do not squeeze the text beside an image. Updated responsive image sizes to match the new tracks. Project content, ordering, palette, reports, resume, and featured I-beam are unchanged.
+- Reviewed 1600 × 1000, 1366 × 900, 768 × 1024, 654 × 764, 390 × 844, and 320 × 740. No horizontal overflow. Confirmed equal margins, aligned desktop text columns, stacked intermediate/phone layouts, 44-pixel navigation controls at 320 pixels, and a contained technical comparison on a phone case page.
+- Built 10 pages, checked 339 local references and seven original report hashes, and passed the five existing regression tests. Verification remains Chromium-based.
+
 ## Expanded project presentation and technical cases — 20 October 2026
 
 - Enlarged the existing horizontal rows without changing the palette or project order. At 1366 × 900, seven rows measure approximately 315 pixels high and the longer UAV row measures 339 pixels. Images occupy a consistent 340 × 232 frame. Roughly two projects appear at the Work section entrance; phone layouts stack imagery above text.
