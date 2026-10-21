@@ -1,5 +1,17 @@
 # Validation record
 
+## Expanded project presentation and technical cases — 20 October 2026
+
+- Enlarged the existing horizontal rows without changing the palette or project order. At 1366 × 900, seven rows measure approximately 315 pixels high and the longer UAV row measures 339 pixels. Images occupy a consistent 340 × 232 frame. Roughly two projects appear at the Work section entrance; phone layouts stack imagery above text.
+- Added concise 45–51-word homepage summaries and explicit personal roles, with “Explore the project” links. Kept the I-beam as the homepage feature and retained the Engineer heading, contact section, resume, and BF sharing image.
+- Expanded all eight narratives using the original reports and confirmed responsibilities. Added seven comparison tables, five explained equations, section navigation, direct PDF-page links, and five original report figures. The additional WebP figures total 381,218 bytes. No runtime library, client script, or build dependency was added.
+- IEEE PELS now includes Bayu's confirmation of PLA, 4-40 × ¾-inch screws, qualitative fit checks, and iterative adjustments. Numerical tolerances, load ratings, yield, and time/cost savings are not inferred. Printed-part sets remain distinct from complete electronics kits, and the kit team's design credit remains visible.
+- Reviewed report methods/results and visually checked newly extracted figures, the thick-origami Bennett equation page, and the crash-box comparison page. Distinguished physical specimens from simulations, repeated captures from repeated builds, calibration from independent validation, and proposed follow-up work from completed iterations. Crash-box SEA uses crushed mass; ambiguous absolute force units are omitted. The UAV remains a proposed architecture with unfinished targets.
+- Reviewed the homepage at 1366 × 900, 768 × 1024, 390 × 844, and 320 × 740. Checked all eight case pages at 390 pixels with no page-level horizontal overflow. Reviewed representative I-beam and UAV sections at desktop width, the boom comparison at tablet width, and equation containment at phone widths.
+- Verified keyboard activation of the case outline, section-heading clearance under the sticky header, keyboard horizontal scrolling of a narrow comparison table, and enlargement/Escape/focus return for a newly added I-beam photograph. Inspected browser logs on reviewed pages without console errors.
+- Built 10 pages, checked 339 local references, and verified all seven original report SHA-256 hashes. All five regression tests pass, including malformed table rejection and the required spoken equation representation. Original report PDFs remain unchanged.
+- Remaining limits: Chromium-based viewport checks only; no Safari/Firefox, real-device, or native screen-reader audit. Source gaps are recorded privately in `portfolio-planning/CASE_STUDY_GAPS.md`, outside the website repository/public build. Several source figures have limited original resolution; they are preserved without inventing or redrawing data.
+
 ## Frontend refinement — 20 October 2026
 
 - Consolidated accumulated style overrides into readable component styles and shared palette, spacing, type, and motion tokens. Retained the existing paper, navy, orange, and muted green identity, eight compact project rows, project facts, original reports, resume, and BF sharing image.

@@ -12,16 +12,16 @@ Install Node.js 22 or newer, then run:
 npm run dev
 ```
 
-Open the URL printed by the server. The default build uses the root path, matching the custom domain. After editing source, rebuild with `npm run build` and refresh the browser. `npm run check` verifies local links, responsive image sources, fragments, image dimensions, unique IDs, content boundaries, and original report hashes. `npm test` covers missing media, stale previews, and shared action links. Both checks run in the deployment workflow.
+Open the URL printed by the server. The default build uses the root path, matching the custom domain. After editing source, rebuild with `npm run build` and refresh the browser. `npm run check` verifies local links, responsive image sources, fragments, image dimensions, unique IDs, content boundaries, and original report hashes. `npm test` covers missing media, stale previews, shared action links, technical tables, and accessible equations. Both checks run in the deployment workflow.
 
 ## Edit the portfolio
 
 | File | Purpose |
 | --- | --- |
-| `content/projects.json` | Card descriptions, project overviews, narrative sections and their image references, roles, captions, report metadata |
+| `content/projects.json` | Homepage summaries, project overviews, narrative sections, optional comparisons/equations, source pages, roles, captions, report metadata |
 | `site.config.json` | Contact links and the default local build URL |
 | `scripts/build.mjs` | Home page and case-study templates |
-| `scripts/components.mjs` | Shared image and action-link rendering, safe fallbacks, responsive media |
+| `scripts/components.mjs` | Shared media, action links, technical tables, accessible equations, and safe fallbacks |
 | `content/image-variants.json` | Original image hashes and optional responsive previews |
 | `scripts/portfolio-preview.svg` | Editable source for the BF logo sharing card |
 | `public/assets/portfolio-preview.png` | 1200 × 627 logo card used by every page for Open Graph and Twitter/X previews |
@@ -32,7 +32,9 @@ Open the URL printed by the server. The default build uses the root path, matchi
 | `public/resume/` | Supplied resume PDF |
 | `content/report-manifest.json` | SHA-256 hashes and original report filenames |
 
-Keep opening overviews under 160 words. Match claims to the supplied evidence, credit collaborators, and distinguish simulation, physical testing, proposed systems, and production estimates. Add new projects as standalone entries in `content/projects.json`, with narrative sections and supporting figures. The `featured` flag selects the home-page image and story link; when it is absent, the first project is used. `featuredCaption` optionally supplies its caption. Employment examples outside MakerLab are omitted. Customer documents, invoices, shipping details, original third-party CAD libraries, and the watch-cleaner manual stay outside the public assets.
+Keep homepage `summary` text under 70 words and opening overviews under 160 words. The shorter `description` remains the page metadata description. Match claims to the supplied evidence, credit collaborators, and distinguish simulation, physical testing, proposed systems, and production estimates. Add new projects as standalone entries in `content/projects.json`, with narrative sections and supporting figures. The `featured` flag selects the home-page image and story link; when it is absent, the first project is used. `featuredCaption` optionally supplies its caption. Employment examples outside MakerLab are omitted. Customer documents, invoices, shipping details, original third-party CAD libraries, and the watch-cleaner manual stay outside the public assets.
+
+Each `story` section has its own heading, paragraphs, and figure references. Use optional `table` content with a caption, columns, and matching-length rows when a comparison helps. An optional `equation` needs an expression, a spoken form, and an explanation of its significance. `sources` entries provide a PDF page number and descriptive link label; page numbers include the cover. Only use these blocks where the project warrants them. The case outline is generated from the actual section headings, so adding or removing sections requires no manual navigation edits.
 
 ## Publish with GitHub Pages
 
@@ -66,7 +68,7 @@ For a manual root-domain build, set `BASE_PATH` to an empty string and `SITE_ORI
 
 ## Accessibility and performance
 
-All project content and report links are available without JavaScript. All eight entries appear in a single Selected Works list, with IEEE PELS first. Each compact desktop row pairs a consistent image with its title, summary, and story/report links. On small screens the image stacks above the text. Rows are generated from the project data and flow automatically as entries change. Image links open the original image without JavaScript and use a modal dialog when supported, with Escape dismissal and focus restoration. Images have alternative text, the layout supports narrow screens, focus indicators are visible, and motion respects the reduced-motion preference.
+All project content and report links are available without JavaScript. All eight entries appear in a single Selected Works list, with IEEE PELS first and the I-beam featured above it. Desktop rows pair a consistent 340 × 232 image with a concise summary, explicit role, and project/report links. Rows are approximately 315 pixels high at 1366 × 900, showing roughly two projects at the section entrance. On small screens the image stacks above the text. Rows flow automatically as entries change. Image links open the original image without JavaScript and use a modal dialog when supported, with Escape dismissal and focus restoration. Images have alternative text, focus indicators are visible, and motion respects the reduced-motion preference. Technical comparisons scroll within their own keyboard-focusable region on narrow screens; equations have a spoken representation and contextual explanation.
 
 Public project images are optimized WebP files. Browsers choose among optional 480- and 768-pixel previews and the original using `srcset` and `sizes`. Originals retain their bytes; project images are lazy-loaded except for the featured image. Reports download only when requested; their original bytes are preserved. Source PDFs and their figures retain their authors' attribution. No blanket open-source license is applied to third-party report content.
 

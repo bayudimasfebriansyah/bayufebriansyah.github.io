@@ -5,7 +5,7 @@
     "category": "Mechanical design & manufacturing",
     "year": "2026",
     "setting": "Illinois MakerLab",
-    "tools": "CAD, 3D printing, client coordination, manufacturing and shipping",
+    "tools": "CAD, PLA 3D printing, client coordination, manufacturing and shipping",
     "evidence": "Printed bases · 200+ printed-part sets manufactured and shipped",
     "image": "ieee-pels-printed-base.webp",
     "imageAlt": "White printed IEEE PELS lab-kit base with square nuts installed in slots in the mounting posts",
@@ -17,7 +17,7 @@
     "overviewHeading": "From a mounting detail to a production run.",
     "overview": [
       "The IEEE Power Electronics Society’s University Lab Kit gives students a platform for hands-on power-electronics experiments. At Illinois MakerLab, I adapted the supplied base designs for 3D printing and worked with the client on the mounting arrangement.",
-      "I designed fitted slots for square nuts so circuit boards could be screwed in, removed for debugging, and reinstalled without heat-set inserts or adhesive. I also adapted the bases to print without supports.",
+      "I designed fitted slots for square nuts so circuit boards could be secured with 4-40 × ¾-inch screws, removed for debugging, and reinstalled. I used PLA and adapted the bases to print without supports, refining the mounting arrangement through qualitative fit checks and design iterations.",
       "I then scaled production through MakerLab and managed manufacturing and shipping of more than 200 complete sets of printed parts. The electronics and other kit components were handled separately."
     ],
     "facts": [
@@ -50,24 +50,65 @@
     ],
     "story": [
       {
-        "heading": "A removable mount with fewer assembly steps",
+        "heading": "Making the boards removable",
         "paragraphs": [
-          "The boards needed a screw-fastened mounting arrangement. I used fitted square-nut slots in the printed posts so the connection could be taken apart and reassembled, without installing heat-set inserts or using adhesive.",
-          "Printing without supports also removed a support-cleanup step from the production workflow. The photographs show the current printed base with square nuts seated in its mounting posts."
+          "The University Lab Kit is an educational power-electronics platform. My scope at Illinois MakerLab was the printed mechanical base and its production, starting from the kit team’s supplied design. The mounting arrangement needed to secure the boards while allowing them to be removed and reinstalled for debugging.",
+          "I worked with the client on that arrangement and designed fitted slots for square nuts in the printed mounting posts. The boards fasten with 4-40 × ¾-inch screws. This keeps the connection removable and avoids adhesive or a separate heat-set-insert installation operation."
         ],
         "figures": [
           "ieee-pels-printed-base.webp"
         ]
       },
       {
-        "heading": "Following the parts through to delivery",
+        "heading": "Designing around the production process",
         "paragraphs": [
-          "My work extended beyond the CAD changes. I coordinated with the client on the mounting arrangement, scaled printing through MakerLab, and organized and managed manufacturing and shipping of the printed-part sets.",
-          "The outcome was more than 200 complete sets of printed components manufactured and shipped. This quantity refers to the printed parts; it does not include production of the electronics or the complete laboratory kit."
+          "I used PLA for the printed bases and adapted the model for printing without supports. At production scale, this avoids repeating a support-removal operation on every set of components.",
+          "I assessed fit qualitatively and revised the design iteratively. This was a practical check of the printed mounting arrangement; I did not establish a numerical tolerance or joint-strength rating. The photographs show the current bases with the nuts seated in their slots."
         ],
         "figures": [
           "ieee-pels-printed-base-side.webp"
-        ]
+        ],
+        "table": {
+          "caption": "Mechanical choices that carried into production",
+          "columns": [
+            "Design choice",
+            "Reason",
+            "Implementation"
+          ],
+          "rows": [
+            [
+              "Fitted square-nut slots",
+              "Keep circuit boards removable for debugging",
+              "4-40 × ¾-inch screws engaging square nuts"
+            ],
+            [
+              "PLA bases printed without supports",
+              "Avoid a support-removal operation",
+              "Qualitative fit checks and iterative design adjustments"
+            ],
+            [
+              "Repeated sets through MakerLab",
+              "Deliver the kit’s printed components",
+              "200+ complete printed-part sets manufactured and shipped"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Following the printed parts through delivery",
+        "paragraphs": [
+          "I organized and managed manufacturing and shipping of more than 200 complete sets of printed parts through MakerLab. My responsibilities connected the mechanical changes, client communication, production, and delivery of those parts.",
+          "The quantity refers to complete sets of printed components. Electronics and the other kit components were handled separately. The project website acknowledges my contribution and Illinois MakerLab’s support, while the original kit design remains credited to its development team."
+        ],
+        "figures": []
+      },
+      {
+        "heading": "What I took from the production run",
+        "paragraphs": [
+          "A small mounting detail had consequences for both use and production. The nut slots made board removal possible, while the support-free geometry avoided an extra cleanup step across the run.",
+          "The result was more than 200 complete printed-part sets manufactured and shipped. A fuller production record would add slot dimensions, nut specifications, print settings, and measured acceptance criteria; the qualitative checks do not establish production yield or long-term joint performance."
+        ],
+        "figures": []
       }
     ],
     "attribution": "Original kit design: IEEE PELS University Lab Kit team. The project website acknowledges my contribution and Illinois MakerLab’s support.",
@@ -75,7 +116,8 @@
       "url": "https://pwreleclabkit.web.illinois.edu/",
       "label": "View the IEEE PELS project"
     },
-    "scopeNote": "Visit the official project website for the wider kit, its educational use, and the project’s acknowledgments."
+    "scopeNote": "Visit the official project website for the wider kit, its educational use, and the project’s acknowledgments.",
+    "summary": "I adapted the printed bases of an educational power-electronics kit so circuit boards could be screwed in and removed for debugging. Fitted square-nut slots and printing without supports reduced assembly operations. I then managed manufacturing and shipping of 200+ complete printed-part sets through Illinois MakerLab."
   },
   {
     "slug": "tape-spring-hinge",
@@ -148,34 +190,166 @@
     "imageHeight": 355,
     "story": [
       {
-        "heading": "Measuring the hinge before comparing it",
+        "heading": "One hinge, several different checks",
         "paragraphs": [
-          "I prepared the thin steel specimen and used camera measurements to record its shape. I combined those measurements with a tap test for vibration and a separate bending test, so each comparison addressed a different part of the hinge’s behavior.",
-          "The motion sequence shows the specimen changing shape. The vibration measurements came from a separate tap test."
+          "A tape spring forms a localized fold by changing the curvature of a thin strip. Its geometry, vibration, and bending response answer different design questions: where the hinge forms, how the mounted structure moves, and what moment is needed to bend it.",
+          "I prepared the steel specimen, fixtures, and optical measurements, developed the analytical and Abaqus comparisons, and processed the test data in MATLAB. I treated the static shape measurements, screwdriver-tap vibration test, pull-and-release sequence, and three-point bending tests as separate evidence."
         ],
         "figures": [
-          "tape-spring-fixture.webp",
-          "tape-spring-measurement.webp",
-          "tape-spring-deployment.webp"
+          "tape-spring-fixture.webp"
+        ],
+        "sources": [
+          {
+            "page": 14,
+            "label": "Methods, PDF pp. 14–25"
+          }
         ]
       },
       {
-        "heading": "Where the predictions agreed",
+        "heading": "Checking the shape against the thin-strip model",
         "paragraphs": [
-          "The second vibration mode measured 111.70 Hz, compared with a prediction of 117.20 Hz—a difference of about 5%. Other modes differed more. I analyzed the measurements in MATLAB alongside the Abaqus results rather than judging the model from its closest match alone."
+          "The analytical model treats the strip as a thin, isotropic, elastic plate. Minimizing its bending energy predicts a localized hinge radius equal in magnitude to the original transverse radius. The nominal reference in the report was 16.25 mm.",
+          "I applied a speckle pattern, calibrated the stereo-camera setup, and captured the deployed, equal-sense, and opposite-sense configurations in printed fixtures. In MATLAB I filtered invalid surface points, estimated a cylinder axis using principal components, and fitted a cylinder to each measured surface.",
+          "The two bent configurations were close to the nominal radius, but the deployed surface was not. A single fitted cylinder is an approximation to a surface that may contain flattening or twist, so a small fitting residual does not remove uncertainty from the specimen or fixture."
         ],
-        "figures": []
+        "figures": [
+          "tape-spring-measurement.webp"
+        ],
+        "equation": {
+          "expression": "D = E t³ / [12(1 − ν²)]",
+          "spoken": "Plate bending stiffness D equals E times thickness cubed divided by twelve times one minus Poisson ratio squared.",
+          "explanation": "The ideal plate stiffness depends on the cube of thickness. Geometry and material assumptions therefore matter when comparing a very thin strip with a physical fixture."
+        },
+        "table": {
+          "caption": "Cylinder-fit radii for the same tape-spring specimen",
+          "columns": [
+            "Configuration",
+            "Measured radius",
+            "Difference from 16.25 mm"
+          ],
+          "rows": [
+            [
+              "Deployed",
+              "13.4037 mm",
+              "−17.52%"
+            ],
+            [
+              "Equal-sense bend",
+              "16.5077 mm",
+              "+1.58%"
+            ],
+            [
+              "Opposite-sense bend",
+              "15.8788 mm",
+              "−2.29%"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "page": 5,
+            "label": "Analytical basis, PDF pp. 5–6"
+          },
+          {
+            "page": 28,
+            "label": "Shape results, PDF pp. 28–30"
+          }
+        ]
       },
       {
-        "heading": "Where the comparison remained incomplete",
+        "heading": "Separating vibration measurement from deployment",
         "paragraphs": [
-          "The nonlinear bending simulation stopped before reproducing the full measured response. The plot shows that limit directly. Completing that response and investigating the test and modeling assumptions remained further work."
+          "For vibration, I tapped the mounted strip with a screwdriver and recorded its displacement at 2,000 frames per second. I removed the mean displacement before applying an FFT to the exported data. The DIC software and MATLAB analyses used the same recording; they were two processing routes, not independent physical tests.",
+          "The second measured peak was closest to the Abaqus prediction. The first and third peaks differed more, so the result supports a limited comparison of the mounted system rather than validation of every mode. Idealized material properties, the clamp, printed fixtures, and surface markings are possible contributors to the mismatch; their individual effects were not isolated."
+        ],
+        "figures": [],
+        "table": {
+          "caption": "Measured peaks and modeled natural frequencies",
+          "columns": [
+            "Mode",
+            "MATLAB FFT",
+            "Abaqus prediction"
+          ],
+          "rows": [
+            [
+              "1",
+              "50.331 Hz",
+              "62.746 Hz"
+            ],
+            [
+              "2",
+              "111.70 Hz",
+              "117.20 Hz"
+            ],
+            [
+              "3",
+              "204.415 Hz",
+              "266.20 Hz"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "page": 17,
+            "label": "Vibration method, PDF p. 17"
+          },
+          {
+            "page": 33,
+            "label": "Frequency comparison, PDF p. 33"
+          }
+        ]
+      },
+      {
+        "heading": "What the release sequence can show",
+        "paragraphs": [
+          "I also bent and released the strip while recording it from the side. This view made the recovery, overshoot, twisting, and decay visible, but the speckle pattern was not clear enough for a full quantitative DIC reconstruction.",
+          "I used selected frames to describe the motion qualitatively. They are not the source of the FFT frequencies, a measured deployment-time specification, or a calibrated damping coefficient."
+        ],
+        "figures": [
+          "tape-spring-deployment.webp"
+        ],
+        "sources": [
+          {
+            "page": 21,
+            "label": "Release method, PDF pp. 21–22"
+          },
+          {
+            "page": 35,
+            "label": "Observed sequence, PDF pp. 35–36"
+          }
+        ]
+      },
+      {
+        "heading": "Comparing bending moment, not just machine force",
+        "paragraphs": [
+          "The three-point bending tests used a 120 mm support span, 25 mm travel, and a loading rate of 10 mm/min. I tested both bending directions and converted the machine’s force and crosshead displacement into moment and an effective bending angle for comparison with theory.",
+          "The Abaqus bending model used a shortened 120 mm strip with prescribed end constraints rather than explicitly modeling the loading nose and supports. That reduced contact complexity, but it also changed how closely the model represented the physical fixture.",
+          "The measured opposite-sense response had a sharp peak followed by a lower plateau. The plateau is the more appropriate comparison with a steady-state bending-moment prediction. The static nonlinear simulation stopped near its positive peak when it failed to converge, so it did not reproduce the full measured response."
         ],
         "figures": [
           "tape-spring-bending.webp"
+        ],
+        "sources": [
+          {
+            "page": 23,
+            "label": "Bending setup and model, PDF pp. 23–26"
+          },
+          {
+            "page": 37,
+            "label": "Bending results, PDF pp. 37–38"
+          }
         ]
+      },
+      {
+        "heading": "What I would carry into a follow-up study",
+        "paragraphs": [
+          "The useful result is a map of where the assumptions held and where they did not. The bent radii followed the simple geometric prediction more closely than the deployed radius; modal agreement varied; and the nonlinear bending comparison remained incomplete.",
+          "Further work needs better characterization of the mounted boundary conditions and a numerical treatment that can continue through the instability. Repeating the tests and measuring local rotation directly would help separate the strip’s response from fixture and crosshead effects. Those are next steps, not completed improvements."
+        ],
+        "figures": []
       }
-    ]
+    ],
+    "summary": "Can a thin curved steel strip act as a predictable hinge? I prepared and tested the specimen, using optical shape measurements, a tap test, and bending experiments to check the model. Its second vibration frequency matched within about 5%, while other modes and nonlinear bending exposed limits in the assumptions."
   },
   {
     "slug": "thick-origami",
@@ -259,35 +433,90 @@
     "imageHeight": 410,
     "story": [
       {
-        "heading": "Allowing for panel thickness",
+        "heading": "Turning a paper mechanism into solid panels",
         "paragraphs": [
-          "The paper models helped establish the folding motion. In NX, I translated that geometry into solid parts. I varied panel thickness and cut away material where needed so neighboring panels could pass one another as the mechanism folded."
+          "The starting point was an assigned four-panel, single-vertex folding pattern. In paper, the fold lines can meet at a vertex with negligible thickness. Giving those panels thickness creates interference unless the hinge axes and panel geometry are changed.",
+          "I folded a paper model to examine the coordinated motion, then used Bennett-linkage conditions to define the hinge offsets for rigid panels. My work covered the geometric calculations, NX models, fabrication preparation, assembly, and manual evaluation."
         ],
         "figures": [
-          "thick-origami-paper.webp",
-          "thick-origami-cad.webp"
+          "thick-origami-paper.webp"
+        ],
+        "sources": [
+          {
+            "page": 5,
+            "label": "Geometry and method, PDF pp. 5–7"
+          }
         ]
       },
       {
-        "heading": "Assembling and checking the motion",
+        "heading": "Using hinge offsets to make room for thickness",
         "paragraphs": [
-          "I joined the printed panels with tape hinges and moved the Bennett-linkage prototype through its folding sequence. That physical check showed the coordinated movement of the assembled parts, beyond what the CAD views alone could show."
+          "The assigned sector angles were 30°, 90°, 150°, and 90°. Opposing pairs sum to 180°, satisfying the stated flat-foldability conditions. With the prescribed 5 mm first offset, the Bennett ratio gives a 10 mm adjacent offset and the repeating offset set 5, 10, 5, 10 mm.",
+          "I modeled the wedge-shaped panels and checked the perpendicular distances between adjacent hinge axes in the assembled CAD model. The panels did not all have the same thickness; two had thickness changes within the panel. This accommodated the offset geometry and reduced the interference that a uniform-thickness translation of the paper pattern would create."
+        ],
+        "figures": [
+          "thick-origami-cad.webp"
+        ],
+        "equation": {
+          "expression": "a₁₂ / a₂₃ = sin(30°) / sin(90°) = 1/2",
+          "spoken": "The ratio of hinge offsets a twelve to a twenty three equals sine thirty degrees divided by sine ninety degrees, or one half.",
+          "explanation": "With a₁₂ = 5 mm, the adjacent hinge offset a₂₃ is 10 mm. The offset distances constrain the CAD geometry rather than being arbitrary clearances."
+        },
+        "sources": [
+          {
+            "page": 5,
+            "label": "Bennett conditions, PDF p. 5"
+          },
+          {
+            "page": 7,
+            "label": "Thickness and clearance choices, PDF p. 7"
+          }
+        ]
+      },
+      {
+        "heading": "Assembling and checking the Bennett mechanism",
+        "paragraphs": [
+          "After preparing the models for printing, I assembled the rigid parts using masking-tape hinges along the intended hinge axes. Hinge placement was part of the mechanism: moving an axis would change the geometric compatibility even if the panels themselves matched the CAD.",
+          "The physical assembly showed coordinated motion when actuated by hand. The result is qualitative evidence that the panel geometry and hinge arrangement could fold together. It does not measure actuation force, structural stiffness, hinge accuracy, or cycle life.",
+          "Nikhil submitted the print job on the Space Structures Lab-managed printer. I performed the design, preparation, assembly, and evaluation described here."
         ],
         "figures": [
           "thick-origami-prototype.webp",
           "thick-origami-motion.webp"
+        ],
+        "sources": [
+          {
+            "page": 9,
+            "label": "Assembly and motion, PDF p. 9"
+          }
         ]
       },
       {
-        "heading": "Trying a second folding pattern",
+        "heading": "Extending the work to a Miura-Ori pattern",
         "paragraphs": [
-          "I also assembled a thick-panel Miura-Ori model and examined its motion. Together, the prototypes showed how thickness and clearance affect whether a folding pattern can work as a physical mechanism."
+          "I also created a thick-panel Miura-Ori base unit in NX and assembled three printed units into a larger folding pattern. This was a related extension, rather than a second demonstration of the full Bennett derivation.",
+          "The repeated assembly let me examine whether neighboring units could be aligned and connected using the same taped-hinge approach. The photos show the combined structure in several manually folded configurations."
         ],
         "figures": [
           "thick-origami-miura.webp"
+        ],
+        "sources": [
+          {
+            "page": 8,
+            "label": "Miura-Ori extension, PDF pp. 8–11"
+          }
         ]
+      },
+      {
+        "heading": "What the prototypes establish",
+        "paragraphs": [
+          "The Bennett specimen connects a geometric compatibility condition to a real, foldable assembly. The Miura-Ori example shows a larger patterned build using repeated thick-panel units.",
+          "The next engineering step would be to define repeatable hinge hardware and quantify motion, interference margins, and loads. The taped prototypes were useful for checking kinematics; they were not qualified as load-carrying deployable structures."
+        ],
+        "figures": []
       }
-    ]
+    ],
+    "summary": "Paper folds easily until the panels have thickness. I used Bennett-linkage geometry to place hinge axes 5 and 10 mm apart, then designed and assembled printed panels with clearance for motion. A hand-folded Bennett mechanism and a three-unit Miura-Ori extension demonstrated the geometry in physical parts."
   },
   {
     "slug": "thin-origami-bellows",
@@ -362,27 +591,77 @@
     "imageHeight": 1500,
     "story": [
       {
-        "heading": "Making the bellows",
+        "heading": "Building the prescribed folding geometry",
         "paragraphs": [
-          "I drew the crease pattern in NX, then scored and folded the paper into a bellows. Printed fixtures connected its ends to the tensile frame. I carried out the CAD, fabrication, testing, and analysis, with fixture guidance from the Space Structures Lab."
+          "The task was to manufacture a thin-sheet bellows and examine its resistance to opening under axial tension. I modeled the assigned pattern in NX: four repeating units, 12 mm facet width, and 45° crease angles, including tabs to close the sheet into a tube.",
+          "I printed the pattern on 11 × 17-inch paper, cut the boundary, scored the fold lines, and formed the bellows. Double-sided tape closed the longitudinal seam. I checked that the assembled specimen could compress and extend without obvious interference before mounting it for testing.",
+          "I carried out the CAD, fabrication, test, and analysis, with fixture guidance from the Space Structures Lab. The paper grade and thickness were not formally recorded, which limits reproduction of the specimen."
         ],
         "figures": [
           "thin-origami-pattern.webp",
           "thin-origami-mounted.webp"
+        ],
+        "sources": [
+          {
+            "page": 5,
+            "label": "Geometry and fabrication, PDF pp. 5–6"
+          }
         ]
       },
       {
-        "heading": "Reading the force and the damage together",
+        "heading": "Making the fixture part of the experiment",
         "paragraphs": [
-          "The trial recorded a peak of 48.1 N and tearing near an attachment. The record began with preload and covered limited movement, so it did not capture a complete opening cycle. I considered the measured force alongside where the paper tore, rather than treating the peak as an intrinsic property of the folding pattern.",
-          "The useful next step was to improve the attachments and repeat the test. Those changes were identified from the trial; they were not completed within this project."
+          "The bellows was taped to printed end attachments and mounted vertically in an Instron frame. The lower end remained fixed while the crosshead pulled the upper end upward. The intended boundary was approximately clamped, but tape and attachment compliance could contribute to the measured motion.",
+          "The loading rate was approximately 0.20 mm/s, with force and displacement sampled at about 20 Hz. Only one specimen and one trial were available. No external extensometer measured the bellows locally, so the displacement record includes any grip seating and fixture motion as well as opening of the paper structure."
         ],
         "figures": [
-          "thin-origami-test.webp",
+          "thin-origami-test.webp"
+        ],
+        "sources": [
+          {
+            "page": 6,
+            "label": "Fixtures and test method, PDF pp. 6–8"
+          }
+        ]
+      },
+      {
+        "heading": "Reading the peak together with the recorded range",
+        "paragraphs": [
+          "The saved record began at approximately 32.5 N, already under tension, and covered 4.449 mm of crosshead travel. I converted the machine position to travel relative to the first recorded point, then normalized it to the final recorded travel.",
+          "That normalized percentage describes the saved data window. It is not proof that the bellows completed its full geometric deployment. The result plot emphasizes the early part of this normalized record, where the force rises to 48.1 N and then drops sharply as tearing develops near an attachment.",
+          "The peak therefore belongs to this specimen and its attachment conditions. A single, preloaded trial cannot establish repeatable deployment force or the intrinsic strength of the crease pattern."
+        ],
+        "figures": [
           "thin-origami-result.webp"
+        ],
+        "equation": {
+          "expression": "d_recorded = [(D − D₀) / (Dmax − D₀)] × 100%",
+          "spoken": "Recorded deployment percentage equals crosshead position minus the initial recorded position, divided by the total recorded travel, times one hundred.",
+          "explanation": "Zero and 100% are the ends of the recorded crosshead-travel range. They are not independently measured fully compressed and fully deployed geometric states."
+        },
+        "sources": [
+          {
+            "page": 8,
+            "label": "Normalization and results, PDF pp. 8–10"
+          }
+        ]
+      },
+      {
+        "heading": "What the failure makes worth testing next",
+        "paragraphs": [
+          "The abrupt force loss and tearing near the attachment make load introduction a central part of the result. The experiment does not isolate crease resistance from damage at the fixture-paper interface.",
+          "A follow-up needs a documented paper specification, improved attachments, a zero-load record, direct displacement measurement, and repeated specimens. Those changes would help distinguish the folding response from setup compliance and local tearing. They were not completed within this project."
+        ],
+        "figures": [],
+        "sources": [
+          {
+            "page": 11,
+            "label": "Interpretation and limitations, PDF p. 11"
+          }
         ]
       }
-    ]
+    ],
+    "summary": "I designed, folded, and tested a paper bellows to investigate how its crease pattern resists opening. The single tensile trial peaked at 48.1 N before tearing near an attachment. The result made fixture compliance and load transfer central to interpreting the response, rather than treating the peak as a material-strength rating."
   },
   {
     "slug": "carbon-epoxy-i-beam",
@@ -433,6 +712,26 @@
         "height": 963,
         "source": "Project report, PDF page 34.",
         "wide": true
+      },
+      {
+        "file": "composite-beam-first-cure.webp",
+        "title": "What the first cure produced",
+        "caption": "The first build’s flanges relaxed outward during cure. This observation led to the upright, mechanically restrained setup used for the next build.",
+        "alt": "First composite beam build with flanges warped outward after curing",
+        "width": 637,
+        "height": 478,
+        "source": "Project report, PDF p. 32.",
+        "wide": false
+      },
+      {
+        "file": "composite-beam-load-curve.webp",
+        "title": "Load response and seating correction",
+        "caption": "The team’s original load-displacement plot shows raw and toe-compensated data. The correction addresses initial seating; it does not remove the later damage and load redistribution.",
+        "alt": "Original team plot comparing raw and toe-compensated I-beam force-displacement response",
+        "width": 395,
+        "height": 262,
+        "source": "Project report, PDF p. 38.",
+        "wide": false
       }
     ],
     "role": "Fabrication lead",
@@ -446,35 +745,128 @@
     "imageHeight": 599,
     "story": [
       {
-        "heading": "Choosing a core we could manufacture",
+        "heading": "A load target constrained by the build",
         "paragraphs": [
-          "The initial plan used foam-filled Nomex honeycomb. Filling the core proved impractical, so we moved to unfilled Nomex bonded with adhesive film. I worked through the layup and assembly around the team’s design, available prepreg, and steel-channel tooling."
+          "The team’s objective was a carbon-fiber/epoxy I-beam for a 7,200 lbf three-point-bending load target. I led fabrication from the numerical design, working within the available prepreg, steel-channel tooling, bagging materials, and autoclave equipment.",
+          "The team assigned longitudinal 0° reinforcement to the flange faces and ±45° reinforcement to the web facings, reflecting the bending and shear load paths. Nomex honeycomb separated and supported the web facings. Available tooling restricted the web height, so the build could not simply use the largest section allowed by the competition envelope.",
+          "The numerical design and aggregate test results were team work. The fabrication decisions, layup, assembly, and process revisions are the part of the project I led."
+        ],
+        "figures": [],
+        "sources": [
+          {
+            "page": 13,
+            "label": "Load paths and design constraints, PDF pp. 13–20"
+          }
+        ]
+      },
+      {
+        "heading": "Replacing a core preparation that would not bond flat",
+        "paragraphs": [
+          "The initial concept stacked two Nomex honeycomb sheets and filled them with expanding polyurethane foam. The foam stiffened the core, but expansion forced the sheets apart and left a rough, curved surface. Sanding did not produce the flat interface needed to bond the laminate facings.",
+          "We removed the foam and used Hysol EA 9696 .06 adhesive film between the Nomex layers and between the core and facings. This addressed the bonding-surface problem without treating foam filling as a completed manufacturing solution.",
+          "I worked through the layup and assembly around the tooling and available prepreg. The web used segmented angle-ply material because the available prepreg width did not cover the full beam length; the report’s alternating cutting arrangement attempted to support adjacent layers at these interfaces."
         ],
         "figures": [
           "composite-beam-layup.webp"
+        ],
+        "sources": [
+          {
+            "page": 30,
+            "label": "Core trials and web cutting arrangement, PDF pp. 30–34"
+          }
         ]
       },
       {
-        "heading": "Changing the cure setup",
+        "heading": "Learning that bag pressure was not enough restraint",
         "paragraphs": [
-          "The initial cure left the flanges warped. We changed the beam’s orientation and added restraint during curing to address the distortion. This was a manufacturing problem we had to resolve before the beam could be tested."
+          "The first beam was cured on its side, leaving both flanges unsupported by the autoclave platform. The report records 125°C for 1 hour 45 minutes with 5 psi autoclave pressure. As the resin softened, the unconstrained flanges relaxed outward and the bag tended to flatten the section.",
+          "For the second build, we cured the beam upright. The platform restrained the lower flange, an aluminum plate restrained the upper flange, and C-clamps joined the mold channels. The revised process used 115°C and approximately 0 psi reported autoclave pressure, while the vacuum bag and mechanical tooling held the assembly.",
+          "The revision produced a testable beam, but it did not eliminate every imperfection. Rippling remained near the vacuum-port side, where the connector and plate arrangement interfered with consolidation. The manufactured specimen weighed 432.4 g."
         ],
         "figures": [
+          "composite-beam-first-cure.webp",
           "composite-beam-tooling.webp"
+        ],
+        "sources": [
+          {
+            "page": 31,
+            "label": "Cure conditions and process changes, PDF pp. 31–35"
+          }
         ]
       },
       {
-        "heading": "What the load test showed",
+        "heading": "Testing the manufactured structure",
         "paragraphs": [
-          "The team measured a failure load of 2,376 lbf against the 7,200 lbf target. The build did not achieve the required load, and the result made the difference between an ideal numerical structure and the manufactured part clear. The report records the fabrication sequence and test for further investigation."
+          "The team tested the beam in a three-point-bending setup at the Newmark Structural Engineering Laboratory, with a 23-inch support span and an approximately 1 in/min crosshead rate. The source analysis removed an initial seating region before deriving flexural properties.",
+          "The report distinguishes initial failure from subsequent loading and progressive damage. Its load-displacement plot includes multiple peaks, so later load-carrying capacity should not be read as an undamaged elastic response."
         ],
         "figures": [
-          "composite-beam-test.webp"
+          "composite-beam-test.webp",
+          "composite-beam-load-curve.webp"
+        ],
+        "sources": [
+          {
+            "page": 37,
+            "label": "Test method and response, PDF pp. 37–43"
+          }
         ]
+      },
+      {
+        "heading": "Comparing the result with what the model actually predicted",
+        "paragraphs": [
+          "The beam reached 2,376 lbf against the 7,200 lbf target. The team’s idealized analysis predicted first-ply failure near 7,700 lbf and a flexural modulus of 45.95 GPa; the modulus derived from test data was 14.63 GPa.",
+          "The prediction used laminate and beam-theory assumptions, including idealized load transfer and material properties that were not all measured for the specimen. The report also identified a core-shear risk, so the laminate first-ply estimate was not a complete prediction of every possible failure mode.",
+          "Damage was observed in the web rather than following the predicted upper-flange sequence. The report discusses discontinuities between angle-ply segments, bonding and consolidation, and out-of-plane effects as possible contributors. The data do not isolate a single cause or quantify each contribution."
+        ],
+        "figures": [],
+        "table": {
+          "caption": "Team design predictions and the documented Nomex-core test",
+          "columns": [
+            "Quantity",
+            "Design basis",
+            "Physical result"
+          ],
+          "rows": [
+            [
+              "Load",
+              "7,200 lbf target; 7,700 lbf first-ply estimate",
+              "2,376 lbf reported failure load"
+            ],
+            [
+              "Flexural modulus",
+              "45.95 GPa predicted",
+              "14.63 GPa test-derived"
+            ],
+            [
+              "Manufacturing condition",
+              "Idealized geometry and bonding",
+              "Flange rippling and process imperfections remained"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "page": 15,
+            "label": "Prediction and scope, PDF p. 15"
+          },
+          {
+            "page": 41,
+            "label": "Derived properties and failure discussion, PDF pp. 41–44"
+          }
+        ]
+      },
+      {
+        "heading": "What this build changed in my approach",
+        "paragraphs": [
+          "The core and cure trials made manufacturing constraints visible before the destructive test. A usable bonding surface and positive flange restraint were necessary just to carry the design into testable hardware. The final load result then showed that a testable part still could fall far short of the structural target.",
+          "For further development, the report points toward better vacuum-port placement, more uniform consolidation, and a review of core, joint, and ply-interface assumptions. Those improvements remain to be tested. The results here cover the documented Nomex-core beam."
+        ],
+        "figures": []
       }
     ],
     "featured": true,
-    "featuredCaption": "Led fabrication of a carbon-fiber I-beam, revising the core preparation and cure setup before the team’s load test."
+    "featuredCaption": "Led fabrication of a carbon-fiber I-beam, revising the core preparation and cure setup before the team’s load test.",
+    "summary": "I led fabrication of a carbon-fiber I-beam from the team’s numerical design. Expanding foam disrupted the core’s bonding surface, and the first cure warped the flanges. We revised both processes to produce a testable beam; its 2,376 lbf result exposed the gap to the 7,200 lbf target."
   },
   {
     "slug": "bistable-composite-boom",
@@ -534,6 +926,16 @@
         "height": 1200,
         "source": "Project report, PDF page 8.",
         "wide": false
+      },
+      {
+        "file": "bistable-boom-screen-energy.webp",
+        "title": "The screened candidate changes the stored shape",
+        "caption": "Computed energy curve for the UD/UD/UD candidate with outer plies at −25° and the middle ply at 30°. The marked coiled-like state differs from the baseline geometry; this is a modeled candidate, not a second fabricated specimen.",
+        "alt": "Computed energy plot for the screened all-unidirectional laminate, with deployed and coiled-like states marked",
+        "width": 1253,
+        "height": 830,
+        "source": "Project report, PDF p. 17.",
+        "wide": false
       }
     ],
     "role": "Modeling, fabrication, testing",
@@ -547,33 +949,124 @@
     "imageHeight": 520,
     "story": [
       {
-        "heading": "From laminate model to specimen",
+        "heading": "A boom with two useful equilibrium shapes",
         "paragraphs": [
-          "I used MATLAB to model a three-layer composite, then fabricated it on the available mold. Layer arrangement matters because it determines the shapes the thin structure can hold. Building a baseline gave me a real part to compare with the prediction."
+          "A deployable boom needs a compact stored configuration and a useful extended configuration. The lab specimen used a symmetric, three-ply [45° plain weave / 0° unidirectional / 45° plain weave] carbon-fiber laminate to hold both shapes without an external fixture maintaining them.",
+          "I carried the work from MATLAB laminate and energy modeling into layup, vacuum bagging, curing, stereo-camera measurement, and geometry processing. I then used the model to screen alternative layups rather than assuming the fabricated baseline was the only option."
         ],
-        "figures": [
-          "bistable-boom-fabrication-ccw.svg"
+        "figures": [],
+        "sources": [
+          {
+            "page": 5,
+            "label": "Model and specimen, PDF pp. 5–9"
+          }
         ]
       },
       {
-        "heading": "Measuring both shapes",
+        "heading": "Reducing the shape model to curvature and axis angle",
         "paragraphs": [
-          "I measured the extended and coiled configurations with stereo cameras. Their curvatures were within about 5% of the predicted values. I also adjusted model parameters to explore the remaining mismatch; fitting those same measurements was a calibration step, rather than a separate test of the model."
+          "I assembled the laminate extensional, bending-extension, and bending stiffness matrices from the transformed ply properties. The thin-shell model assumed perfect bonding, small strains, linear orthotropic elasticity, and no residual manufacturing strain.",
+          "Under the stated cylindrical slit-boom assumptions, each configuration is represented by a cylinder curvature C and an axis angle θ relative to the boom length. I evaluated a strain-energy landscape and searched for distinct local minima, treating angles 0° and 180° as the same physical orientation.",
+          "This reduction makes the model practical to search, but it does not reproduce every local wrinkle, residual stress, or edge effect in a manufactured laminate."
+        ],
+        "figures": [],
+        "equation": {
+          "expression": "C = 1 / R",
+          "spoken": "Cylinder curvature C is the reciprocal of radius R.",
+          "explanation": "The same curvature definition is used for the model and the cylinder fitted to the camera measurements, so their geometric results can be compared directly."
+        },
+        "sources": [
+          {
+            "page": 5,
+            "label": "Laminate and energy model, PDF pp. 5–7"
+          }
+        ]
+      },
+      {
+        "heading": "Fabricating and measuring the baseline",
+        "paragraphs": [
+          "I laid up the plain-weave/unidirectional/plain-weave stack on the provided cylindrical mold, whose nominal diameter was 60.325 mm. The stated ply thicknesses were 58.2 μm for plain weave and 40.0 μm for unidirectional prepreg. I vacuum-bagged the laminate and oven-cured it under vacuum.",
+          "For measurement, I applied a white speckle pattern, adjusted the camera focus and lighting, and calibrated the stereo DIC setup with a reference plate. Five captures of each configuration were averaged pointwise. These were repeated captures of one specimen, not five separate builds.",
+          "In MATLAB, I removed invalid coordinates, fitted a cylinder to each surface, and used an unwrapped point cloud and singular-value decomposition to recover the axis angle. The cylinder-fit residual describes agreement with that fitted surface; it is not a complete measurement-uncertainty bound."
+        ],
+        "figures": [
+          "bistable-boom-fabrication-ccw.svg",
+          "bistable-boom-measurement.webp"
+        ],
+        "sources": [
+          {
+            "page": 8,
+            "label": "Fabrication and DIC processing, PDF pp. 8–11"
+          }
+        ]
+      },
+      {
+        "heading": "Comparing both stable states before tuning the model",
+        "paragraphs": [
+          "The measured curvatures differed from the baseline predictions by about 4.8% in the deployed state and 4.6% in the coiled state, using the analytical prediction as the denominator. The measured coiled angle was also a few degrees away from the nominal 90°.",
+          "I separately explored bounded changes in forming radius, ply angles, and effective ply thickness to see whether plausible manufacturing variation could reduce the discrepancy. The search improved agreement with the same measurements. That is calibration, not independent validation or a direct measurement of the actual ply thickness."
         ],
         "figures": [
           "bistable-boom-deployed.webp",
-          "bistable-boom-coiled.webp",
-          "bistable-boom-measurement.webp"
+          "bistable-boom-coiled.webp"
+        ],
+        "table": {
+          "caption": "Baseline predictions and DIC-derived geometry for one specimen",
+          "columns": [
+            "State",
+            "Predicted curvature",
+            "Measured curvature",
+            "Measured axis angle"
+          ],
+          "rows": [
+            [
+              "Deployed",
+              "33.15 m⁻¹",
+              "31.57 m⁻¹",
+              "0.46°"
+            ],
+            [
+              "Coiled",
+              "26.35 m⁻¹",
+              "27.55 m⁻¹",
+              "86.81°"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "page": 11,
+            "label": "Measured geometry, PDF pp. 11–14"
+          }
         ]
       },
       {
-        "heading": "Choosing what to optimize",
+        "heading": "Asking what easier switching would cost",
         "paragraphs": [
-          "I compared 5,476 modeled layer arrangements. Some lowered the estimated energy required to move between the two stable shapes, but they also changed the stored shape. The screen helped identify which candidates deserved closer study without treating the lowest energy as the only design objective."
+          "The coarse design screen covered 5,476 combinations across four symmetric, three-ply families using the available plain-weave and unidirectional prepregs. Outer- and middle-ply angles varied in 5° increments. The forming radius and nominal material inputs stayed fixed for the screen.",
+          "I ranked candidates using an estimated strain-energy barrier between stable configurations. The lowest reported candidate was UD/UD/UD with −25° outer plies and a 30° middle ply. Its coiled-like state became less curved and moved away from the original 90° orientation.",
+          "The optimization therefore exposed competing objectives: a smaller estimated barrier did not guarantee a compact coil. A final selection would need explicit constraints on both stable shapes rather than ranking energy alone."
+        ],
+        "figures": [
+          "bistable-boom-screen-energy.webp"
+        ],
+        "sources": [
+          {
+            "page": 15,
+            "label": "Layup screen and tradeoff, PDF pp. 15–17"
+          }
+        ]
+      },
+      {
+        "heading": "Where the evidence stops",
+        "paragraphs": [
+          "The physical result is the fabricated baseline and its two measured stable configurations. The alternative layups remained numerical candidates, and the modeled transition barrier was not measured as an actuation force or demonstrated as the true minimum-energy transition path.",
+          "A useful next stage would fabricate a candidate that also satisfies storage geometry, then measure its stable shapes and switching response independently. The present study provides the comparison method and a reason to make the design objective more complete."
         ],
         "figures": []
       }
-    ]
+    ],
+    "summary": "I modeled and fabricated a composite boom that holds both an extended and a coiled shape. Optical measurements put its two curvatures within about 5% of the baseline predictions. I then screened 5,476 layups and found that reducing the estimated switching-energy barrier could compromise the shape needed for compact storage."
   },
   {
     "slug": "medical-uav-systems",
@@ -614,6 +1107,26 @@
         "height": 720,
         "source": "Project report, PDF page 10.",
         "wide": false
+      },
+      {
+        "file": "medical-uav-functions.webp",
+        "title": "Breaking control-center work into functions",
+        "caption": "The proposed hierarchy separates mission planning, communications, airspace coordination, monitoring, and fleet management. It assigns responsibilities rather than demonstrating implemented software.",
+        "alt": "Functional decomposition of the proposed command and control center into five primary functions and their subfunctions",
+        "width": 1280,
+        "height": 720,
+        "source": "Project report, PDF p. 12.",
+        "wide": true
+      },
+      {
+        "file": "medical-uav-interfaces.webp",
+        "title": "Making product-level coupling visible",
+        "caption": "The N² matrix marks proposed interactions among facility, power, communications, computing, software, and operator-console elements. It does not specify implemented communication protocols.",
+        "alt": "Product interface N squared matrix for the proposed medical UAV command and control center",
+        "width": 969,
+        "height": 1029,
+        "source": "Project report, PDF p. 17.",
+        "wide": false
       }
     ],
     "role": "Systems architecture",
@@ -627,25 +1140,115 @@
     "imageHeight": 608,
     "story": [
       {
-        "heading": "Defining the control center’s responsibilities",
+        "heading": "Choosing the control-center boundary",
         "paragraphs": [
-          "I set the system boundary around the command-and-control center. That let me examine mission planning, aircraft monitoring, airspace coordination, and safety intervention while making the dependencies on other groups explicit."
+          "The project considered a command-and-control center for medical UAV delivery. A request from a healthcare facility has to become a feasible mission, while the aircraft, payload, ground services, and airspace coordination remain connected to the operation.",
+          "I developed the control-center operating concept, functional decomposition, requirements structure, and interface matrix. I placed the system boundary around the control center rather than claiming to design the aircraft or the entire logistics network.",
+          "The report identified practical dependencies: uneven communication coverage, telecommunications infrastructure outside the center’s control, fleet readiness, staffing, power, and airspace authorization. These constraints shape the architecture even before numerical performance targets are allocated."
         ],
         "figures": [
           "medical-uav-context.webp"
+        ],
+        "sources": [
+          {
+            "page": 7,
+            "label": "Stakeholders, constraints, and boundary, PDF pp. 7–9"
+          }
         ]
       },
       {
-        "heading": "Tracing a request through the system",
+        "heading": "Turning an operation into assigned responsibilities",
         "paragraphs": [
-          "I broke the proposed operation into functions and mapped the information needed between them. The interface matrix recorded the exchanges across subsystem boundaries, giving the architecture a basis for review.",
-          "The output was a proposed architecture and a starting point for more detailed requirements. Numerical requirements still needed refinement before implementation and testing."
+          "I organized the operation around five primary functions: plan missions, communicate, coordinate airspace, monitor, and manage the fleet. Their decomposition links an initial request to route feasibility, authorization, readiness checks, launch, supervision, intervention, and mission confirmation.",
+          "Separating the functions makes their responsibilities reviewable. For example, a route is not ready for launch merely because it is geometrically feasible: authorization and vehicle-readiness checks are also dependencies in the proposed requirements.",
+          "The functional flows describe planned behavior and information needs. They are not a deployed dispatch application, an autonomous flight controller, or evidence that a delivery was completed."
         ],
         "figures": [
-          "medical-uav-operation.webp"
+          "medical-uav-operation.webp",
+          "medical-uav-functions.webp"
+        ],
+        "sources": [
+          {
+            "page": 9,
+            "label": "Operating concept and functional flows, PDF pp. 9–15"
+          }
         ]
+      },
+      {
+        "heading": "Examining the interfaces behind the diagrams",
+        "paragraphs": [
+          "I used a product-level N² matrix to make coupling visible across the facility, power system, communications network, computing hardware, software, and operator consoles. Marking an interaction exposes an integration responsibility; it does not by itself define a data packet, failure response, or verified interface.",
+          "The requirements then distinguish internal and external interfaces and record their rationale. The examples below show the kinds of allocations needed before these relationships can become an implementable control system."
+        ],
+        "figures": [
+          "medical-uav-interfaces.webp"
+        ],
+        "table": {
+          "caption": "Examples of proposed interface responsibilities",
+          "columns": [
+            "Interface or dependency",
+            "What is defined",
+            "What still needs allocation"
+          ],
+          "rows": [
+            [
+              "Planning and airspace coordination",
+              "Flight-plan submission and authorization before launch",
+              "Detailed interface agreement and response-time targets"
+            ],
+            [
+              "Aircraft telemetry and monitoring",
+              "Position/status data feeding operator supervision",
+              "Refresh rate, data age, and latency limits"
+            ],
+            [
+              "Primary and backup communications",
+              "A redundant path for command continuity",
+              "Failover timing and acceptance criteria"
+            ],
+            [
+              "Vehicle readiness and dispatch",
+              "Battery, payload, link, and health checks",
+              "Pass/fail thresholds and verification procedure"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "page": 17,
+            "label": "Interface matrix and requirements, PDF pp. 17–22"
+          }
+        ]
+      },
+      {
+        "heading": "Writing requirements without pretending the numbers were finished",
+        "paragraphs": [
+          "The requirements structure records functions, rationale, type, and interface category. It includes launch prerequisites, command and telemetry exchanges, redundant links, operator intervention, mission records, and fleet status.",
+          "Several performance values in the source remain X/XXX placeholders, including latency, refresh rate, failover timing, and uptime. One requirement also has an incomplete function reference. Those entries need resolution and traceability review before the document can be treated as an implementation baseline.",
+          "The illustrative mission timeline also overlaps planning and departure. It needs reconciliation with the stated prelaunch authorization and readiness requirements, rather than being presented as an approved operational sequence."
+        ],
+        "figures": [],
+        "sources": [
+          {
+            "page": 15,
+            "label": "Illustrative timeline, PDF p. 15"
+          },
+          {
+            "page": 18,
+            "label": "Requirements structure, PDF pp. 18–22"
+          }
+        ]
+      },
+      {
+        "heading": "The result and the next verification step",
+        "paragraphs": [
+          "The result is a proposed architecture that connects the operating concept, functional responsibilities, product interfaces, and requirement categories. It gives a technical reviewer concrete boundaries and dependencies to examine.",
+          "There was no built UAV network, flight test, or measured service performance in this project. The next stage would allocate numerical targets, reconcile the timeline and traceability, and define verification methods for each requirement before implementation."
+        ],
+        "figures": []
       }
-    ]
+    ],
+    "summary": "A medical-drone mission depends on planning, communication, airspace approval, fleet readiness, and operator oversight. I developed the proposed control-center architecture that connects those responsibilities, including functional diagrams, an interface matrix, and requirements. The key decision was defining a clear system boundary while making external dependencies and unfinished performance targets explicit."
   },
   {
     "slug": "graded-crash-boxes",
@@ -692,31 +1295,135 @@
     "description": "Used impact simulations to study how internal walls and varying thickness change a crash box’s folding, energy absorption, and crushing force.",
     "overview": [
       "A crash box absorbs energy by folding during an impact. In my undergraduate thesis, I studied how its internal walls and thickness distribution change that process.",
-      "I developed LS-DYNA models, checked the modeling approach against a published impact test, and compared designs under the same simulated conditions. One graded design absorbed 124% more energy per unit of crushed material than a plain tube, and 11.8% more than a conventional multicell tube.",
+      "I developed LS-DYNA models, checked the modeling approach against a published tube-crush experiment, and compared designs under the same simulated conditions. One graded design absorbed 124% more energy per unit of crushed material than a plain tube, and 11.8% more than a conventional multicell tube.",
       "The same design had a 15.8% lower mean crushing force than the multicell comparison. These simulation results showed a tradeoff to consider in design selection; the proposed structures were not physically tested."
     ],
     "imageWidth": 1215,
     "imageHeight": 757,
     "story": [
       {
-        "heading": "Comparing the wall layouts",
+        "heading": "Changing the section to control progressive collapse",
         "paragraphs": [
-          "I modeled plain, multicell, and graded-thickness tubes. Changing the wall thickness across a section let me study where the material influenced the folding sequence. Using common impact conditions made the numerical comparisons consistent."
+          "A crash box absorbs impact energy through progressive folding. My undergraduate thesis investigated whether combining a four-cell section with thickness graded across its walls could change the folding response and energy absorption per unit of material being crushed.",
+          "I developed the LS-DYNA models and comparative studies. Plain square, conventional multicell, and graded-wall sections provided reference cases. A separate taper-ratio study varied the distribution of wall thickness rather than treating one geometry as universally best."
         ],
         "figures": [
           "crash-box-geometry.webp"
+        ],
+        "sources": [
+          {
+            "page": 48,
+            "label": "Study geometry and loading, PDF pp. 48–56"
+          }
         ]
       },
       {
-        "heading": "Checking the model and following the collapse",
+        "heading": "Keeping impact conditions consistent",
         "paragraphs": [
-          "I used a physical impact test from published research as a benchmark for the modeling approach. That experiment was performed by the cited researchers; my work was the numerical modeling and design comparison.",
-          "I examined the progressive collapse alongside the energy and force results. The highlighted design improved energy absorption per crushed mass, but that measure uses the material crushed during the event, not the total component mass. Its lower mean crushing force also mattered to the comparison. Physical tests would be needed to assess the proposed designs further."
+          "The dynamic comparison used nominal 100 × 100 × 400 mm tubes, a fixed base, and a rigid 98 kg impactor moving axially at 13.4 m/s. This gives about 8.80 kJ of initial kinetic energy. Holding the loading conditions common made the section comparisons interpretable.",
+          "The model used solid elements with three elements through the wall thickness, following the convergence guidance in the cited literature. This should not be read as a new mesh-convergence study performed on every candidate. Contact definitions and energy controls were part of the numerical setup needed to follow large deformation and self-contact.",
+          "For the graded four-cell family, the taper ratio ranged from 1.5 to 2.75. At a ratio of 2, the geometry table specifies minimum and maximum wall thicknesses of 1 and 2 mm."
+        ],
+        "figures": [],
+        "sources": [
+          {
+            "page": 47,
+            "label": "Numerical setup, PDF pp. 47–55"
+          }
+        ]
+      },
+      {
+        "heading": "Checking the numerical approach against published evidence",
+        "paragraphs": [
+          "Before comparing the proposed impact structures, I reproduced a published aluminum-tube crush configuration and compared its response with the experimental benchmark. That physical experiment was performed by the cited researchers, not by me.",
+          "The benchmark comparison covered the force-displacement history and energy/force metrics. The peak-force agreement was weaker than the agreement in the integrated response. Matching one benchmark supports the modeling approach within that comparison; it does not physically validate every new geometry or a complete vehicle crash system."
+        ],
+        "figures": [],
+        "sources": [
+          {
+            "page": 44,
+            "label": "Published benchmark setup, PDF pp. 44–47"
+          },
+          {
+            "page": 72,
+            "label": "Benchmark comparison, PDF p. 72"
+          }
+        ]
+      },
+      {
+        "heading": "Defining the energy metric before comparing it",
+        "paragraphs": [
+          "I evaluated absorbed energy, mean crushing force, specific energy absorption, and crushing-force efficiency alongside the folding sequence. The report defines specific energy absorption using displaced or crushed mass, rather than the total mass of the whole component.",
+          "For the taper-ratio-2 graded multicell case, the source reports 8.599 kJ absorbed, approximately 0.257 kg of crushed mass, and approximately 0.946 kg of total specimen mass. The reported SEA of 33.487 kJ/kg therefore uses the smaller, crushed-mass denominator. It must not be compared directly with values normalized by whole-component mass."
         ],
         "figures": [
           "crash-box-collapse.webp"
+        ],
+        "equation": {
+          "expression": "SEA = E_absorbed / m_crushed",
+          "spoken": "Specific energy absorption equals absorbed energy divided by the mass of the crushed portion.",
+          "explanation": "This is the normalization used in the thesis. It is distinct from energy per total component mass."
+        },
+        "sources": [
+          {
+            "page": 82,
+            "label": "Energy definition and reported metrics, PDF pp. 82–84"
+          }
         ]
+      },
+      {
+        "heading": "What improved, and what moved the other way",
+        "paragraphs": [
+          "At taper ratio 2, the graded multicell model’s SEA was about 124% above the plain tube and 11.8% above the conventional multicell tube under the simulated conditions. Its mean crushing force was 15.8% lower than the conventional multicell result.",
+          "The taper study also showed SEA increasing from 30.742 to 36.129 kJ/kg as taper ratio increased from 1.5 to 2.75. These are numerical results for the selected geometry, material inputs, boundary conditions, and crushed-mass definition.",
+          "The useful design conclusion is the tradeoff, not a blanket claim that one section improves every crashworthiness measure. Energy absorption, force levels, mass basis, and available crush distance need to be considered together."
+        ],
+        "figures": [],
+        "table": {
+          "caption": "Simulated SEA comparison at taper ratio 2 where applicable",
+          "columns": [
+            "Section",
+            "SEA, kJ/kg",
+            "Normalization"
+          ],
+          "rows": [
+            [
+              "Plain square tube",
+              "14.951",
+              "Crushed mass"
+            ],
+            [
+              "Conventional four-cell tube",
+              "29.946",
+              "Crushed mass"
+            ],
+            [
+              "Graded four-cell tube, TR = 2",
+              "33.487",
+              "Crushed mass"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "page": 83,
+            "label": "Baseline comparison, PDF pp. 83–84"
+          },
+          {
+            "page": 88,
+            "label": "Taper study, PDF pp. 88–90"
+          }
+        ]
+      },
+      {
+        "heading": "Limits of a simulation-led result",
+        "paragraphs": [
+          "The proposed crash boxes were not physically manufactured or impact-tested in this study. Further work would need specimen tests, material and contact characterization, and additional numerical sensitivity checks before relying on the concepts in a vehicle design.",
+          "The source’s absolute force labels are inconsistent with its energy and displacement scales. I have therefore retained the documented relative comparison and energy-per-crushed-mass values, and have not presented the ambiguous absolute force units as verified results."
+        ],
+        "figures": []
       }
-    ]
+    ],
+    "summary": "In my undergraduate thesis, I used impact simulations to investigate how internal walls and graded thickness affect a crash box’s folding. A graded four-cell design improved energy absorption per crushed mass by 124% against a plain tube, while its mean crushing force was lower than the conventional multicell comparison."
   }
 ]

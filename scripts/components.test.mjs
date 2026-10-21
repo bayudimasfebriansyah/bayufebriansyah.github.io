@@ -4,7 +4,7 @@ import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import { createMediaRenderer, actionLink } from './components.mjs';
+import { createMediaRenderer, actionLink, technicalTable, equationBlock } from './components.mjs';
 
 function fixture(t) {
   const root = mkdtempSync(path.join(os.tmpdir(), 'portfolio-media-'));
@@ -43,4 +43,21 @@ test('repeated action labels retain project context and safe new-tab behavior', 
   assert.match(link, /target="_blank" rel="noopener"/);
   assert.match(link, /Beam &amp; tooling · PDF, opens in a new tab/);
   assert.doesNotMatch(actionLink({href:'/project/',label:'Story'}), /undefined|target=/);
+});
+
+test('technical comparisons reject missing cells and preserve accessible table relationships', ()=> {
+  assert.throws(()=>technicalTable({caption:'Comparison',columns:['State','Radius'],rows:[['Deployed']]},'radius'), /Incomplete technical comparison/);
+  const markup = technicalTable({caption:'Measured & predicted',columns:['State','Radius'],rows:[['<baseline>','16 mm']]},'radius');
+  assert.match(markup, /role="region" aria-labelledby="radius-caption" tabindex="0"/);
+  assert.match(markup, /<caption id="radius-caption">Measured &amp; predicted<\/caption>/);
+  assert.match(markup, /<th scope="col">State<\/th>/);
+  assert.match(markup, /<th scope="row">&lt;baseline&gt;<\/th>/);
+});
+
+test('equations require a spoken form and a contextual explanation', ()=> {
+  assert.throws(()=>equationBlock({expression:'C = 1/R'}), /spoken form/);
+  const markup = equationBlock({expression:'C = 1/R',spoken:'Curvature equals one divided by radius.',explanation:'Used for both model and measurements.'});
+  assert.match(markup, /role="math" aria-label="Curvature equals one divided by radius\."/);
+  assert.match(markup, /aria-hidden="true">C = 1\/R/);
+  assert.match(markup, /<figcaption>Used for both model and measurements\.<\/figcaption>/);
 });
