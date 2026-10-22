@@ -1,6 +1,6 @@
 # Bayu Febriansyah · Engineering portfolio
 
-A static portfolio built around engineering decisions, personal contributions, and evidence. Eight standalone projects cover structures, materials, manufacturing, mechanical design, and systems architecture. The IEEE PELS University Lab Kit leads the collection, followed by seven technical projects.
+A static portfolio built around engineering decisions, personal contributions, and evidence. Selected Works is the default collection, with IEEE PELS followed by seven technical projects. Other Works contains four additional MakerLab projects: SO-101 robot arms, a tissue-clamp assembly, Functional Hand grips, and watch-cleaner print planning.
 
 The site is plain HTML and CSS with a small progressive-enhancement script. A dependency-free Node build produces the pages from editable JSON. There is no database, subscription, external font request, or client-side framework.
 
@@ -18,10 +18,11 @@ Open the URL printed by the server. The default build uses the root path, matchi
 
 | File | Purpose |
 | --- | --- |
-| `content/projects.json` | Homepage summaries, project overviews, narrative sections, optional comparisons/equations, source pages, roles, captions, report metadata |
+| `content/projects.json` | Collection membership, summaries, project overviews, narrative sections, optional comparisons/equations/video, roles, captions, report metadata |
 | `site.config.json` | Contact links and the default local build URL |
 | `scripts/build.mjs` | Home page and case-study templates |
 | `scripts/components.mjs` | Shared media, action links, technical tables, accessible equations, and safe fallbacks |
+| `scripts/collections.mjs` | Collection labels/routes, default membership, and navigation within each collection |
 | `content/image-variants.json` | Original image hashes and optional responsive previews |
 | `scripts/portfolio-preview.svg` | Editable source for the BF logo sharing card |
 | `public/assets/portfolio-preview.png` | 1200 × 627 logo card used by every page for Open Graph and Twitter/X previews |
@@ -34,7 +35,11 @@ Open the URL printed by the server. The default build uses the root path, matchi
 
 Keep homepage `summary` text under 70 words and opening overviews under 160 words. The shorter `description` remains the page metadata description. Match claims to the supplied evidence, credit collaborators, and distinguish simulation, physical testing, proposed systems, and production estimates. Add new projects as standalone entries in `content/projects.json`, with narrative sections and supporting figures. The `featured` flag selects the home-page image and story link; when it is absent, the first project is used. `featuredCaption` optionally supplies its caption. Employment examples outside MakerLab are omitted. Customer documents, invoices, shipping details, original third-party CAD libraries, and the watch-cleaner manual stay outside the public assets.
 
+For an additional project, set `"collection": "other"` in its entry. Omitting the field keeps an entry in Selected Works. Both lists are generated automatically in content order; no layout or navigation edits are needed when projects are added or removed. Only a Selected Works entry can supply the home-page feature. Collection navigation uses real URLs (`/#work` and `/other-works/#work`) and works without JavaScript. Back links and Next project stay within the entry's collection. Unknown collection keys fail the build instead of silently hiding a project.
+
 Each `story` section has its own heading, paragraphs, and figure references. Use optional `table` content with a caption, columns, and matching-length rows when a comparison helps. An optional `equation` needs an expression, a spoken form, and an explanation of its significance. `sources` entries provide a PDF page number and descriptive link label; page numbers include the cover. Only use these blocks where the project warrants them. The case outline is generated from the actual section headings, so adding or removing sections requires no manual navigation edits.
+
+A story section can include an optional `video` with a file under `public/assets/video/`, a project-image poster, dimensions, an accessible label, and a caption. Native controls and a direct video link remain available; videos use `preload="none"` and never autoplay.
 
 ## Publish with GitHub Pages
 
@@ -68,7 +73,7 @@ For a manual root-domain build, set `BASE_PATH` to an empty string and `SITE_ORI
 
 ## Accessibility and performance
 
-All project content and report links are available without JavaScript. All eight entries appear in a single Selected Works list, with IEEE PELS first and the I-beam featured above it. Desktop rows use proportional image and text columns, shared with the section heading so its introduction aligns with the summaries. At 1366 × 900, images occupy approximately 507 × 280 frames and rows are approximately 333 pixels high, showing roughly two projects at the section entrance. The centered page reserves equal scrollbar gutters. At 720 pixels and below, images stack above the text. Rows flow automatically as entries change. Image links open the original image without JavaScript and use a modal dialog when supported, with Escape dismissal and focus restoration. Images have alternative text, focus indicators are visible, and motion respects the reduced-motion preference. Technical comparisons scroll within their own keyboard-focusable region on narrow screens; equations have a spoken representation and contextual explanation.
+All project content and report links are available without JavaScript. The collection tabs show eight Selected Works by default and four Other Works on their own route. The I-beam remains featured above both lists. Desktop rows use proportional image and text columns, shared with the section heading so its introduction aligns with the summaries. At 1366 × 900, images occupy approximately 507 × 280 frames and rows are approximately 333 pixels high, showing roughly two projects at the section entrance. The centered page reserves equal scrollbar gutters. At 720 pixels and below, images stack above the text. Rows flow automatically as entries change. Image links open the original image without JavaScript and use a modal dialog when supported, with Escape dismissal and focus restoration. Images have alternative text, focus indicators are visible, and motion respects the reduced-motion preference. Technical comparisons scroll within their own keyboard-focusable region on narrow screens; equations have a spoken representation and contextual explanation.
 
 Public project images are optimized WebP files. Browsers choose among optional 480- and 768-pixel previews and the original using `srcset` and `sizes`. Originals retain their bytes; project images are lazy-loaded except for the featured image. Reports download only when requested; their original bytes are preserved. Source PDFs and their figures retain their authors' attribution. No blanket open-source license is applied to third-party report content.
 

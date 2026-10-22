@@ -101,6 +101,11 @@ a:hover > .arrow, a:focus-visible > .arrow { transform: translate(2px, -2px); }
 .work-section { --work-columns: minmax(0, .85fr) minmax(0, 1.15fr); --work-gap: 48px; padding-block: var(--section-space); border-block: 1px solid var(--line); background: var(--white); }
 .section-heading { display: grid; grid-template-columns: var(--work-columns); align-items: center; gap: var(--work-gap); margin-bottom: 28px; }
 .section-heading h2 { margin-top: 8px; font-size: clamp(34px, 3.2vw, 44px); }
+.work-tabs { display: flex; align-items: center; gap: clamp(12px, 2vw, 24px); margin-top: 8px; }
+.work-tabs a { display: inline-flex; align-items: center; min-height: 52px; padding-block: 6px 10px; border-bottom: 2px solid transparent; color: var(--muted); font: 500 clamp(28px, 2.45vw, 34px)/1.2 var(--serif); letter-spacing: -.035em; white-space: nowrap; transition: color var(--fast), border-color var(--fast); }
+.work-tabs a:hover { color: var(--orange); border-bottom-color: var(--line); }
+.work-tabs a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--orange); }
+.collection-empty { padding-block: 40px; color: var(--muted); }
 .work-intro { color: var(--muted); font-size: 16px; line-height: 1.8; }
 .work-intro span { display: block; }
 .project-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
@@ -230,6 +235,9 @@ a:hover > .arrow, a:focus-visible > .arrow { transform: translate(2px, -2px); }
 .equation-card { margin-top: 24px; padding: 22px 24px; border-left: 2px solid var(--orange); background: var(--blue); }
 .equation-expression { font: 500 clamp(17px,1.8vw,23px)/1.7 var(--serif); overflow-wrap: anywhere; color: var(--ink); }
 .equation-card figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.project-video { max-width: 640px; margin-inline: auto; }
+.project-video video { display: block; width: 100%; height: auto; max-height: 70dvh; aspect-ratio: 406 / 720; object-fit: contain; border: 1px solid var(--line); border-radius: var(--radius); background: var(--ink); }
+.project-video figcaption { padding-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.8; }
 
 /* Native dialog provides focus containment and Escape dismissal. */
 .image-dialog { width: min(1180px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); padding: 64px 24px 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); color: var(--ink); overscroll-behavior: contain; }
@@ -306,6 +314,7 @@ html.has-dialog { overflow: hidden; }
   .image-label { bottom: 10px; left: 10px; max-width: calc(100% - 20px); font-size: 9px; }
   .section-heading { margin-bottom: 24px; }
   .work-intro { font-size: 15px; }
+  .work-tabs a { font-size: clamp(18px, 5.5vw, 28px); }
   .project-summary h3 { font-size: 27px; }
   .project-links { gap: 0 22px; margin-top: 6px; }
   .project-links .text-link { font-size: 13px; }

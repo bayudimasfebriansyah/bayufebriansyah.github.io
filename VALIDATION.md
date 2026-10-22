@@ -1,5 +1,15 @@
 # Validation record
 
+## Selected Works and Other Works — 22 October 2026
+
+- Added an Other Works collection beside Selected Works. The homepage defaults to the original eight Selected Works, with their content, order, and I-beam feature unchanged. Other Works has its own shareable `/other-works/#work` route and uses the same balanced row layout.
+- Added standalone SO-101 robot arms, Tissue Clamp Assembly, Functional Hand Grips, and Watch-Cleaner Print Planning pages using existing project material and prior confirmed copy. Restored the two original tissue-clamp images from repository history. Kept Functional Hand and watch-cleaner design credits, prototype/estimate limitations, and the corrected grip-image orientation. Aering, Gexcon, the trophy, and the MakerLab umbrella remain excluded.
+- Collection links are native links with current-page feedback, so they work without a JavaScript tab controller. Back and Next project links stay within the current collection. Membership is content-driven: omitted `collection` means Selected Works; `collection: "other"` means Other Works. Unknown keys fail the build.
+- Restored the existing SO-101 video in its standalone page with native controls, reserved dimensions, a poster, `preload="none"`, and a direct-video fallback. Confirmed the video remained at readyState 0 before activation, then played the approximately 21-second demonstration through to completion without a media error. The page does not claim repeated-trial reliability or original robot-platform design.
+- Reviewed both collections at 1366 × 900, 390 × 844, and 320 × 740. The two collection links remain side by side with at least 52-pixel target heights at 320 pixels. Checked all four new project pages at 320 pixels with no horizontal overflow. Verified keyboard Enter navigation, browser Back, and collection-specific case links.
+- Built 15 pages, checked 446 local references and all seven original report hashes, and passed nine regression tests. New coverage checks default/unknown collection membership, next-project isolation, real collection URLs/current state, and deferred video loading. Original selected-project objects were compared directly with the prior commit and are unchanged.
+- Verification remains Chromium-based. Additional projects can be added to the content file without changing layout code; only supported project details should be published.
+
 ## Alignment and visual balance — 20 October 2026
 
 - Replaced the narrow fixed project-image column with proportional image/text tracks. The Work section heading uses the same grid, aligning its introduction with the project summaries. Removed the summary width cap that left unused space at the right of the rows.

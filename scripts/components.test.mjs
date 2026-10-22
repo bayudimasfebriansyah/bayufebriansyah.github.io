@@ -4,7 +4,8 @@ import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import { createMediaRenderer, actionLink, technicalTable, equationBlock } from './components.mjs';
+import { createMediaRenderer, actionLink, technicalTable, equationBlock, collectionNavigation, projectVideo } from './components.mjs';
+import { COLLECTIONS, collectionFor, nextInCollection } from './collections.mjs';
 
 function fixture(t) {
   const root = mkdtempSync(path.join(os.tmpdir(), 'portfolio-media-'));
@@ -60,4 +61,36 @@ test('equations require a spoken form and a contextual explanation', ()=> {
   assert.match(markup, /role="math" aria-label="Curvature equals one divided by radius\."/);
   assert.match(markup, /aria-hidden="true">C = 1\/R/);
   assert.match(markup, /<figcaption>Used for both model and measurements\.<\/figcaption>/);
+});
+
+test('selected is the default collection and unknown collections cannot disappear silently', ()=> {
+  assert.equal(collectionFor({slug:'beam'}).key,'selected');
+  assert.equal(collectionFor({slug:'robot',collection:'other'}).pathname,'/other-works/');
+  assert.throws(()=>collectionFor({collection:'typo'}),/Unknown project collection/);
+});
+
+test('next-project links stay inside the current collection as entries change', ()=> {
+  const projects=[{slug:'beam'},{slug:'robot',collection:'other'},{slug:'boom'},{slug:'clamp',collection:'other'}];
+  assert.equal(nextInCollection(projects,projects[0]).slug,'boom');
+  assert.equal(nextInCollection(projects,projects[2]).slug,'beam');
+  assert.equal(nextInCollection(projects,projects[1]).slug,'clamp');
+  assert.equal(nextInCollection(projects,projects[3]).slug,'robot');
+  assert.equal(nextInCollection([projects[1]],projects[1]),null);
+});
+
+test('collection tabs use real URLs and expose exactly one current destination', ()=> {
+  const nav=collectionNavigation(COLLECTIONS,'other',p=>'/portfolio'+p);
+  assert.match(nav,/href="\/portfolio\/#work"/);
+  assert.match(nav,/href="\/portfolio\/other-works\/#work" aria-current="page"/);
+  assert.equal((nav.match(/aria-current=/g)||[]).length,1);
+  assert.throws(()=>collectionNavigation(COLLECTIONS,'unknown',p=>p),/Unknown active collection/);
+});
+
+test('project video reserves its dimensions and loads only on request', ()=> {
+  const video=projectVideo({file:'robot.mp4',poster:'robot.webp',width:406,height:720,label:'Robot demonstration',caption:'Trained arm task.'},p=>p);
+  assert.match(video,/controls playsinline preload="none" width="406" height="720"/);
+  assert.match(video,/poster="\/assets\/projects\/robot.webp" aria-label="Robot demonstration"/);
+  assert.match(video,/href="\/assets\/video\/robot.mp4"/);
+  assert.doesNotMatch(video,/autoplay/);
+  assert.throws(()=>projectVideo({file:'robot.mp4'},p=>p),/Incomplete project video/);
 });

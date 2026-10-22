@@ -56,3 +56,13 @@ export function equationBlock(equation) {
   if (!equation.expression || !equation.spoken || !equation.explanation) throw Error('Equation needs a readable expression, spoken form, and explanation');
   return `<figure class="equation-card"><div class="equation-expression" role="math" aria-label="${escapeHTML(equation.spoken)}"><span aria-hidden="true">${escapeHTML(equation.expression)}</span></div><figcaption>${escapeHTML(equation.explanation)}</figcaption></figure>`;
 }
+
+export function collectionNavigation(collections, current, url) {
+  if (!collections.some(item => item.key === current)) throw Error('Unknown active collection: ' + current);
+  return `<nav class="work-tabs" aria-label="Project collections">${collections.map(item => `<a href="${escapeHTML(url(item.pathname + '#work'))}"${item.key === current ? ' aria-current="page"' : ''}>${escapeHTML(item.label)}</a>`).join('')}</nav>`;
+}
+
+export function projectVideo(video, url) {
+  if (!video.file || !video.poster || !video.label || !video.caption || !(video.width > 0 && video.height > 0)) throw Error('Incomplete project video');
+  return `<figure class="project-video"><video controls playsinline preload="none" width="${Number(video.width)}" height="${Number(video.height)}" poster="${escapeHTML(url('/assets/projects/' + video.poster))}" aria-label="${escapeHTML(video.label)}"><source src="${escapeHTML(url('/assets/video/' + video.file))}" type="video/mp4"><p><a href="${escapeHTML(url('/assets/video/' + video.file))}">Open the robot demonstration</a></p></video><figcaption><p>${escapeHTML(video.caption)}</p><a class="text-link" href="${escapeHTML(url('/assets/video/' + video.file))}">Open video <span aria-hidden="true">↗</span></a></figcaption></figure>`;
+}

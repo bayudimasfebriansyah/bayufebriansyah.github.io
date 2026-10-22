@@ -1425,5 +1425,283 @@
       }
     ],
     "summary": "In my undergraduate thesis, I used impact simulations to investigate how internal walls and graded thickness affect a crash box’s folding. A graded four-cell design improved energy absorption per crushed mass by 124% against a plain tube, while its mean crushing force was lower than the conventional multicell comparison."
+  },
+  {
+    "slug": "lerobot-so101",
+    "title": "LeRobot SO-101 Robot Arms",
+    "collection": "other",
+    "category": "Robotics & integration",
+    "year": "2026",
+    "setting": "Illinois MakerLab",
+    "tools": "3D printing, assembly, wiring, calibration, teleoperation, software setup and training",
+    "evidence": "Assembled robot arms · Trained-task demonstration",
+    "image": "so101-robot.webp",
+    "imageAlt": "Two red SO-101 robot arms on the MakerLab worktable",
+    "imageWidth": 1000,
+    "imageHeight": 1774,
+    "imagePosition": "center 72%",
+    "role": "Build, software setup, calibration & training",
+    "description": "Built and trained SO-101 robot arms, handling printed parts, assembly, wiring, software setup, calibration, and teleoperation.",
+    "summary": "I took the SO-101 arms from printed parts through assembly, wiring, software setup, calibration, teleoperation, and training. The video shows a trained arm performing a task. My contribution was building and integrating the existing robot platform into a working demonstration at MakerLab.",
+    "takeaway": "I built and trained SO-101 robot arms, taking responsibility for the hardware and software workflow through a task demonstration.",
+    "overviewHeading": "From printed parts to a trained demonstration.",
+    "overview": [
+      "At Illinois MakerLab, I built LeRobot SO-101 arms and worked through the hardware and software needed to run them. My scope included printing parts, assembly, wiring, software setup, calibration, teleoperation, and training.",
+      "The supplied video shows a trained arm performing a task. It demonstrates the integrated system in use; it is not a repeated-trial benchmark.",
+      "The SO-101 is an existing robot platform. My work was its build, setup, integration, and training, rather than the original arm design."
+    ],
+    "figures": [
+      {
+        "file": "so101-robot.webp",
+        "title": "The assembled SO-101 arms",
+        "caption": "Two assembled arms on the MakerLab worktable.",
+        "alt": "Two red SO-101 robot arms on the MakerLab worktable",
+        "width": 1000,
+        "height": 1774
+      }
+    ],
+    "story": [
+      {
+        "heading": "Bringing the hardware and software together",
+        "paragraphs": [
+          "I printed and assembled the parts, completed the wiring, and set up the software for the SO-101 arms. I then handled calibration and teleoperation as part of bringing the physical build into use.",
+          "Owning both sides of the setup meant following the workflow beyond a completed mechanical assembly. The arm also needed to operate through the software before I could move on to training."
+        ],
+        "figures": [
+          "so101-robot.webp"
+        ]
+      },
+      {
+        "heading": "Running the trained arm",
+        "paragraphs": [
+          "I handled the training workflow and ran the trained arm on a task. The video below is the demonstration supplied for this project.",
+          "The result establishes that the assembled and configured system could perform the demonstrated behavior. The available record does not include repeated-trial success rates, payload measurements, or a comparison of training methods."
+        ],
+        "figures": [],
+        "video": {
+          "file": "so101-demo.mp4",
+          "poster": "so101-robot.webp",
+          "width": 406,
+          "height": 720,
+          "label": "Trained SO-101 robot arm task demonstration",
+          "caption": "The trained arm performing a task at MakerLab. This is a demonstration, rather than a measured reliability test."
+        }
+      }
+    ],
+    "attribution": "Robot platform: SO-101 / LeRobot. My contribution covers printing, assembly, wiring, software setup, calibration, teleoperation, and training.",
+    "scopeNote": "The build photograph and task video document the integration work. Training settings and repeated-trial performance data are not included in the available project record."
+  },
+  {
+    "slug": "tissue-clamp-assembly",
+    "title": "Tissue Clamp Assembly",
+    "category": "Mechanical design & prototyping",
+    "year": "2026",
+    "setting": "Illinois MakerLab",
+    "tools": "CAD, 3D printing, assembly review",
+    "evidence": "CAD assembly · Physical prototype · Revision notes",
+    "image": "tissue-clamp-cad.webp",
+    "imageAlt": "CAD view of a circular tissue-clamp assembly with four rods and sliding clamps",
+    "imageWidth": 1600,
+    "imageHeight": 1200,
+    "role": "CAD design & prototyping",
+    "description": "Designed a compact tissue-clamp assembly in CAD, printed prototypes, and identified changes to its sliders, fasteners, and connections.",
+    "takeaway": "I designed and printed a tissue-clamp assembly, then identified changes to its sliding parts, connections, and fasteners.",
+    "overviewHeading": "Making the connections work together.",
+    "overview": [
+      "The tissue clamp brings a frame, rods, sliders, and screws together in a compact assembly. I designed it in CAD and printed prototypes, with attention to how the parts connected and moved together.",
+      "The prototype and revision notes identified the next changes: thicker slides and connections, larger screws, and fewer fasteners underneath. These findings gave the next design revision a concrete starting point.",
+      "The work shown here is design and prototyping. Clamping performance has not yet been measured."
+    ],
+    "figures": [
+      {
+        "file": "tissue-clamp-cad.webp",
+        "title": "The clamp assembly in CAD",
+        "caption": "The frame, rods, sliding clamps, and screws shown together before printing.",
+        "alt": "CAD view of a circular tissue-clamp assembly with four rods and sliding clamps",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 13846
+      },
+      {
+        "file": "tissue-clamp-prototype.webp",
+        "title": "A physical prototype",
+        "caption": "The printed assembly beside a ruler. Revision notes address the slides, fasteners, and connections.",
+        "alt": "Black printed tissue-clamp prototype beside a ruler",
+        "width": 1024,
+        "height": 768,
+        "bytes": 42026
+      }
+    ],
+    "story": [
+      {
+        "heading": "Designing the assembly in CAD",
+        "paragraphs": [
+          "I designed the frame, rods, sliding clamps, and screw connections as one assembly. The interfaces mattered as much as the overall shape: each part had to fit into the compact layout while allowing the sliding parts to move.",
+          "The CAD view shows those parts together before printing, making the connections and fastener arrangement visible."
+        ],
+        "figures": [
+          "tissue-clamp-cad.webp"
+        ]
+      },
+      {
+        "heading": "Using the prototype to plan the next revision",
+        "paragraphs": [
+          "I printed prototypes to bring the CAD design into a physical assembly. The prototype and revision notes helped identify changes to the slides, screws, connections, and fasteners underneath.",
+          "Thicker slides and connections, larger screws, and fewer underside fasteners were planned for the next revision. The prototype gave me specific changes to work on before evaluating clamping performance."
+        ],
+        "figures": [
+          "tissue-clamp-prototype.webp"
+        ]
+      }
+    ],
+    "scopeNote": "The CAD view, prototype photograph, and revision notes document the design and prototyping work described above.",
+    "collection": "other",
+    "imageFit": "contain",
+    "summary": "I designed a compact tissue-clamp assembly with a frame, rods, sliding clamps, and screws, then printed prototypes to examine the connections. The physical assembly and revision notes identified changes to the slides, connections, and fasteners before clamping performance could be evaluated."
+  },
+  {
+    "slug": "functional-hand-grips",
+    "title": "Functional Hand Grips",
+    "collection": "other",
+    "category": "Print trials & assembly",
+    "year": "2026",
+    "setting": "Illinois MakerLab",
+    "tools": "3D printing, print trials and assembly",
+    "evidence": "Print trials · Assembled grips",
+    "image": "functional-hand-batch.webp",
+    "imageAlt": "A batch of blue printed Functional Hand grips with flexible loops",
+    "imageWidth": 1600,
+    "imageHeight": 1200,
+    "role": "Printing & assembly",
+    "description": "Printed and assembled an existing assistive grip design, working through print trials before completing a batch of grips.",
+    "summary": "I printed and assembled grips from the Functional Hand design, fitting the printed bodies with flexible loops. The work included unsuccessful prints and test pieces as well as completed assemblies. The photographs show the progression from print trials to a batch of assembled grips.",
+    "takeaway": "I worked through print trials and assembled a batch of grips using the existing Functional Hand design.",
+    "overviewHeading": "Taking an existing design into physical parts.",
+    "overview": [
+      "I printed and assembled grips from the Functional Hand design, which uses a printed body and flexible loops to hold objects. My work covered the physical parts and assembly; the device design belongs to Functional Hand.",
+      "The work included failed prints and test pieces as well as assembled grips. The photos show that progression and the batch of completed assemblies.",
+      "The photographs document printing and assembly. They do not establish a measured grip force, durability rating, or clinical outcome."
+    ],
+    "figures": [
+      {
+        "file": "functional-hand-failed-print.webp",
+        "title": "An unsuccessful print",
+        "caption": "Loose filament and incomplete parts on the build plate during the print trials.",
+        "alt": "Failed blue Functional Hand print with loose filament on the build plate",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 506060
+      },
+      {
+        "file": "functional-hand-assembled-ccw.svg",
+        "title": "Assembled grips",
+        "caption": "Printed bodies fitted with flexible loops.",
+        "alt": "Five assembled blue and turquoise Functional Hand grips with flexible loops",
+        "width": 1024,
+        "height": 768,
+        "bytes": 55158
+      },
+      {
+        "file": "functional-hand-batch.webp",
+        "title": "The completed assemblies",
+        "caption": "A batch of assembled Functional Hand grips on the MakerLab worktable.",
+        "alt": "Batch of completed blue Functional Hand grips on a worktable",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 228076
+      }
+    ],
+    "story": [
+      {
+        "heading": "Working through the print trials",
+        "paragraphs": [
+          "I printed parts from the existing Functional Hand design. The project record includes failed prints and test pieces, making the fabrication work visible alongside the completed assemblies.",
+          "The failed-print photograph records an unsuccessful build. It does not isolate a root cause, and I have not assigned particular print-setting changes or a measured yield improvement to it."
+        ],
+        "figures": [
+          "functional-hand-failed-print.webp"
+        ]
+      },
+      {
+        "heading": "Assembling the grips",
+        "paragraphs": [
+          "I fitted the printed bodies with flexible loops and assembled the grips. The photographs show individual assemblies and the completed batch on the MakerLab worktable.",
+          "My scope was printing and physical assembly. The underlying device design belongs to Functional Hand; user testing and quantified device performance are outside the evidence shown here."
+        ],
+        "figures": [
+          "functional-hand-assembled-ccw.svg",
+          "functional-hand-batch.webp"
+        ]
+      }
+    ],
+    "attribution": "Device design: Functional Hand. The work shown here concerns printing and assembly.",
+    "scopeNote": "The print-trial and assembly photographs show the fabrication work. No grip-strength, durability, or clinical testing is claimed."
+  },
+  {
+    "slug": "watch-cleaner-print-planning",
+    "title": "Watch-Cleaner Print Planning",
+    "collection": "other",
+    "category": "Manufacturing preparation",
+    "year": "2026",
+    "setting": "Illinois MakerLab",
+    "tools": "Print preparation, material grouping and machine-time planning",
+    "evidence": "13 print configurations · Material and time estimates",
+    "image": "watch-cleaner-slicing.webp",
+    "imageAlt": "Watch-cleaner slicing result showing estimated filament use and print duration",
+    "imageWidth": 597,
+    "imageHeight": 471,
+    "imageFit": "contain",
+    "role": "Print preparation & production planning",
+    "description": "Organized supplied watch-cleaner parts into 13 print configurations, separating materials and settings and estimating filament use and machine time.",
+    "summary": "I turned a supplied watch-cleaner part library into 13 print configurations, grouping parts by color, PLA or PETG, infill, and support needs. The resulting plan estimated material use and machine time before printing. My work covered production preparation, with the machine design credited to its original creator.",
+    "takeaway": "I organized the supplied watch-cleaner parts into a material and machine-time plan across 13 print configurations.",
+    "overviewHeading": "Making a large part library manageable.",
+    "overview": [
+      "I prepared the supplied UberKiwi watch-cleaner parts as 13 print configurations. I grouped them by color, PLA or PETG, infill, and support requirements because different parts needed different print settings.",
+      "The slicer estimates gave the job a material and machine-time plan before printing. This example shows my production preparation; the estimated times do not represent measured turnaround or completed delivery."
+    ],
+    "figures": [
+      {
+        "file": "watch-cleaner-slicing.webp",
+        "title": "Planning a print job",
+        "caption": "The slicer estimates filament use and print duration for one watch-cleaner configuration.",
+        "alt": "Watch-cleaner slicing result showing estimated filament use and print duration",
+        "width": 597,
+        "height": 471,
+        "bytes": 15878
+      }
+    ],
+    "facts": [
+      {
+        "value": "13",
+        "label": "Print configurations in the watch-cleaner plan"
+      },
+      {
+        "value": "PLA + PETG",
+        "label": "Materials separated into appropriate jobs"
+      }
+    ],
+    "story": [
+      {
+        "heading": "Grouping parts around their print requirements",
+        "paragraphs": [
+          "The supplied UberKiwi watch-cleaner library contained parts with different printing needs. I prepared 13 configurations, separating color, PLA and PETG, infill, and support requirements.",
+          "The deliverable was an organized print plan. It connected the part library to the materials and machine time needed for the proposed jobs."
+        ],
+        "figures": []
+      },
+      {
+        "heading": "Using estimates before committing machine time",
+        "paragraphs": [
+          "I used slicer estimates to record filament use and print duration. The example below is one configuration; its figures are not totals for the whole machine.",
+          "These are planning estimates, rather than measured production time, actual cost, or evidence of a completed machine delivery. The supplied machine design and manual remain credited to Frank Simons."
+        ],
+        "figures": [
+          "watch-cleaner-slicing.webp"
+        ]
+      }
+    ],
+    "attribution": "UberKiwi machine design and manual: Frank Simons. The contribution shown here is print preparation and production planning.",
+    "scopeNote": "The configuration plan and slicer record document production preparation. Estimated time and material use are not measured manufacturing results."
   }
 ]
