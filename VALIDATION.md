@@ -1,5 +1,14 @@
 # Validation record
 
+## Stable collection switching — 22 October 2026
+
+- Replaced full-page collection switching with an in-place progressive enhancement. Both panels are generated in the collection pages, with only the requested panel visible initially. Native URLs remain available for direct visits, modified clicks, and JavaScript-free navigation.
+- Kept the tab elements and shared heading in place. Both introductions size the same grid cell, with inactive text visually hidden and excluded from the reading order. Disabled scroll anchoring inside the changing section. No scrolling or entrance animation runs during a collection switch.
+- Updated current-link state, visible heading, document title, canonical URL, description, and Open Graph text together. Verified Back/Forward restores the right collection and a reload of `/other-works/#work` shows its four projects.
+- Direct mouse switching at 1366 × 900 preserved scrollY, tab top, and project-list top exactly (0-pixel change), including a scrolled position at approximately 765 pixels. Keyboard Enter and Back/Forward preserved that position. Direct switching at 390 × 844 also preserved all three measurements exactly, with an unchanged 81-pixel introduction area.
+- Reviewed 768 × 1024 and 320 × 740 for overflow and single-panel visibility. No horizontal overflow or console errors. Hidden lazy images kept their correct source/alternative text when revealed. Project copy, images, collection membership, and case pages are unchanged.
+- Built 15 pages and checked 520 local references, unique IDs, controlled-region IDs, consistent server-rendered collection state, and all seven original report hashes. All nine regression tests pass, including the enhanced navigation-hook contract. Browser verification remains Chromium-based.
+
 ## Image framing polish — 22 October 2026
 
 - Removed inset padding from collection previews and case-study figures, matched technical-image canvases to the existing white palette, and gave the featured image a matching border. Retained the layout, spacing, typography, project text, and collection membership.

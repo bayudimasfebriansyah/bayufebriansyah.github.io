@@ -59,7 +59,7 @@ export function equationBlock(equation) {
 
 export function collectionNavigation(collections, current, url) {
   if (!collections.some(item => item.key === current)) throw Error('Unknown active collection: ' + current);
-  return `<nav class="work-tabs" aria-label="Project collections">${collections.map(item => `<a href="${escapeHTML(url(item.pathname + '#work'))}"${item.key === current ? ' aria-current="page"' : ''}>${escapeHTML(item.label)}</a>`).join('')}</nav>`;
+  return `<nav class="work-tabs" aria-label="Project collections">${collections.map(item => `<a href="${escapeHTML(url(item.pathname + '#work'))}"${item.key === current ? ' aria-current="page"' : ''} id="work-tab-${escapeHTML(item.key)}" data-work-collection="${escapeHTML(item.key)}" aria-controls="work-panel-${escapeHTML(item.key)}">${escapeHTML(item.label)}</a>`).join('')}</nav>`;
 }
 
 export function projectVideo(video, url) {

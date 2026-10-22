@@ -83,6 +83,7 @@ test('collection tabs use real URLs and expose exactly one current destination',
   assert.match(nav,/href="\/portfolio\/#work"/);
   assert.match(nav,/href="\/portfolio\/other-works\/#work" aria-current="page"/);
   assert.equal((nav.match(/aria-current=/g)||[]).length,1);
+  assert.match(nav,/id="work-tab-other" data-work-collection="other" aria-controls="work-panel-other"/);
   assert.throws(()=>collectionNavigation(COLLECTIONS,'unknown',p=>p),/Unknown active collection/);
 });
 

@@ -68,6 +68,65 @@ if (document.body.dataset.page === 'home') {
   updateNavigation();
 }
 
+// Switch only the collection, keeping the document and scroll position intact.
+// Real links still support direct visits, modified clicks, and no-JS navigation.
+const collectionNav = document.querySelector('.work-tabs');
+if (collectionNav && typeof history.pushState === 'function') {
+  const tabs = [...collectionNav.querySelectorAll('[data-work-collection]')];
+  const panels = [...document.querySelectorAll('[data-work-panel]')];
+  const intros = [...document.querySelectorAll('[data-work-intro]')];
+  const title = document.getElementById('work-title');
+  const ready = tabs.length > 0 && tabs.every(tab =>
+    panels.some(panel => panel.dataset.workPanel === tab.dataset.workCollection) &&
+    intros.some(intro => intro.dataset.workIntro === tab.dataset.workCollection)
+  );
+
+  function showCollection(tab) {
+    const key = tab.dataset.workCollection;
+    const panel = panels.find(item => item.dataset.workPanel === key);
+    for (const item of panels) item.hidden = item !== panel;
+    for (const intro of intros) intro.setAttribute('aria-hidden', String(intro.dataset.workIntro !== key));
+    for (const link of tabs) {
+      if (link === tab) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    }
+    if (title) title.textContent = tab.textContent.trim();
+    document.title = panel.dataset.pageTitle;
+    const canonical = new URL(tab.href);
+    canonical.hash = '';
+    const metadata = [
+      ['link[rel="canonical"]', 'href', canonical.href],
+      ['meta[name="description"]', 'content', panel.dataset.pageDescription],
+      ['meta[property="og:title"]', 'content', panel.dataset.pageTitle],
+      ['meta[property="og:description"]', 'content', panel.dataset.pageDescription],
+      ['meta[property="og:url"]', 'content', canonical.href]
+    ];
+    for (const [selector, attribute, value] of metadata) {
+      document.querySelector(selector)?.setAttribute(attribute, value);
+    }
+  }
+
+  if (ready) {
+    collectionNav.addEventListener('click', event => {
+      const tab = event.target instanceof Element ? event.target.closest('a[data-work-collection]') : null;
+      if (!tab || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (new URL(tab.href).origin !== location.origin) return;
+      event.preventDefault();
+      if (tab.hasAttribute('aria-current')) return;
+      history.pushState(null, '', tab.href);
+      showCollection(tab);
+    });
+    window.addEventListener('popstate', () => {
+      const tab = tabs.find(item => new URL(item.href).pathname === location.pathname);
+      if (tab) showCollection(tab);
+    });
+    window.addEventListener('pageshow', () => {
+      const tab = tabs.find(item => new URL(item.href).pathname === location.pathname);
+      if (tab) showCollection(tab);
+    });
+  }
+}
+
 // Native dialog supplies focus containment and Escape behavior; links remain
 // ordinary full-size image links when dialog support or JavaScript is absent.
 const dialog = document.querySelector('.image-dialog');

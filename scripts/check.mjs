@@ -15,6 +15,16 @@ for (const f of pages) {
   if (/C:[\\/]|Editorial source and integration|Gexcon|Aering|aering-flight-data|hello@bayufebriansyah/.test(html)) errors.push(`${f}: private or excluded content leaked`);
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]);
   if (new Set(ids).size !== ids.length) errors.push(`${f}: duplicate IDs`);
+  for (const control of html.matchAll(/\baria-controls="([^"]+)"/g)) {
+    if (!ids.includes(control[1])) errors.push(`${f}: missing controlled region ${control[1]}`);
+  }
+  const collectionPanels = [...html.matchAll(/<div\b[^>]*\bdata-work-panel="([^"]+)"[^>]*>/g)];
+  if (collectionPanels.length) {
+    const visible = collectionPanels.filter(match=>!/\bhidden(?:\s|>)/.test(match[0]));
+    const current = [...html.matchAll(/<a\b[^>]*\bdata-work-collection="([^"]+)"[^>]*>/g)].filter(match=>match[0].includes('aria-current="page"'));
+    const intro = [...html.matchAll(/<span\b[^>]*\bdata-work-intro="([^"]+)"[^>]*>/g)].filter(match=>!match[0].includes('aria-hidden="true"'));
+    if (visible.length !== 1 || current.length !== 1 || intro.length !== 1 || visible[0]?.[1] !== current[0]?.[1] || visible[0]?.[1] !== intro[0]?.[1]) errors.push(`${f}: inconsistent default collection state`);
+  }
   const references = [...html.matchAll(/(?:href|src|poster)="([^"]+)"/g)].map(match=>match[1]);
   for (const match of html.matchAll(/\bsrcset="([^"]+)"/g)) {
     references.push(...match[1].split(',').map(candidate=>candidate.trim().split(/\s+/)[0]));
