@@ -1,5 +1,13 @@
 # Validation record
 
+## Image framing polish — 22 October 2026
+
+- Removed inset padding from collection previews and case-study figures, matched technical-image canvases to the existing white palette, and gave the featured image a matching border. Retained the layout, spacing, typography, project text, and collection membership.
+- Tightened the tissue-clamp preview with a presentation-only focal crop and framed its two case figures to fill their borders. Aligned the watch-cleaner preview to the top of the source, preserving its material/time summary while cropping the lower options area. Diagrams and plots retain their complete labels and data.
+- Added a bounded thumbnail scale and retained the crop during hover; missing-image fallbacks bypass it. Original image files and full-size enlargement are unchanged. Verified that enlargement of the prototype still opens the complete 1024 × 768 source and closes with Escape.
+- Reviewed 1366 × 900, 768 × 1024, 390 × 844, and 320 × 740. Preview frames have equal heights within each layout and no horizontal overflow. Checked the centered CAD crop, watch-cleaner summary, complete technical thumbnails, and the preserved crop during hover.
+- Built 15 pages, checked 446 local references and seven original report hashes, and passed all nine existing tests. Project content was compared with the previous commit after excluding presentation fields and is unchanged.
+
 ## Selected Works and Other Works — 22 October 2026
 
 - Added an Other Works collection beside Selected Works. The homepage defaults to the original eight Selected Works, with their content, order, and I-beam feature unchanged. Other Works has its own shareable `/other-works/#work` route and uses the same balanced row layout.

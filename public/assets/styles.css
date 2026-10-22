@@ -86,7 +86,7 @@ a:hover > .arrow, a:focus-visible > .arrow { transform: translate(2px, -2px); }
 .hero-intro { max-width: 47ch; margin-top: var(--space-5); color: var(--muted); font-size: 17px; line-height: 1.8; }
 .hero-actions { margin-top: 26px; }
 .hero-visual { position: relative; min-width: 0; }
-.hero-image { position: relative; overflow: hidden; background: var(--blue); border-radius: var(--radius); aspect-ratio: 1.22; }
+.hero-image { position: relative; overflow: hidden; border: 1px solid var(--line); background: var(--blue); border-radius: var(--radius); aspect-ratio: 1.22; }
 .hero-image img { width: 100%; height: 100%; object-fit: cover; }
 .hero-image.contain img { object-fit: contain; padding: 16px; }
 .image-label { position: absolute; bottom: 16px; left: 16px; max-width: calc(100% - 32px); padding: 6px 10px; border-left: 2px solid var(--orange); background: var(--paper); font-size: 10px; line-height: 1.6; letter-spacing: .07em; text-transform: uppercase; }
@@ -111,9 +111,9 @@ a:hover > .arrow, a:focus-visible > .arrow { transform: translate(2px, -2px); }
 .project-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
 .project-row { display: grid; grid-template-columns: var(--work-columns); align-items: center; gap: var(--work-gap); min-width: 0; min-height: 332px; padding-block: 26px; border-bottom: 1px solid var(--line); transition: border-color var(--fast); }
 .project-row:hover, .project-row:focus-within { border-bottom-color: var(--orange); }
-.project-thumbnail { display: block; height: 280px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--blue); }
-.project-thumbnail img { width: 100%; height: 100%; object-fit: cover; transition: transform 240ms var(--ease); }
-.project-thumbnail.contain img { object-fit: contain; padding: 10px; }
+.project-thumbnail { display: block; height: 280px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+.project-thumbnail img { width: 100%; height: 100%; object-fit: cover; transform: scale(var(--image-scale, 1)); transform-origin: var(--image-origin, center); transition: transform 240ms var(--ease); }
+.project-thumbnail.contain img { object-fit: contain; }
 .project-summary { min-width: 0; }
 .project-summary .eyebrow { color: var(--muted); font-size: 10px; letter-spacing: .09em; }
 .project-summary h3 { margin-top: 4px; font: 500 clamp(28px, 2.6vw, 34px)/1.2 var(--serif); letter-spacing: -.025em; text-wrap: pretty; }
@@ -183,8 +183,9 @@ a:hover > .arrow, a:focus-visible > .arrow { transform: translate(2px, -2px); }
 .evidence-figure { min-width: 0; }
 .evidence-figure.wide, .single-figure { grid-column: 1 / -1; }
 .evidence-grid.single-figure { grid-template-columns: 1fr; }
-.zoom-link { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; min-width: 0; height: 340px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--blue); }
-.zoom-link img { width: 100%; height: 100%; object-fit: contain; padding: 14px; }
+.zoom-link { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; min-width: 0; height: 340px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+.zoom-link img { width: 100%; height: 100%; object-fit: contain; }
+.zoom-link.cover img { object-fit: cover; }
 .single-figure .zoom-link { height: 420px; }
 .evidence-figure.wide .zoom-link { height: auto; min-height: 220px; max-height: 480px; }
 .zoom-indicator { position: absolute; right: 10px; bottom: 10px; display: grid; place-items: center; width: 36px; height: 36px; background: var(--white); color: var(--orange); transition: background var(--fast), color var(--fast); }
@@ -347,7 +348,7 @@ html.has-dialog { overflow: hidden; }
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .project-row:hover .project-thumbnail img { transform: scale(1.025); }
+  .project-row:hover .project-thumbnail img { transform: scale(calc(var(--image-scale, 1) * 1.025)); }
 }
 @media (prefers-reduced-motion: no-preference) {
   @keyframes arrive { from { opacity: .6; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }

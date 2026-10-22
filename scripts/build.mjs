@@ -44,12 +44,14 @@ function page({title, description, pathname, body, home = false, noindex = false
 
 function projectRow(p) {
   const titleId = 'project-' + p.slug;
+  const scale = media.info(p.image).available ? (p.thumbnailScale ?? 1) : 1;
+  const framing = scale !== 1 ? ` style="--image-scale:${scale};--image-origin:${e(p.thumbnailOrigin || 'center')}"` : '';
   const image = media.image({file:p.image, alt:p.imageAlt, width:p.imageWidth, height:p.imageHeight,
     sizes:'(max-width:720px) calc(100vw - 40px), (max-width:1050px) 40vw, (min-width:1366px) 507px, 40vw', position:p.imagePosition});
   const links = [actionLink({href:projectUrl(p), label:'Explore the project', context:p.title})];
   if (p.report) links.push(actionLink({href:reportUrl(p), label:'Full report', context:p.title, newTab:true}));
   if (p.reference) links.push(actionLink({href:p.reference.url, label:'Project website', context:p.title}));
-  return `<article class="project-row" aria-labelledby="${e(titleId)}"><a class="project-thumbnail ${p.imageFit === 'contain' ? 'contain' : ''}" href="${projectUrl(p)}" tabindex="-1" aria-hidden="true">${image}</a><div class="project-summary"><p class="eyebrow">${e(p.category)}${p.year ? ` <span>· ${e(p.year)}</span>` : ''}</p><h3 id="${e(titleId)}"><a href="${projectUrl(p)}">${e(p.title)}</a></h3><p class="project-description">${e(p.summary || p.description)}</p><p class="project-role"><span>My role</span> ${e(p.role)}</p><div class="project-links">${links.join('')}</div></div></article>`;
+  return `<article class="project-row" aria-labelledby="${e(titleId)}"><a class="project-thumbnail ${p.imageFit === 'contain' ? 'contain' : ''}"${framing} href="${projectUrl(p)}" tabindex="-1" aria-hidden="true">${image}</a><div class="project-summary"><p class="eyebrow">${e(p.category)}${p.year ? ` <span>· ${e(p.year)}</span>` : ''}</p><h3 id="${e(titleId)}"><a href="${projectUrl(p)}">${e(p.title)}</a></h3><p class="project-description">${e(p.summary || p.description)}</p><p class="project-role"><span>My role</span> ${e(p.role)}</p><div class="project-links">${links.join('')}</div></div></article>`;
 }
 
 const selectedProjects = collections.find(collection => collection.key === 'selected').projects;
@@ -63,9 +65,9 @@ function homeBody(collection) { return `<main id="main" tabindex="-1"><section c
 
 function figure(f) {
   const info = media.info(f.file);
-  const image = media.image({file:f.file, alt:f.alt, width:f.width, height:f.height});
+  const image = media.image({file:f.file, alt:f.alt, width:f.width, height:f.height, position:f.position});
   const tag = info.available ? 'a' : 'div';
-  return `<figure class="evidence-figure ${f.wide ? 'wide' : ''}"><${tag} class="zoom-link"${f.wide ? ` style="aspect-ratio:${f.width}/${f.height}"` : ''}${info.available ? ` href="${e(info.src)}" data-zoom data-caption="${e(f.caption)}" aria-label="Enlarge: ${e(f.alt)}"` : ''}>${image}${info.available ? '<span class="zoom-indicator" aria-hidden="true">↗</span>' : ''}</${tag}><figcaption><div><strong>${e(f.title)}</strong><p>${e(f.caption)}</p>${f.source ? `<small>${e(f.source)}</small>` : ''}</div></figcaption></figure>`;
+  return `<figure class="evidence-figure ${f.wide ? 'wide' : ''}"><${tag} class="zoom-link${f.fit === 'cover' ? ' cover' : ''}"${f.wide ? ` style="aspect-ratio:${f.width}/${f.height}"` : ''}${info.available ? ` href="${e(info.src)}" data-zoom data-caption="${e(f.caption)}" aria-label="Enlarge: ${e(f.alt)}"` : ''}>${image}${info.available ? '<span class="zoom-indicator" aria-hidden="true">↗</span>' : ''}</${tag}><figcaption><div><strong>${e(f.title)}</strong><p>${e(f.caption)}</p>${f.source ? `<small>${e(f.source)}</small>` : ''}</div></figcaption></figure>`;
 }
 
 function caseOutline(p) {
@@ -117,6 +119,7 @@ for (const p of projects) {
   if (p.story?.some(s=>!s.heading || !s.paragraphs?.length || !Array.isArray(s.figures))) throw Error(`Incomplete project narrative: ${p.slug}`);
   if (p.description.split(/\s+/).length > 35) throw Error(`Card description too long: ${p.slug}`);
   if (p.summary && p.summary.split(/\s+/).length > 70) throw Error(`Homepage summary too long: ${p.slug}`);
+  if (p.thumbnailScale !== undefined && (!Number.isFinite(p.thumbnailScale) || p.thumbnailScale < 1 || p.thumbnailScale > 2)) throw Error(`Invalid thumbnail crop scale: ${p.slug}`);
   if (p.story.some(s=>(s.sources ?? []).some(ref=>!p.report || !Number.isInteger(ref.page) || ref.page < 1 || ref.page > p.report.pages))) throw Error(`Invalid report-page reference: ${p.slug}`);
   if (p.overview.join(' ').split(/\s+/).length > 160) throw Error(`Overview too long: ${p.slug}`);
 }

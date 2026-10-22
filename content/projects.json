@@ -1520,7 +1520,8 @@
         "alt": "CAD view of a circular tissue-clamp assembly with four rods and sliding clamps",
         "width": 1600,
         "height": 1200,
-        "bytes": 13846
+        "bytes": 13846,
+        "fit": "cover"
       },
       {
         "file": "tissue-clamp-prototype.webp",
@@ -1529,7 +1530,9 @@
         "alt": "Black printed tissue-clamp prototype beside a ruler",
         "width": 1024,
         "height": 768,
-        "bytes": 42026
+        "bytes": 42026,
+        "fit": "cover",
+        "position": "center 25%"
       }
     ],
     "story": [
@@ -1556,8 +1559,10 @@
     ],
     "scopeNote": "The CAD view, prototype photograph, and revision notes document the design and prototyping work described above.",
     "collection": "other",
-    "imageFit": "contain",
-    "summary": "I designed a compact tissue-clamp assembly with a frame, rods, sliding clamps, and screws, then printed prototypes to examine the connections. The physical assembly and revision notes identified changes to the slides, connections, and fasteners before clamping performance could be evaluated."
+    "summary": "I designed a compact tissue-clamp assembly with a frame, rods, sliding clamps, and screws, then printed prototypes to examine the connections. The physical assembly and revision notes identified changes to the slides, connections, and fasteners before clamping performance could be evaluated.",
+    "thumbnailScale": 1.65,
+    "thumbnailOrigin": "70% 50%",
+    "imagePosition": "center"
   },
   {
     "slug": "functional-hand-grips",
@@ -1650,7 +1655,6 @@
     "imageAlt": "Watch-cleaner slicing result showing estimated filament use and print duration",
     "imageWidth": 597,
     "imageHeight": 471,
-    "imageFit": "contain",
     "role": "Print preparation & production planning",
     "description": "Organized supplied watch-cleaner parts into 13 print configurations, separating materials and settings and estimating filament use and machine time.",
     "summary": "I turned a supplied watch-cleaner part library into 13 print configurations, grouping parts by color, PLA or PETG, infill, and support needs. The resulting plan estimated material use and machine time before printing. My work covered production preparation, with the machine design credited to its original creator.",
@@ -1702,6 +1706,7 @@
       }
     ],
     "attribution": "UberKiwi machine design and manual: Frank Simons. The contribution shown here is print preparation and production planning.",
-    "scopeNote": "The configuration plan and slicer record document production preparation. Estimated time and material use are not measured manufacturing results."
+    "scopeNote": "The configuration plan and slicer record document production preparation. Estimated time and material use are not measured manufacturing results.",
+    "imagePosition": "center top"
   }
 ]

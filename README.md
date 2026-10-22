@@ -85,6 +85,8 @@ Every action has a visible keyboard focus state. Repeated story and report links
 
 Keep `imageWidth`, `imageHeight`, and descriptive alternative text with every new project image. Missing imagery uses the neutral fallback; a failed enlarged image does not leave a broken zoom action. Optional reports, project references, and scope notes render only when supplied. The next-project component is omitted when only one project remains.
 
+Preview photographs fill their frames without inset padding. Use `imagePosition` to choose a focal point and optional `thumbnailScale` (1–2) with `thumbnailOrigin` for a closer presentation crop. Missing-image fallbacks bypass that crop. Technical thumbnails can retain `imageFit: "contain"` against the matching white canvas to preserve labels. Case figures default to showing the complete image; an optional `fit: "cover"` and `position` can crop a photograph within its frame. Enlarging always opens the original uncropped file.
+
 Responsive previews are optional: a new original works immediately without them, and an original with a changed hash automatically bypasses stale previews. To regenerate previews, use `node scripts/prepare-images.mjs` with Sharp available in your local Node environment, or set `PORTFOLIO_SHARP_MODULE` to its module directory. This optional authoring tool is separate from the dependency-free build and does not run during deployment. It preserves the originals.
 
 Browser verification uses Chromium-based desktop, tablet, and phone viewports. The build checks and small regression suite complement manual keyboard, focus, contrast, and download checks; they do not constitute a full screen-reader or cross-browser audit.
