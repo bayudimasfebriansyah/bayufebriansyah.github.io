@@ -1,6 +1,6 @@
 # Bayu Febriansyah · Engineering portfolio
 
-A static portfolio built around engineering decisions, personal contributions, and evidence. Selected Works is the default collection, with IEEE PELS followed by seven technical projects. Other Works contains four additional MakerLab projects: SO-101 robot arms, a tissue-clamp assembly, Functional Hand grips, and watch-cleaner print planning.
+A static portfolio built around engineering decisions, personal contributions, and evidence. Selected Works is the default collection, with IEEE PELS followed by seven technical projects. Other Works contains three additional MakerLab projects: SO-101 robot arms, a tissue-clamp assembly, and Functional Hand grips.
 
 The site is plain HTML and CSS with a small progressive-enhancement script. A dependency-free Node build produces the pages from editable JSON. There is no database, subscription, external font request, or client-side framework.
 

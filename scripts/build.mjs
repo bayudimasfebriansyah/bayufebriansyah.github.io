@@ -60,7 +60,7 @@ if (!featured) throw Error('Featured project is missing');
 function collectionMetadata(collection) {
   return {
     title:collection.key === 'selected' ? 'Bayu Febriansyah | Engineering Portfolio' : 'Other Works | Bayu Febriansyah',
-    description:collection.key === 'selected' ? 'Bayu Febriansyah’s engineering portfolio: structures, materials, manufacturing, mechanical design, fabrication, and testing.' : 'Additional projects by Bayu Febriansyah: SO-101 robot arms, a tissue-clamp assembly, assistive grips, and watch-cleaner print planning.'
+    description:collection.key === 'selected' ? 'Bayu Febriansyah’s engineering portfolio: structures, materials, manufacturing, mechanical design, fabrication, and testing.' : 'Additional projects by Bayu Febriansyah: SO-101 robot arms, a tissue-clamp assembly, and assistive grips.'
   };
 }
 

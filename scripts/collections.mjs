@@ -9,7 +9,7 @@ export const COLLECTIONS = [
     key: 'other',
     label: 'Other Works',
     pathname: '/other-works/',
-    intro: ['More hands-on work from Illinois MakerLab.', 'Robot integration, client prototypes, and print planning.']
+    intro: ['More hands-on work from Illinois MakerLab.', 'Robot integration, client prototypes, and assistive grips.']
   }
 ];
 
